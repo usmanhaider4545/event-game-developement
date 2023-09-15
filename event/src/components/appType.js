@@ -12,17 +12,17 @@ function AppType(props) {
 
     const handleChange = (event) => {
         setValue(event.target.value);
-        localStorage.setItem("appType", event.target.value);
+        localStorage.setItem("appSoftware", event.target.value);
     };
 
     useEffect(() => {
-        setLocalStorageValue(localStorage.getItem("appType"));
+        setLocalStorageValue(localStorage.getItem("appSoftware"));
         window.onbeforeunload = closeIt;
     }, []);
 
 
     function closeIt() {
-        localStorage.clear("appType");
+        localStorage.clear("appSoftware");
     }
 
 

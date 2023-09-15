@@ -28,7 +28,7 @@ function Industries() {
 
     return (
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "32px" }}>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "20px 0", fontWeight: "700", fontSize: "32px" }}>
                 Which industry does your product belong to?
             </Typography>
             <FormControl>
@@ -39,7 +39,7 @@ function Industries() {
                         value={value ? value : localStorageValue}
                         onChange={handleChange}
                 >
-                        <Stack className='optionsBlocks' flexDirection="initial" justifyContent="center" gap="100px">
+                  <Stack className='optionsBlocks' flexDirection="initial" justifyContent="center" gap="100px">
                     <Box>
                     <FormControlLabel value="Fintech" control={<Radio />} label="Fintech" />
                     <FormControlLabel value="Digital Signage" control={<Radio />} label="Digital Signage" />

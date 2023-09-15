@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Step, StepLabel, Stepper, Typography, Container, Box } from '@mui/material';
 import stepsData from '../steps.json';
 import Logo from "../images/logo.png"
@@ -6,8 +6,11 @@ import MobileStepper from '@mui/material/MobileStepper';
 import { Stack } from '@mui/material';
 import Industries from "./industries";
 import AppType from "./appType";
-import AppDesignedFor from "./appDesignedFor"
+import AppDesignedFor from "./appDesignedFor";
+import Categories from "./categories";
+import CategoriesFeatures from "./categoriesFeatures"
 
+ 
 function StepperComponent() {
     const [activeStep, setActiveStep] = useState(0);
 
@@ -19,8 +22,7 @@ function StepperComponent() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-
-
+ 
 
     return (
         // <Container sx={{ display: "flex", height: "100%", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
@@ -91,6 +93,12 @@ function StepperComponent() {
                                         activeStep === 3 ?
                                             <AppDesignedFor />
                                             :
+                                                activeStep === 4 ?
+                                                    <Categories />
+                                                :
+                                                activeStep === 5 ?
+                                                        <CategoriesFeatures/>
+                                                :
                                             ""
                                 }
                             </Box>
@@ -134,7 +142,7 @@ function StepperComponent() {
                 </>
             }
 
-            <Button onClick={handleNext} sx={{ background: "#3B82F6", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
+            <Button onClick={handleNext} sx={{ background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
                 {activeStep == 0 ? "Get Started" : "Next"}
             </Button>
 
