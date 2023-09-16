@@ -1,4 +1,4 @@
-const artificialInteligence = [
+export const ArtificialInteligence = [
   {
     category: "AI-Powered Virtual Assistant",
     features: [
@@ -171,4 +171,4 @@ const artificialInteligence = [
     ],
   },
 ];
-export default artificialInteligence;
+ 

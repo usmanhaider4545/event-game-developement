@@ -16,8 +16,11 @@ import { TransportManagementSystem } from "../TransportManagement";
 import { HealthTech } from "../HealthCare";
 import { ComputerVision } from "../ComputerVision";
 import { VirtualReality } from "../VirtualReality";
+import { ArtificialInteligence } from "../ArtificialInteligence";
+import { MachineLearning } from "../MachineLearning";
+import { DeepLearning } from "../DeepLearning";
 
-function Categories() {
+function Categories(props) {
     const [value, setValue] = useState('');
     const [localStorageCategory, setLocalStorageCategory] = useState(localStorage.getItem("appCategory"));
 
@@ -30,11 +33,15 @@ function Categories() {
     const handleChange = (event) => {
         setValue(event.target.value);
         localStorage.setItem("appCategory", event.target.value);
+        props.removeDisabledButton();
     };
 
     useEffect(() => {
         window.onbeforeunload = closeIt;
         getDataCategories();
+        if (localStorageCategory){
+            props.removeDisabledButton();
+        }
     }, []);
 
 
@@ -51,12 +58,6 @@ function Categories() {
             })
             setCategories(combineCategories);
         } else if (checkSelectedProjects === "Fintech") {
-            let combineCategories = Fintech.map((item, index) => {
-                return item.category ? item.category : "-"
-            })
-            setCategories(combineCategories);
-        }
-        else if (checkSelectedProjects === "Fintech") {
             let combineCategories = Fintech.map((item, index) => {
                 return item.category ? item.category : "-"
             })
@@ -110,14 +111,32 @@ function Categories() {
             })
             setCategories(combineCategories);
         }
-        else if (checkSelectedProjects === "AI/ML/DL Computer Vision") {
+        else if (checkSelectedProjects === "Computer Vision") {
             let combineCategories = ComputerVision.map((item, index) => {
                 return item.category ? item.category : "-"
             })
             setCategories(combineCategories);
         }
-        else if (checkSelectedProjects === "AR/VR Meta") {
+        else if (checkSelectedProjects === "Virtual Reality") {
             let combineCategories = VirtualReality.map((item, index) => {
+                return item.category ? item.category : "-"
+            })
+            setCategories(combineCategories);
+        }
+        else if (checkSelectedProjects === "Artificial Inteligence") {
+            let combineCategories = ArtificialInteligence.map((item, index) => {
+                return item.category ? item.category : "-"
+            })
+            setCategories(combineCategories);
+        }
+        else if (checkSelectedProjects === "Machine Learning") {
+            let combineCategories = MachineLearning.map((item, index) => {
+                return item.category ? item.category : "-"
+            })
+            setCategories(combineCategories);
+        }
+        else if (checkSelectedProjects === "Deep Learning") {
+            let combineCategories = DeepLearning.map((item, index) => {
                 return item.category ? item.category : "-"
             })
             setCategories(combineCategories);
@@ -133,7 +152,7 @@ function Categories() {
                 What type of {localStorageIndustry} product do you want?
             </Typography>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="80%" margin="auto">
-                <FormControl>
+             <FormControl>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
                         defaultValue=""
@@ -141,8 +160,8 @@ function Categories() {
                         value={value ? value : localStorageCategory}
                         onChange={handleChange}
                     >
-                        <Stack className='optionsBlocks' flexDirection="initial" justifyContent="center" gap="100px">
-                            <Box className={categories.length > 5 ? "largeCatelog" : ""}>
+                        <Stack sx={{ overflowX: "auto", paddingLeft: "30px", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center" gap="100px">
+                            <Box sx={{ width: "40%" }} className={categories.length > 5 ? "largeCatelog" : ""}>
 
                                 {categories.length > 0 ? categories.slice(0, 6).map((c) => (
                                     <FormControlLabel value={c} control={<Radio />} label={c} />
@@ -151,14 +170,25 @@ function Categories() {
                                 }
                             </Box>
                             {categories.length > 6 ?
-                            <Box className={categories.length > 5 ? "largeCatelog" : ""}>
-                                {categories.length > 0 ? categories.slice(7, categories.length).map((c) => (
+                                <Box sx={{ width: "40%" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
+                                {categories.length > 0 ? categories.slice(6, 12).map((c) => (
                                     <FormControlLabel value={c} control={<Radio />} label={c} />
                                 ))
                                     : ""
                                 }
                             </Box>
-                            : ""}
+                            : 
+                            ""}
+                            {categories.length > 12 ?
+                                <Box sx={{ width: "40%" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
+                                    {categories.length > 0 ? categories.slice(12, 18).map((c) => (
+                                        <FormControlLabel value={c} control={<Radio />} label={c} />
+                                    ))
+                                        : ""
+                                    }
+                                </Box>
+                                :
+                                ""}
                         </Stack>
                     </RadioGroup>
                 </FormControl>

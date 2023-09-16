@@ -1,4 +1,4 @@
-const deepLearning = [
+export const DeepLearning = [
   {
     category: "Image Recognition and Classification System",
     features: [
@@ -125,5 +125,4 @@ const deepLearning = [
     ],
   },
 ];
-
-export default deepLearning;
+ 

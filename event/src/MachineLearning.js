@@ -1,4 +1,4 @@
-const machineLearning = [
+export const MachineLearning = [
   {
     category: "Predictive Maintenance Solution",
     features: [
@@ -175,5 +175,4 @@ const machineLearning = [
     ],
   },
 ];
-
-export default machineLearning;
+ 

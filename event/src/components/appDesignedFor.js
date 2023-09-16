@@ -4,7 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
  
-function AppDesignedFor() {
+function AppDesignedFor(props) {
      const [DNC, setDNC] = React.useState({
         Consumer: false,
         Business: false,
@@ -15,6 +15,7 @@ function AppDesignedFor() {
 
     const handleChange = (event) => {
         setDNC({ ...DNC, [event.target.name]: event.target.checked });
+        props.removeDisabledButton();
     };
 
     useEffect(() => {

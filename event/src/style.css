@@ -3,12 +3,15 @@ body {
     height: 100%;
     font-family: 'Nunito', sans-serif;
 }
+
 div#root {
     height: 100%;
 }
+
 .App {
     height: 100%;
 }
+
 .MuiLinearProgress-root {
     width: 100% !important;
     margin: auto;
@@ -16,23 +19,27 @@ div#root {
     height: 30px !important;
     border-radius: 40px;
 }
+
 p,
 h1,
 h2,
 h3,
 h6,
+h4,
 div,
 span,
 button {
     font-family: 'Nunito', sans-serif !important;
 }
+
 .optionsBlocks span {
     color: #fff;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     line-height: normal;
 }
+
 .optionsBlocks label {
     border-radius: 10px;
     border: 2px solid #7B8089;
@@ -40,12 +47,114 @@ button {
     box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
     -webkit-backdrop-filter: blur(26.94999885559082px);
     backdrop-filter: blur(26.94999885559082px);
-    padding: 11px 15px;
+    padding: 8px 15px;
     margin-bottom: 15px;
     display: flex;
     text-align: left;
+    width: 100%;
 }
+
 .disabled {
     pointer-events: none;
     opacity: 0.5;
+}
+
+.resultBox {
+    width: 450px;
+    height: 208px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 90px auto 70px;
+}
+
+.whyChoose {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    padding: 70px 0 40px 0;
+    text-align: left;
+}
+
+.whyChoose ul {
+    padding: 0;
+}
+
+.whyChoose ul li {
+    color: #FFF;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 13px;
+    line-height: normal;
+    list-style-type: none;
+}
+
+.whyChoose ul li::before {
+    content: "\2022";
+    color: #3B82F6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: relative;
+    top: -1px;
+    right: 7px;
+}
+
+/* width */
+.optionsBlocks::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+}
+
+/* Track */
+.optionsBlocks::-webkit-scrollbar-track {
+    background: #3b82f640;
+}
+
+/* Handle */
+.optionsBlocks::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+}
+
+/* Handle on hover */
+.optionsBlocks::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.reset {
+    color: #fff;
+    font-size: 22px;
+}
+
+@media all and (max-width:1367px) {
+    .resultBox .manDays {
+            font-size: 47px;
+        }
+    .optionsBlocks label {
+        padding: 3px 15px;
+    }
+.whyChoose ul li {
+    font-size: 19px;
+    padding-bottom: 8px;
+}
+    .optionsBlocks span {
+        font-size: 19px;
+    }
+
+    .resultBox {
+        margin: 30px auto 40px;
+    }
+
+    .whyChoose {
+        padding: 50px 0 40px 0;
+        background-position: center;
+    }
+        .reset {
+             font-size: 18px;
+        }
 }

@@ -8,21 +8,33 @@ import Industries from "./industries";
 import AppType from "./appType";
 import AppDesignedFor from "./appDesignedFor";
 import Categories from "./categories";
-import CategoriesFeatures from "./categoriesFeatures"
+import CategoriesFeatures from "./categoriesFeatures";
+import TotalManDays from "./totalDays";
+import CloseIcon from '@mui/icons-material/Close';
 
  
 function StepperComponent() {
     const [activeStep, setActiveStep] = useState(0);
 
+    const [disabledButton, setDisabledButton] = useState(true);
+
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setDisabledButton(true);
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        setDisabledButton(true);
     };
 
- 
+    const removeDisabledButton = () => {
+        setDisabledButton(false);
+    };
+
+    const resetAction = () => {
+        setActiveStep(0)
+    };
 
     return (
         // <Container sx={{ display: "flex", height: "100%", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
@@ -74,6 +86,7 @@ function StepperComponent() {
                                 sx={{ width: "80%", background: "transparent" }}
 
                             />
+                            <CloseIcon sx={{ color: "#fff" }} onClick={resetAction}/>
                         </Stack>
                         : ""}
 
@@ -85,19 +98,22 @@ function StepperComponent() {
                         ) : (
                             <Box>
                                 {activeStep === 1 ?
-                                    <Industries />
+                                        <Industries removeDisabledButton={removeDisabledButton} />
                                     :
                                     activeStep === 2 ?
-                                        <AppType />
+                                            <AppType removeDisabledButton={removeDisabledButton} />
                                         :
                                         activeStep === 3 ?
-                                            <AppDesignedFor />
+                                                <AppDesignedFor removeDisabledButton={removeDisabledButton} />
                                             :
                                                 activeStep === 4 ?
-                                                    <Categories />
+                                                    <Categories removeDisabledButton={removeDisabledButton} />
                                                 :
                                                 activeStep === 5 ?
-                                                        <CategoriesFeatures/>
+                                                        <CategoriesFeatures removeDisabledButton={removeDisabledButton} />
+                                                :
+                                                activeStep === 6 ? 
+                                                            <TotalManDays resetAction={resetAction}/>
                                                 :
                                             ""
                                 }
@@ -141,10 +157,12 @@ function StepperComponent() {
                     </Box>
                 </>
             }
-
-            <Button onClick={handleNext} sx={{ background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
+            {activeStep !== 6 ? 
+                <Button className={disabledButton && activeStep !== 0 ? "disabled" : "" }  onClick={handleNext} sx={{ background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
                 {activeStep == 0 ? "Get Started" : "Next"}
             </Button>
+            : ""
+            }
 
         </Container>
     );
