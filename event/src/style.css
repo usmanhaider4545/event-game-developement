@@ -68,6 +68,7 @@ button {
     align-items: center;
     justify-content: center;
     margin: 90px auto 70px;
+    padding: 10px 20px;
 }
 
 .whyChoose {
@@ -75,8 +76,15 @@ button {
     align-items: flex-start;
     justify-content: center;
     gap: 100px;
-    padding: 70px 0 40px 30px;
+    padding: 30px 20px;
     text-align: left;
+    border-radius: 10px;
+    border: 2px solid var(--Stroke, rgba(59, 130, 246, 0.54));
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+    -webkit-backdrop-filter: blur(26.94999885559082px);
+    backdrop-filter: blur(26.94999885559082px);
+    margin-top: 19px;
 }
 
 .whyChoose ul {
@@ -107,23 +115,23 @@ button {
 }
 
 /* width */
-.optionsBlocks::-webkit-scrollbar {
-    width: 10px;
+ ::-webkit-scrollbar {
+    width: 3px;
     height: 3px;
 }
 
 /* Track */
-.optionsBlocks::-webkit-scrollbar-track {
+ ::-webkit-scrollbar-track {
     background: #3b82f640;
 }
 
 /* Handle */
-.optionsBlocks::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
     background: #3B82F6;
 }
 
 /* Handle on hover */
-.optionsBlocks::-webkit-scrollbar-thumb:hover {
+ ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 .reset {
@@ -131,6 +139,23 @@ button {
     font-size: 22px;
 }
 
+.appTable {
+    border-radius: 10px;
+        border: 2px solid var(--Stroke, rgba(59, 130, 246, 0.54));
+        background: rgba(255, 255, 255, 0.09);
+        box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+        backdrop-filter: blur(26.94999885559082px);
+        padding: 0px 24px;
+        margin: 20px 0;
+ }
+ .appTable table tr, th, td {
+     color: #FFF !important;
+     font-family: Nunito !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+}
 @media all and (max-width:1367px) {
     .resultBox .manDays {
             font-size: 47px;
@@ -148,11 +173,6 @@ button {
 
     .resultBox {
         margin: 30px auto 40px;
-    }
-
-    .whyChoose {
-        padding: 50px 0 40px 0;
-        background-position: center;
     }
         .reset {
              font-size: 18px;

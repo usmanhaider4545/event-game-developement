@@ -10,7 +10,8 @@ import AppDesignedFor from "./appDesignedFor";
 import Categories from "./categories";
 import CategoriesFeatures from "./categoriesFeatures";
 import TotalManDays from "./totalDays";
-import CloseIcon from '@mui/icons-material/Close';
+import GetFinalEstimates from "./getFinalEstimates";
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
  
 function StepperComponent() {
@@ -90,7 +91,7 @@ function StepperComponent() {
                                 sx={{ width: "80%", background: "transparent" }}
 
                             />
-                            <CloseIcon sx={{ color: "#fff" }} onClick={resetAction}/>
+                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "30px", cursor: "pointer" }} />
                         </Stack>
                         : ""}
 
@@ -116,7 +117,10 @@ function StepperComponent() {
                                                 activeStep === 5 ?
                                                         <CategoriesFeatures activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                                 :
-                                                activeStep === 6 ? 
+                                                     activeStep === 6 ?
+                                                    <GetFinalEstimates />
+                                                    :
+                                                activeStep === 7 ? 
                                                             <TotalManDays resetAction={resetAction}/>
                                                 :
                                             ""
@@ -161,9 +165,9 @@ function StepperComponent() {
                     </Box>
                 </>
             }
-            {activeStep !== 6 ? 
-                <Button className={disabledButton && activeStep !== 0 ? "disabled" : "" }  onClick={handleNext} sx={{ background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
-                {activeStep == 0 ? "Get Started" : "Next"}
+            {activeStep !== 7 ? 
+                <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? "disabled" : "" }  onClick={handleNext} sx={{fontWeight : "700" , background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
+                    {activeStep === 0 ? "Get Started" : activeStep === 6 ? "Get final estimates" : "Next"}
             </Button>
             : ""
             }

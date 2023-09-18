@@ -30,7 +30,8 @@ function CategoriesFeatures(props) {
          if (event.target.checked){
              let parsValue = parseInt(event.target.value);
         totalManDays.push([
-           event.target.name,
+            event.target.name,
+            event.target.ariaLabel,
             parsValue
         ]);
          } else {
@@ -58,7 +59,7 @@ function CategoriesFeatures(props) {
 
 
     function closeIt() {
-        localStorage.clear("appType");
+        localStorage.clear("totalManDays");
     }
 
     const getDataCategories = () => {
@@ -70,7 +71,9 @@ function CategoriesFeatures(props) {
                  combineCategories = item?.features.map((feature, index) => {
                     return {
                         "name" : feature.name ? feature.name : "-",
-                        "days" : feature.totalManDays ? feature.totalManDays : "-"
+                        "manDays": feature.manDays ? feature.manDays : "-",
+                        "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+
                     }
                 })
             }
@@ -83,7 +86,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -96,7 +100,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -109,7 +114,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -122,7 +128,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -135,7 +142,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -148,7 +156,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -161,7 +170,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -174,7 +184,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -187,7 +198,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -200,7 +212,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -213,7 +226,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -226,7 +240,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -239,7 +254,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -252,7 +268,8 @@ function CategoriesFeatures(props) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
-                            "days": feature.totalManDays ? feature.totalManDays : "-"
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         }
                     })
                 }
@@ -274,7 +291,12 @@ function CategoriesFeatures(props) {
                 {features.length > 0 ? features.slice(0, 6).map((f , i) => (
                   <FormControlLabel
                         control={
-                            <Checkbox onChange={handleChange} name={f.name} value={f.days}/>
+                          <Checkbox 
+                            onChange={handleChange} 
+                            name={f.name} 
+                            inputProps={{ 'aria-label': f.manDays }}
+                            value={f.totalManDays} 
+                            />
                         }
                         label={f.name}
                     />  
@@ -287,7 +309,12 @@ function CategoriesFeatures(props) {
                     {features.length > 0 ? features.slice(6, 12).map((f, i) => (
                         <FormControlLabel
                             control={
-                                <Checkbox onChange={handleChange} name={f.name} value={f.days} />
+                                <Checkbox
+                                    onChange={handleChange}
+                                    name={f.name}
+                                    inputProps={{ 'aria-label': f.manDays }}
+                                    value={f.totalManDays}
+                                />
                             }
                             label={f.name}
                         />
@@ -302,7 +329,12 @@ function CategoriesFeatures(props) {
                         {features.length > 0 ? features.slice(12, 18).map((f, i) => (
                             <FormControlLabel
                                 control={
-                                    <Checkbox onChange={handleChange} name={f.name} value={f.days} />
+                                    <Checkbox
+                                        onChange={handleChange}
+                                        name={f.name}
+                                        inputProps={{ 'aria-label': f.manDays }}
+                                        value={f.totalManDays}
+                                    />
                                 }
                                 label={f.name}
                             />
@@ -317,7 +349,12 @@ function CategoriesFeatures(props) {
                         {features.length > 0 ? features.slice(18, 25).map((f, i) => (
                             <FormControlLabel
                                 control={
-                                    <Checkbox onChange={handleChange} name={f.name} value={f.days} />
+                                    <Checkbox
+                                        onChange={handleChange}
+                                        name={f.name}
+                                        inputProps={{ 'aria-label': f.manDays }}
+                                        value={f.totalManDays}
+                                    />
                                 }
                                 label={f.name}
                             />

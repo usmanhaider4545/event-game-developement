@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import ResultsBG from "../images/Result-Page.png";
-import whyChooseBg from "../images/Result-bottom.png";
-
+ 
 function TotalManDays() {
 
    const [localStorageManDays, setLocalStorageManDays] = useState(localStorage.getItem("totalManDays"));
 
-        const [manDays, setManDays] = useState();
+        const [selectedTotalManDays, setSelectedTotalManDays] = useState();
 
         useEffect(() => {
                 let parsManDays = JSON.parse(localStorageManDays);
                 let getNumberFromArray = [];
                 parsManDays.map((item, index) => {
-                        getNumberFromArray.push(item[1]);
+                        getNumberFromArray.push(item[2]);
                  })
                 const daysSum = getNumberFromArray.reduce((partialSum, a) => partialSum + a, 0);
-                setManDays(daysSum);
+                setSelectedTotalManDays(daysSum);
         }, []);
 
  
@@ -27,7 +26,7 @@ function TotalManDays() {
                                         <b> Choose Intagleo </b> for a fast delivery in
                                 </Typography>
                                 <Typography className="manDays" variant='h4' sx={{ color: "#fff", fontSize: "65px", fontWeight: "700" }}>
-                                        {manDays ? manDays : ""} Man Days
+                                        {selectedTotalManDays ? selectedTotalManDays : ""} Man Days
                                 </Typography>
                         </Box>
 
@@ -36,7 +35,7 @@ function TotalManDays() {
                                         Why you should choose intagleo
                                 </Typography>
 
-                                <Box className="whyChoose" style={{ backgroundImage: `url(${whyChooseBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+                                <Box className="whyChoose">
                                         <ul>
                                                 <li>Free Project Manager</li>
                                                 <li>No Hiring Costs</li>
