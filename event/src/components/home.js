@@ -32,6 +32,10 @@ function StepperComponent() {
         setDisabledButton(false);
     };
 
+    const activeDisabledBtn = () => {
+        setDisabledButton(true);
+    };
+
     const resetAction = () => {
         setActiveStep(0)
     };
@@ -101,16 +105,16 @@ function StepperComponent() {
                                         <Industries removeDisabledButton={removeDisabledButton} />
                                     :
                                     activeStep === 2 ?
-                                            <AppType removeDisabledButton={removeDisabledButton} />
+                                            <AppType activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                         :
                                         activeStep === 3 ?
-                                                <AppDesignedFor removeDisabledButton={removeDisabledButton} />
+                                                <AppDesignedFor activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                             :
                                                 activeStep === 4 ?
                                                     <Categories removeDisabledButton={removeDisabledButton} />
                                                 :
                                                 activeStep === 5 ?
-                                                        <CategoriesFeatures removeDisabledButton={removeDisabledButton} />
+                                                        <CategoriesFeatures activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                                 :
                                                 activeStep === 6 ? 
                                                             <TotalManDays resetAction={resetAction}/>

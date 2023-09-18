@@ -20,13 +20,19 @@ function AppDesignedFor(props) {
 
     useEffect(() => {
         let stringfyData = JSON.stringify(DNC);
-        localStorage.setItem("appDesignedFor", stringfyData)
+        localStorage.setItem("appDesignedFor", stringfyData);
+
+        const someTruthy = Object.values(DNC).some(val => val === true);
+
+        if (someTruthy === true) {
+            props.removeDisabledButton();
+        } else {
+            props.activeDisabledBtn();
+        }
+
     }, [handleChange]);
 
     useEffect(() => {
-        let checkBoxData = localStorage.getItem("appDesignedFor");
-
-        setDNC(JSON.parse(checkBoxData));
         window.onbeforeunload = closeIt;
     }, []);
 

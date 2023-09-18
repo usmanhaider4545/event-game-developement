@@ -27,7 +27,6 @@ function CategoriesFeatures(props) {
     const [totalManDays, setTotalManDays] = useState([]);
 
     const handleChange = (event) => {
-        props.removeDisabledButton();
          if (event.target.checked){
              let parsValue = parseInt(event.target.value);
         totalManDays.push([
@@ -43,6 +42,11 @@ function CategoriesFeatures(props) {
                  }
              })
          }
+        if (totalManDays.length === 0) {
+            props.activeDisabledBtn();
+        }else{
+            props.removeDisabledButton();
+        }
         let totalManDaysStringfy = JSON.stringify(totalManDays);
         localStorage.setItem("totalManDays", totalManDaysStringfy);
     };

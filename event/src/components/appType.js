@@ -21,13 +21,19 @@ function AppType(props) {
 
     useEffect(() => {
         let stringfyData = JSON.stringify(DNC);
-        localStorage.setItem("appSoftware", stringfyData)
+        localStorage.setItem("appSoftware", stringfyData);
+
+        const someTruthy = Object.values(DNC).some(val => val === true);
+
+        if (someTruthy === true) {
+            props.removeDisabledButton();
+        } else {
+            props.activeDisabledBtn();
+        }
+        
     }, [handleChange]);
 
     useEffect(() => {
-        let checkBoxData = localStorage.getItem("appSoftware");
-
-        setDNC(JSON.parse(checkBoxData));
         window.onbeforeunload = closeIt;
     }, []);
 
