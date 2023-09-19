@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button, Stack, Typography, Stepper, Container, Box } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import { useDraggable } from "react-use-draggable-scroll";
 
 function Industries(props) {
-    
+
+    const ref = useRef();  
+
+    const { events } = useDraggable(ref);
 
     const [value, setValue] = useState('');
+    
     const [localStorageValue, setLocalStorageValue] = useState(localStorage.getItem("industry"));
 
     const handleChange = (event) => {
@@ -44,8 +49,8 @@ function Industries(props) {
                         value={value ? value : localStorageValue}
                         onChange={handleChange}
                 >
-            <Stack sx={{ overflowX: "auto", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
-                            <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
+                        <Stack {...events} ref={ref} sx={{ overflowX: "auto", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
+                <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
                     <FormControlLabel value="Fintech" control={<Radio />} label="Fintech" />
                     <FormControlLabel value="Digital Signage" control={<Radio />} label="Digital Signage" />
                     <FormControlLabel value="Wayfinding" control={<Radio />} label="Wayfinding" />

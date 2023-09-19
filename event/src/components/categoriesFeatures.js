@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -17,10 +17,17 @@ import { VirtualReality } from "../projectsData/VirtualReality";
 import { ArtificialInteligence } from "../projectsData/ArtificialInteligence";
 import { MachineLearning } from "../projectsData/MachineLearning";
 import { DeepLearning } from "../projectsData/DeepLearning";
+import { useDraggable } from "react-use-draggable-scroll";
 
 function CategoriesFeatures(props) {
+    
     const [localStorageCategory, setLocalStorageCategory] = useState(localStorage.getItem("appCategory"));
+
     const [localStorageIndustry, setLocalStorageIndustry] = useState(localStorage.getItem("industry"));
+
+    const ref = useRef();
+
+    const { events } = useDraggable(ref);
 
     const [features, setFeatures] = useState([]);
 
@@ -286,7 +293,7 @@ function CategoriesFeatures(props) {
             <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: "32px" }}>
                 What features do you envision for the {localStorageCategory} in {localStorageIndustry}?
             </Typography>
-            <Stack sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
+            <Stack {...events} ref={ref} sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
                 <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${features.length > 6 ? "80px" : ""}` }}> 
                 {features.length > 0 ? features.slice(0, 6).map((f , i) => (
                   <FormControlLabel

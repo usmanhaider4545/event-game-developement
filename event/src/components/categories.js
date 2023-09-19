@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -19,16 +19,21 @@ import { VirtualReality } from "../projectsData/VirtualReality";
 import { ArtificialInteligence } from "../projectsData/ArtificialInteligence";
 import { MachineLearning } from "../projectsData/MachineLearning";
 import { DeepLearning } from "../projectsData/DeepLearning";
+import { useDraggable } from "react-use-draggable-scroll";
 
 function Categories(props) {
+
     const [value, setValue] = useState('');
+
     const [localStorageCategory, setLocalStorageCategory] = useState(localStorage.getItem("appCategory"));
 
     const [localStorageIndustry, setLocalStorageIndustry] = useState(localStorage.getItem("industry"));
 
     const [categories, setCategories] = useState([]);
 
+    const ref = useRef();
 
+    const { events } = useDraggable(ref);
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -160,7 +165,7 @@ function Categories(props) {
                         value={value ? value : localStorageCategory}
                         onChange={handleChange}
                     >
-                        <Stack sx={{ overflowX: "auto", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
+                        <Stack {...events} ref={ref} sx={{ overflowX: "auto", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
                             <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${categories.length > 6 ? "80px" : ""}` }} className={categories.length > 5 ? "largeCatelog" : ""}>
 
                                 {categories.length > 0 ? categories.slice(0, 6).map((c) => (
