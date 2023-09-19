@@ -286,8 +286,8 @@ function CategoriesFeatures(props) {
             <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: "32px" }}>
                 What features do you envision for the {localStorageCategory} in {localStorageIndustry}?
             </Typography>
-            <Stack sx={{ overflowX: "auto", paddingLeft : "30px" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center" gap="100px">
-                <Box sx={{width : "40%"}}> 
+            <Stack sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
+                <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${features.length > 6 ? "80px" : ""}` }}> 
                 {features.length > 0 ? features.slice(0, 6).map((f , i) => (
                   <FormControlLabel
                         control={
@@ -305,7 +305,7 @@ function CategoriesFeatures(props) {
                 }
                 </Box>
                 {features.length > 6 ?
-                    <Box sx={{ width: "40%" }}>
+                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
                     {features.length > 0 ? features.slice(6, 12).map((f, i) => (
                         <FormControlLabel
                             control={
@@ -325,7 +325,7 @@ function CategoriesFeatures(props) {
                 </Box>
                 : "" }
                 {features.length > 12 ?
-                    <Box sx={{ width: "40%" }}>
+                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
                         {features.length > 0 ? features.slice(12, 18).map((f, i) => (
                             <FormControlLabel
                                 control={
@@ -345,7 +345,7 @@ function CategoriesFeatures(props) {
                     </Box>
                     : ""}
                 {features.length > 18 ?
-                    <Box sx={{ width: "40%" }}>
+                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
                         {features.length > 0 ? features.slice(18, 25).map((f, i) => (
                             <FormControlLabel
                                 control={

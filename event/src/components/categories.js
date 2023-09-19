@@ -151,7 +151,7 @@ function Categories(props) {
             <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "32px" }}>
                 What type of {localStorageIndustry} product do you want?
             </Typography>
-            <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="80%" margin="auto">
+            <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" margin="auto">
              <FormControl>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
@@ -160,8 +160,8 @@ function Categories(props) {
                         value={value ? value : localStorageCategory}
                         onChange={handleChange}
                     >
-                        <Stack sx={{ overflowX: "auto", paddingLeft: "30px", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center" gap="100px">
-                            <Box sx={{ width: "40%" }} className={categories.length > 5 ? "largeCatelog" : ""}>
+                        <Stack sx={{ overflowX: "auto", width: "100%" }} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
+                            <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${categories.length > 6 ? "80px" : ""}` }} className={categories.length > 5 ? "largeCatelog" : ""}>
 
                                 {categories.length > 0 ? categories.slice(0, 6).map((c) => (
                                     <FormControlLabel value={c} control={<Radio />} label={c} />
@@ -170,7 +170,7 @@ function Categories(props) {
                                 }
                             </Box>
                             {categories.length > 6 ?
-                                <Box sx={{ width: "40%" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
+                                <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
                                 {categories.length > 0 ? categories.slice(6, 12).map((c) => (
                                     <FormControlLabel value={c} control={<Radio />} label={c} />
                                 ))

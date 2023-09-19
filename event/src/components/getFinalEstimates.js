@@ -27,7 +27,7 @@ function GetFinalEstimates() {
                 <TableHead>
                     <TableRow>
                             <TableCell sx={{ color: "#fff", borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }}>Features</TableCell>
-                            <TableCell sx={{ color: "#fff", borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">Estimate (F.E + B.E)</TableCell>
+                            {/* <TableCell sx={{ color: "#fff", borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">Estimate (F.E + B.E)</TableCell> */}
                             <TableCell sx={{ color: "#fff", borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">Estimate Man-Days</TableCell>
                     </TableRow>
                 </TableHead>
@@ -38,7 +38,7 @@ function GetFinalEstimates() {
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                                 <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[0] ? row[0] : "-"}</TableCell>
-                                <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[1] ? row[1] : "-"}</TableCell>
+                                {/* <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[1] ? row[1] : "-"}</TableCell> */}
                                 <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[2]  ? row[2] + " Days" : "-"}</TableCell>
                          </TableRow>
                     ))}

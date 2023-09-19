@@ -42,8 +42,6 @@ function StepperComponent() {
     };
 
     return (
-        // <Container sx={{ display: "flex", height: "100%", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
-
         <Container sx={{ transform: "translate(50%,-50%)", right: "50%", top: "50%", position: "absolute" }}>
 
             {activeStep == 0 ?
@@ -63,13 +61,6 @@ function StepperComponent() {
                 :
 
                 <>
-                    {/* <Stepper activeStep={activeStep} alternativeLabel>
-                        {stepsData.map((step, index) => (
-                            <Step key={index}>
-                                <StepLabel>{step.title}</StepLabel>
-                            </Step>
-                        ))}
-                    </Stepper> */}
                     {activeStep !== stepsData.length ?
                         <Stack sx={{ flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
                             <Typography variant='p' onClick={handleBack} sx={{ cursor: "pointer" }}>
@@ -91,7 +82,7 @@ function StepperComponent() {
                                 sx={{ width: "80%", background: "transparent" }}
 
                             />
-                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "34px"}} />
+                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "34px", cursor: "pointer"}} />
                         </Stack>
                         : ""}
 
@@ -126,41 +117,6 @@ function StepperComponent() {
                                             ""
                                 }
                             </Box>
-
-                            //         <Box sx={{ padding: "25px 0" }}>
-                            //             <Typography variant="h5" sx={{ color: "#fff"}}>{stepsData[activeStep].title}</Typography>
-
-                            //             <Box sx={{ padding: "25px 0 0 0" }}>
-                            //                 <Stack flexDirection="inherit" justifyContent="center" gap="100px">
-                            //                <>
-                            //                 <FormControl>
-                            //                      <RadioGroup
-                            //                         aria-labelledby="demo-radio-buttons-group-label"
-                            //                         defaultValue="female"
-                            //                         name="radio-buttons-group"
-                            //                     >
-                            //                         {stepsData[activeStep].leftColumn.map((item, index) => (
-                            //                             <FormControlLabel sx={{ color: "#fff" }} value={item} control={<Radio />} label={item} />
-                            //                         ))}
-                            //                     </RadioGroup>
-                            //                 </FormControl>
-                            //                     <FormControl>
-                            //                         <RadioGroup
-                            //                             aria-labelledby="demo-radio-buttons-group-label"
-                            //                             defaultValue="female"
-                            //                             name="radio-buttons-group"
-                            //                         >
-                            //                           {stepsData[activeStep].rightColumn.map((item, index) => (
-                            //                                 <FormControlLabel sx={{color : "#fff"}} value={item} control={<Radio />} label={item} />
-                            //                             ))}
-                            //                         </RadioGroup>
-                            //                     </FormControl>
-                            //                    </>
-                            //                  </Stack>
-
-                            //             </Box>
-
-                            //    </Box>
                         )}
                     </Box>
                 </>
