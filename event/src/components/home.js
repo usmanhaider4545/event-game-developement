@@ -91,7 +91,7 @@ function StepperComponent() {
                                 sx={{ width: "80%", background: "transparent" }}
 
                             />
-                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "30px", cursor: "pointer" }} />
+                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "34px"}} />
                         </Stack>
                         : ""}
 
