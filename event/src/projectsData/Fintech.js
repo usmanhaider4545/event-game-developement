@@ -5,7 +5,7 @@ export const Fintech = [
       {
         name: "Ease of Use",
         manDays: "10-20 man-days",
-        totalManDays: 150,
+        totalManDays: 20,
       },
       {
         name: "Security",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Stack, StepLabel, Stepper, Typography, Container, Box } from '@mui/material';
-  import FormControlLabel from '@mui/material/FormControlLabel';
- import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 function AppType(props) {
 
@@ -9,7 +9,7 @@ function AppType(props) {
         MobileApp: false,
         WebApplication: false,
         EnterpriseSoftware: false,
-        CloudBasedSolution : false
+        CloudBasedSolution: false
     });
 
     const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } = DNC;
@@ -30,7 +30,7 @@ function AppType(props) {
         } else {
             props.activeDisabledBtn();
         }
-        
+
     }, [handleChange]);
 
     useEffect(() => {
@@ -41,36 +41,40 @@ function AppType(props) {
         localStorage.clear("appSoftware");
     }
 
- 
+
     return (
 
-                <Box>
-             <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "32px" }}>
-           What type of app are you looking for?
-             </Typography>
-             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width = "50%"  margin = "auto">
+        <Box>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "32px" }}>
+                What type of app are you looking for?
+            </Typography>
+            <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="50%" margin="auto">
                 <FormControlLabel
                     control={
-                        <Checkbox checked={MobileApp} onChange={handleChange} name="MobileApp" />
+                        <Checkbox
+                            style={{ color: '#fff' }}
+                            checked={MobileApp}
+                            onChange={handleChange}
+                            name="MobileApp" />
                     }
                     label="Mobile App"
                 />
                 <FormControlLabel
                     control={
-                        <Checkbox checked={WebApplication} onChange={handleChange} name="WebApplication" />
+                        <Checkbox style={{ color: '#fff' }} checked={WebApplication} onChange={handleChange} name="WebApplication" />
                     }
                     label="Web Application"
                 />
 
                 <FormControlLabel
                     control={
-                        <Checkbox checked={EnterpriseSoftware} onChange={handleChange} name="EnterpriseSoftware" />
+                        <Checkbox style={{ color: '#fff' }} checked={EnterpriseSoftware} onChange={handleChange} name="EnterpriseSoftware" />
                     }
                     label="Enterprise Software"
                 />
                 <FormControlLabel
                     control={
-                        <Checkbox checked={CloudBasedSolution} onChange={handleChange} name="CloudBasedSolution" />
+                        <Checkbox style={{ color: '#fff' }} checked={CloudBasedSolution} onChange={handleChange} name="CloudBasedSolution" />
                     }
                     label="Cloud-based Solution"
                 />

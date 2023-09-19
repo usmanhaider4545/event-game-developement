@@ -20,7 +20,7 @@ import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
 
 function CategoriesFeatures(props) {
-    
+
     const [localStorageCategory, setLocalStorageCategory] = useState(localStorage.getItem("appCategory"));
 
     const [localStorageIndustry, setLocalStorageIndustry] = useState(localStorage.getItem("industry"));
@@ -303,6 +303,7 @@ function CategoriesFeatures(props) {
                             name={f.name} 
                             inputProps={{ 'aria-label': f.manDays }}
                             value={f.totalManDays} 
+                            style={{ color: '#fff' }}
                             />
                         }
                         label={f.name}
@@ -321,6 +322,7 @@ function CategoriesFeatures(props) {
                                     name={f.name}
                                     inputProps={{ 'aria-label': f.manDays }}
                                     value={f.totalManDays}
+                                    style={{ color: '#fff' }}
                                 />
                             }
                             label={f.name}
@@ -341,6 +343,7 @@ function CategoriesFeatures(props) {
                                         name={f.name}
                                         inputProps={{ 'aria-label': f.manDays }}
                                         value={f.totalManDays}
+                                        style={{ color: '#fff' }}
                                     />
                                 }
                                 label={f.name}
@@ -361,6 +364,7 @@ function CategoriesFeatures(props) {
                                         name={f.name}
                                         inputProps={{ 'aria-label': f.manDays }}
                                         value={f.totalManDays}
+                                        style={{ color: '#fff' }}
                                     />
                                 }
                                 label={f.name}

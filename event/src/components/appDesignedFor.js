@@ -48,20 +48,20 @@ function AppDesignedFor(props) {
              <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width = "50%"  margin = "auto">
                 <FormControlLabel
                     control={
-                        <Checkbox checked={Consumer} onChange={handleChange} name="Consumer" />
+                         <Checkbox style={{ color: '#fff' }} checked={Consumer} onChange={handleChange} name="Consumer" />
                     }
                     label="Consumer Use"
                 />
                 <FormControlLabel
                     control={
-                        <Checkbox checked={Business} onChange={handleChange} name="Business" />
+                         <Checkbox style={{ color: '#fff' }} checked={Business} onChange={handleChange} name="Business" />
                     }
                     label="Business Use"
                 />
 
                 <FormControlLabel
                     control={
-                        <Checkbox checked={NotYet} onChange={handleChange} name="NotYet" />
+                         <Checkbox style={{ color: '#fff' }} checked={NotYet} onChange={handleChange} name="NotYet" />
                     }
                     label="Not sure yet"
                 />

@@ -36,7 +36,7 @@ export const ArtificialInteligence = [
       {
         name: "Escalation to human agents when necessary",
         manDays: "16-32 days",
-        totalManDays: 28,
+        totalManDays: 30,
       },
       {
         name: "Sentiment analysis for gauging customer satisfaction",
