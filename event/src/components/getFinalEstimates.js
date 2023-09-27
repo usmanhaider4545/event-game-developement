@@ -32,16 +32,25 @@ function GetFinalEstimates() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                        {parsManDays.map((row , index) => (
-                        <TableRow
-                            key={row.selectedFeatures}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                                <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[0] ? row[0] : "-"}</TableCell>
-                                {/* <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[1] ? row[1] : "-"}</TableCell> */}
-                                <TableCell sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }} align="left">{row[2]  ? row[2] + " Days" : "-"}</TableCell>
-                         </TableRow>
-                    ))}
+                    {
+                        parsManDays.map((row, index) => (
+                            <TableRow
+                                key={index}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            >
+                                <TableCell
+                                    sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }}
+                                    align="left">
+                                    {row.name ? row.name : "-"}
+                                </TableCell>
+                                <TableCell
+                                    sx={{ borderBottom: "1px solid var(--Stroke, rgba(59, 130, 246, 0.54))" }}
+                                    align="left">
+                                    {row.value ? row.value + " Days" : "-"}
+                                </TableCell>
+                            </TableRow>
+                        ))
+                    }
                 </TableBody>
             </Table>
         </TableContainer>

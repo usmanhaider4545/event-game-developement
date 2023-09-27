@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Box, Stack, Typography } from '@mui/material';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import { Box, Stack, Typography, FormControlLabel, Checkbox } from '@mui/material';
 import { DigitalSignage } from "../projectsData/DigitalSignage";
 import { Fintech } from "../projectsData/Fintech";
 import { WayFinding } from "../projectsData/WayFinding";
@@ -21,9 +19,9 @@ import { useDraggable } from "react-use-draggable-scroll";
 
 function CategoriesFeatures(props) {
 
-    const [localStorageCategory, setLocalStorageCategory] = useState(localStorage.getItem("appCategory"));
+    const localStorageCategory = localStorage.getItem("appCategory");
+    const localStorageIndustry = localStorage.getItem("industry");
 
-    const [localStorageIndustry, setLocalStorageIndustry] = useState(localStorage.getItem("industry"));
 
     const ref = useRef();
 
@@ -31,37 +29,46 @@ function CategoriesFeatures(props) {
 
     const [features, setFeatures] = useState([]);
 
-    const [totalManDays, setTotalManDays] = useState([]);
+    const [totalManDays, setTotalManDays] = useState(() => {
+        const storedManDays = localStorage.getItem("totalManDays");
+        return storedManDays ? JSON.parse(storedManDays) : [];
+    });
 
     const handleChange = (event) => {
-         if (event.target.checked){
-             let parsValue = parseInt(event.target.value);
-        totalManDays.push([
-            event.target.name,
-            event.target.ariaLabel,
-            parsValue
-        ]);
-         } else {
-             totalManDays.map((array , index) => {
-                 for (var i = array.length - 1; i >= 0; i--) {
-                     if (array[i] == event.target.name) {
-                         totalManDays.splice(index, 1);
-                     }
-                 }
-             })
-         }
-        if (totalManDays.length === 0) {
+        const { checked, value, name, ariaLabel } = event.target;
+        let updatedManDays = [...totalManDays];
+
+        if (checked) {
+            const parsedValue = parseInt(value, 10);
+            updatedManDays.push({
+                name,
+                ariaLabel,
+                value: parsedValue
+            });
+        } else {
+            updatedManDays = updatedManDays.filter(day => day.name !== name);
+        }
+
+        setTotalManDays(updatedManDays);
+
+        if (updatedManDays.length === 0) {
             props.activeDisabledBtn();
-        }else{
+        } else {
             props.removeDisabledButton();
         }
-        let totalManDaysStringfy = JSON.stringify(totalManDays);
-        localStorage.setItem("totalManDays", totalManDaysStringfy);
+
+        const totalManDaysStringify = JSON.stringify(updatedManDays);
+        localStorage.setItem("totalManDays", totalManDaysStringify);
     };
 
     useEffect(() => {
          window.onbeforeunload = closeIt;
-        getDataCategories();
+            getDataCategories();
+        if (totalManDays.length === 0) {
+            props.activeDisabledBtn();
+        } else {
+            props.removeDisabledButton();
+        }
     }, []);
 
 
@@ -304,6 +311,7 @@ function CategoriesFeatures(props) {
                             inputProps={{ 'aria-label': f.manDays }}
                             value={f.totalManDays} 
                             style={{ color: '#fff' }}
+                            defaultChecked={totalManDays.some(day => day.name === f.name)}
                             />
                         }
                         label={f.name}
@@ -323,6 +331,7 @@ function CategoriesFeatures(props) {
                                     inputProps={{ 'aria-label': f.manDays }}
                                     value={f.totalManDays}
                                     style={{ color: '#fff' }}
+                                    defaultChecked={totalManDays.some(day => day.name === f.name)}
                                 />
                             }
                             label={f.name}
@@ -344,6 +353,7 @@ function CategoriesFeatures(props) {
                                         inputProps={{ 'aria-label': f.manDays }}
                                         value={f.totalManDays}
                                         style={{ color: '#fff' }}
+                                        defaultChecked={totalManDays.some(day => day.name === f.name)}
                                     />
                                 }
                                 label={f.name}
@@ -365,6 +375,7 @@ function CategoriesFeatures(props) {
                                         inputProps={{ 'aria-label': f.manDays }}
                                         value={f.totalManDays}
                                         style={{ color: '#fff' }}
+                                        defaultChecked={totalManDays.some(day => day.name === f.name)}
                                     />
                                 }
                                 label={f.name}

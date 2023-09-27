@@ -38,6 +38,9 @@ function Categories(props) {
     const handleChange = (event) => {
         setValue(event.target.value);
         localStorage.setItem("appCategory", event.target.value);
+        if(localStorage.getItem("totalManDays")) {
+            localStorage.removeItem("totalManDays");
+        }
         props.removeDisabledButton();
     };
 
