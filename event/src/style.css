@@ -159,7 +159,7 @@ button {
 }
 .App::before {
     content: "";
-    background-image: url("./images/bgGifImage.gif");
+    background-image: url(http://192.168.101.139:3000/static/media/bgGifImage.940484df8e074a359374.gif);
     background-repeat: no-repeat;
     background-size: 750px;
     background-position: center center;
@@ -167,16 +167,23 @@ button {
     opacity: 0.8;
     width: 750px;
     height: 750px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto;
+     margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
 }
 
 
 
 @media all and (max-width:1367px) {
-    .resultBox .manDays {
-            font-size: 47px;
+    .actionButton {
+            bottom: 23px !important;
+        }
+    .progressBar {
+            top: 25px;
         }
     .optionsBlocks label {
         padding: 3px 15px;
@@ -190,7 +197,8 @@ button {
     }
 
     .resultBox {
-        margin: 30px auto 40px;
+        margin: 40px auto 20px;
+        padding: 5px 10px;
     }
         .reset {
              font-size: 18px;
