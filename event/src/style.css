@@ -157,6 +157,23 @@ button {
     font-weight: 400 !important;
     line-height: normal !important;
 }
+.App::before {
+    content: "";
+    background-image: url("./images/bgGifImage.gif");
+    background-repeat: no-repeat;
+    background-size: 750px;
+    background-position: center center;
+    background-color: rgb(15, 23, 42);
+    opacity: 0.8;
+    width: 750px;
+    height: 750px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+}
+
+
+
 @media all and (max-width:1367px) {
     .resultBox .manDays {
             font-size: 47px;
