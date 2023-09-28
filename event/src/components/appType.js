@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Stack, StepLabel, Stepper, Typography, Container, Box } from '@mui/material';
+import {  Stack, Typography, Container, Box } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+const getDefaultDNC = () => ({
+    MobileApp: false,
+    WebApplication: false,
+    EnterpriseSoftware: false,
+    CloudBasedSolution: false
+});
 
+const getInitialDNC = () => {
+    const storedValue = localStorage.getItem("appSoftware");
+    return storedValue ? JSON.parse(storedValue) : getDefaultDNC();
+};
 function AppType(props) {
 
-    const [DNC, setDNC] = React.useState({
-        MobileApp: false,
-        WebApplication: false,
-        EnterpriseSoftware: false,
-        CloudBasedSolution: false
-    });
+    const [DNC, setDNC] = useState(getInitialDNC);
 
     const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } = DNC;
 

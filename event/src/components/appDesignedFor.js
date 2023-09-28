@@ -3,13 +3,18 @@ import { Box, Stack, Typography } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
- 
+const getDefaultDNC = () => ({
+    Consumer: false,
+    Business: false,
+    NotYet: false
+});
+
+const getInitialDNC = () => {
+    const storedValue = localStorage.getItem("appDesignedFor");
+    return storedValue ? JSON.parse(storedValue) : getDefaultDNC();
+};
 function AppDesignedFor(props) {
-     const [DNC, setDNC] = React.useState({
-        Consumer: false,
-        Business: false,
-        NotYet: false
-    });
+     const [DNC, setDNC] = useState(getInitialDNC);
 
     const { Consumer, Business, NotYet } = DNC;
 

@@ -19,6 +19,9 @@ function Industries(props) {
     const handleChange = (event) => {
         setValue(event.target.value);
         localStorage.setItem("industry", event.target.value);
+        if(localStorage.getItem("totalManDays")) {
+            localStorage.removeItem("totalManDays");
+        }
         props.removeDisabledButton();
     };
 
