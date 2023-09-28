@@ -22,16 +22,16 @@ function TotalManDays() {
         return (
                 <Box>
                         <Box className="resultBox" style={{ backgroundImage: `url(${ResultsBG})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-                                <Typography variant='p' sx={{ color: "#fff", fontSize: "24px" , pb: 1 }}>
+                                <Typography variant='p' sx={{ color: "#fff", fontSize: "1.3vw" , pb: 1 }}>
                                         <b> Choose Intagleo </b> for a fast delivery in
                                 </Typography>
-                                <Typography className="manDays" variant='h4' sx={{ color: "#fff", fontSize: "65px", fontWeight: "700" }}>
+                                <Typography className="manDays" variant='h4' sx={{ color: "#fff", fontSize: "3vw", fontWeight: "700" }}>
                                         {selectedTotalManDays ? selectedTotalManDays : ""} Man Days
                                 </Typography>
                         </Box>
 
                         <Box>
-                                <Typography sx={{ fontSize: "32px", color: "#fff", fontWeight: "700" }}>
+                                <Typography sx={{ fontSize: "1.8vw", color: "#fff", fontWeight: "700" }}>
                                         Why you should choose intagleo
                                 </Typography>
 

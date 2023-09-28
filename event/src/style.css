@@ -116,25 +116,26 @@ button {
 }
 
 /* width */
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 3px;
     height: 3px;
 }
 
 /* Track */
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #3b82f640;
 }
 
 /* Handle */
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #3B82F6;
 }
 
 /* Handle on hover */
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
 .reset {
     color: #fff;
     font-size: 22px;
@@ -142,24 +143,28 @@ button {
 
 .appTable {
     border-radius: 10px;
-        border: 2px solid var(--Stroke, rgba(59, 130, 246, 0.54));
-        background: rgba(255, 255, 255, 0.09);
-        box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
-        backdrop-filter: blur(26.94999885559082px);
-        padding: 0px 24px;
-        margin: 20px 0;
- }
- .appTable table tr, th, td {
-     color: #FFF !important;
-     font-family: Nunito !important;
+    border: 2px solid var(--Stroke, rgba(59, 130, 246, 0.54));
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+    backdrop-filter: blur(26.94999885559082px);
+    padding: 0px 24px;
+    margin: 20px 0;
+}
+
+.appTable table tr,
+th,
+td {
+    color: #FFF !important;
+    font-family: Nunito !important;
     font-size: 20px !important;
     font-style: normal !important;
     font-weight: 400 !important;
     line-height: normal !important;
 }
+
 .App::before {
     content: "";
-    background-image: url("./images/bgGifImage.gif");
+    background-image: url(http://192.168.101.139:3000/static/media/bgGifImage.940484df8e074a359374.gif);
     background-repeat: no-repeat;
     background-size: 750px;
     background-position: center center;
@@ -167,32 +172,45 @@ button {
     opacity: 0.8;
     width: 750px;
     height: 750px;
-    display: inline-block;
-    vertical-align: middle;
     margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
 }
 
 
 
 @media all and (max-width:1367px) {
-    .resultBox .manDays {
-            font-size: 47px;
-        }
+    .actionButton {
+        bottom: 23px !important;
+    }
+
+    .progressBar {
+        top: 25px;
+    }
+
     .optionsBlocks label {
         padding: 3px 15px;
     }
-.whyChoose ul li {
-    font-size: 19px;
-    padding-bottom: 8px;
-}
+
+    .whyChoose ul li {
+        font-size: 17px;
+        padding-bottom: 8px;
+    }
+
     .optionsBlocks span {
         font-size: 19px;
     }
 
     .resultBox {
-        margin: 30px auto 40px;
+        margin: 40px auto 20px;
+        padding: 5px 10px;
     }
-        .reset {
-             font-size: 18px;
-        }
+
+    .reset {
+        font-size: 18px;
+    }
 }

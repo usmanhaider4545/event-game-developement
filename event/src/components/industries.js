@@ -37,7 +37,7 @@ function Industries(props) {
 
     return (
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "20px 0", fontWeight: "700", fontSize: "32px" }}>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "20px 0", fontWeight: "700", fontSize: "1.8vw" }}>
                 Which industry does your product belong to?
             </Typography>
             <Stack className='optionsBlocks' flexDirection="inherit" justifyContent="center" gap="100px">

@@ -290,7 +290,7 @@ function CategoriesFeatures(props) {
 
     return (
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: "32px" }}>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: "1.8vw" }}>
                 What features do you envision for the {localStorageCategory} in {localStorageIndustry}?
             </Typography>
             <Stack {...events} ref={ref} sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">

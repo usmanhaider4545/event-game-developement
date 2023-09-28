@@ -43,10 +43,36 @@ function StepperComponent() {
     };
 
     return (
-        <Container sx={{ transform: "translate(50%,-50%)", right: "50%", top: "50%", position: "absolute" }}>
+   <>
+            {activeStep !== stepsData.length && activeStep !== 0 ?
+            <Stack className='progressBar' sx={{ position: "fixed", top: "40px", right: "0", left: "0", zIndex : "999" , margin: "auto", maxWidth: "1030px", flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
+                <Typography variant='p' onClick={handleBack} sx={{ cursor: "pointer" }}>
+                    {activeStep == 1 ?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        :
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82159 22.5607L0.432141 13.0147C-0.144042 12.4289 -0.144042 11.4792 0.432141 10.8934L9.82159 1.34745C10.3978 0.761667 11.332 0.761667 11.9081 1.34745C12.4843 1.93324 12.4843 2.88299 11.9081 3.46878L5.03737 10.4541L30 10.4541L30 13.4541L5.03737 13.4541L11.9081 20.4393C12.4843 21.0251 12.4843 21.9749 11.9081 22.5607C11.332 23.1464 10.3978 23.1464 9.82159 22.5607Z" fill="white" />
+                        </svg>
+                    }
+                </Typography>
+                <MobileStepper
+                    variant="progress"
+                    steps={stepsData.length}
+                    position="static"
+                    activeStep={activeStep}
+                    sx={{ width: "80%", background: "transparent" }}
+
+                />
+                <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "34px", cursor: "pointer" }} />
+            </Stack>
+            : ""}
+
 
             {activeStep == 0 ?
-                <Box>
+            <Container sx={{ height: "100%", zIndex: "123"}}>
+                <Box sx={{ transform: "translate(50%,-50%)", right: "50%", top: "42%", position: "absolute" }}>
                     <Typography variant='h2'>
                         <img src={Logo} />
                     </Typography>
@@ -55,45 +81,22 @@ function StepperComponent() {
                         <Typography sx={{ fontSize: "32px", color: "#fff" }}>Hey there 👋 </Typography>
                         <Typography sx={{ pt: 5, fontSize: "60px", color: "#fff" }}>
                             <strong>Have a product idea? </strong></Typography>
-                        <Typography sx={{ fontSize: "60px", color: "#fff" }}> Get time and workforce estimations now!  </Typography>
+                            <Typography sx={{ fontSize: "3.4vw", color: "#fff" }}> Get time and workforce estimations now!  </Typography>
                     </Box>
 
                 </Box>
+             </Container>
                 :
 
                 <>
-                    {activeStep !== stepsData.length ?
-                        <Stack sx={{ flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
-                            <Typography variant='p' onClick={handleBack} sx={{ cursor: "pointer" }}>
-                                {activeStep == 1 ?
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                                        <path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                    :
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82159 22.5607L0.432141 13.0147C-0.144042 12.4289 -0.144042 11.4792 0.432141 10.8934L9.82159 1.34745C10.3978 0.761667 11.332 0.761667 11.9081 1.34745C12.4843 1.93324 12.4843 2.88299 11.9081 3.46878L5.03737 10.4541L30 10.4541L30 13.4541L5.03737 13.4541L11.9081 20.4393C12.4843 21.0251 12.4843 21.9749 11.9081 22.5607C11.332 23.1464 10.3978 23.1464 9.82159 22.5607Z" fill="white" />
-                                    </svg>
-                                }
-                            </Typography>
-                            <MobileStepper
-                                variant="progress"
-                                steps={stepsData.length}
-                                position="static"
-                                activeStep={activeStep}
-                                sx={{ width: "80%", background: "transparent" }}
-
-                            />
-                            <RestartAltIcon onClick={resetAction} sx={{ color: "#fff", fontSize: "34px", cursor: "pointer"}} />
-                        </Stack>
-                        : ""}
-
-                    <Box>
+                   <Container sx={{ height: "100%", zIndex: "123", position: "relative" }}>
+                        <Box sx={{ transform: "translate(50%,-50%)", right: "50%", top: "50%", position: "absolute", width: "100%" }}>
                         {activeStep === stepsData.length ? (
                             <div>
                                 <Typography variant="h5">All steps completed</Typography>
                             </div>
                         ) : (
-                            <Box>
+                            <>
                                 {activeStep === 1 ?
                                         <Industries removeDisabledButton={removeDisabledButton} />
                                     :
@@ -117,19 +120,24 @@ function StepperComponent() {
                                                 :
                                             ""
                                 }
-                            </Box>
+                          </>
                         )}
                     </Box>
+              </Container>
                 </>
             }
+           
+
             {activeStep !== 7 ? 
-                <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? "disabled" : "" }  onClick={handleNext} sx={{fontWeight : "700" , background: "#3B82F6 !important", width: "100%", maxWidth: "890px", marginTop: "30px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
+          <Box className="actionButton" sx={{ position: "fixed", bottom: "43px", right: "0", left: "0", zIndex: "999" }}>  
+              <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? "disabled" : ""} onClick={handleNext} sx={{ fontWeight: "700", background: "#3B82F6 !important", width: "100%", maxWidth: "890px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
                     {activeStep === 0 ? "Get Started" : activeStep === 6 ? "Get final estimates" : "Next"}
             </Button>
+                </Box>
             : ""
             }
+        </>
 
-        </Container>
     );
 }
 

@@ -42,10 +42,10 @@ function AppDesignedFor(props) {
 
      return (
         <Box>
-             <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "32px" }}>
+             <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "1.8vw" }}>
                  Who's your app designed for? 
              </Typography>
-             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width = "50%"  margin = "auto">
+             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" maxWidth="450px" margin = "auto">
                 <FormControlLabel
                     control={
                          <Checkbox style={{ color: '#fff' }} checked={Consumer} onChange={handleChange} name="Consumer" />
