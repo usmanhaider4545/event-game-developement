@@ -50,7 +50,7 @@ function AppType(props) {
     return (
 
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: "1.8vw" }}>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
                 What type of app are you looking for?
             </Typography>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" maxWidth ="450px" margin="auto">
