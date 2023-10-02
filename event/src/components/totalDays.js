@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
-import PersonIcon from '@mui/icons-material/Person';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-import MailIcon from '@mui/icons-material/Mail';
+import { Box, Typography } from '@mui/material';
+import UserInformation from "./UserInformation";
 
-function TotalManDays() {
 
-        const [localStorageManDays, setLocalStorageManDays] = useState(localStorage.getItem("totalManDays"));
+function TotalManDays(props) {
+        const localStorageManDays = localStorage.getItem("totalManDays");
 
         const [selectedTotalManDays, setSelectedTotalManDays] = useState();
 
@@ -23,69 +18,14 @@ function TotalManDays() {
                 setSelectedTotalManDays(daysSum);
         }, []);
 
-        
+        const enableActionButton = () => {
+                props.removeDisabledButton();
+        };
 
 
         return (
                 <Box>
-                        <Box>
-                                <Typography variant='h6' sx={{ color: "#fff", fontSize: "32px", pb: 1 , fontWeight : "700"  }}>
-                                        Enter information for final results
-                                </Typography>
-                                <Box className="resultBox" >
-                                        <Grid container spacing={2}>
-                                                <Grid sx={{ padding: "0" }} item xs={6}>
-                                                        <TextField 
-                                                          id="name" 
-                                                          label="Name"
-                                                          variant="standard"
-                                                                fullWidth
-                                                        sx={{
-                                                                "& .MuiInputLabel-root": { color: "#fff" },
-                                                                borderBottom: "1px solid #fff",
-                                                          }} 
-                                                                InputProps={{ 
-                                                                        disableUnderline: true, 
-                                                                        style: { color: "#fff" },
-                                                                        endAdornment: (
-                                                                                 <InputAdornment position="end">
-                                                                                        <PersonIcon sx={{color : "#fff"}} />
-                                                                                </InputAdornment>
-                                                                        )
-                                                                 }}
-                                                                />
-                                                </Grid>
-                                                <Grid item xs={6}>
-                                                        <TextField fullWidth id="phone" label="Phone" variant="standard" sx={{
-                                                                "& .MuiInputLabel-root": { color: "#fff" },
-                                                                borderBottom: "1px solid #fff",
-                                                         }}
-                                                                InputProps={{ disableUnderline: true,
-                                                                 style: { color: "#fff" },
-                                                                        endAdornment: (
-                                                                                <InputAdornment position="end">
-                                                                                        <PhoneEnabledIcon sx={{ color: "#fff" }} />
-                                                                                </InputAdornment>
-                                                                        )
-                                                                  }} />
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                        <TextField fullWidth id="email" label="Email" variant="standard" sx={{
-                                                                "& .MuiInputLabel-root": { color: "#fff" },
-                                                                borderBottom: "1px solid #fff",
-                                                         }}
-                                                                InputProps={{ disableUnderline: true,
-                                                                 style: { color: "#fff" },
-                                                                        endAdornment: (
-                                                                                <InputAdornment position="end">
-                                                                                        <MailIcon sx={{ color: "#fff" }} />
-                                                                                </InputAdornment>
-                                                                        )
-                                                                 }} />
-                                                </Grid>
-                                        </Grid>
-                                </Box>
-                        </Box>
+                        <UserInformation enableActionButton={enableActionButton} />
 
                         <Box>
                                 <Typography sx={{ fontSize: { xs: "32px", md: "27px" }, color: "#fff", fontWeight: "700" }}>
