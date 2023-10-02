@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import UserInformation from "./UserInformation";
 
 
-function TotalManDays(props) {
+function TotalManDays({removeDisabledButton,activeDisabledBtn}) {
         const localStorageManDays = localStorage.getItem("totalManDays");
 
         const [selectedTotalManDays, setSelectedTotalManDays] = useState();
@@ -19,13 +19,16 @@ function TotalManDays(props) {
         }, []);
 
         const enableActionButton = () => {
-                props.removeDisabledButton();
+                removeDisabledButton();
         };
+        const disableActionButton = () => {
+                activeDisabledBtn()
+        }
 
 
         return (
                 <Box>
-                        <UserInformation enableActionButton={enableActionButton} />
+                        <UserInformation enableActionButton={enableActionButton} disableActionButton={disableActionButton} />
 
                         <Box>
                                 <Typography sx={{ fontSize: { xs: "32px", md: "27px" }, color: "#fff", fontWeight: "700" }}>
