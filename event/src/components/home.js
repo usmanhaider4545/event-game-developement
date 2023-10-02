@@ -119,7 +119,7 @@ function StepperComponent() {
                                                     <GetFinalEstimates />
                                                     :
                                                 activeStep === 7 ? 
-                                                            <TotalManDays resetAction={resetAction} removeDisabledButton={removeDisabledButton}/>
+                                                            <TotalManDays resetAction={resetAction} removeDisabledButton={removeDisabledButton} activeDisabledBtn={activeDisabledBtn}/>
                                                 :
                                             ""
                                 }
