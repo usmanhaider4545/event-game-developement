@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import ResultsBG from "../images/Result-Page.png";
- 
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import PersonIcon from '@mui/icons-material/Person';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import MailIcon from '@mui/icons-material/Mail';
+
 function TotalManDays() {
 
-   const [localStorageManDays, setLocalStorageManDays] = useState(localStorage.getItem("totalManDays"));
+        const [localStorageManDays, setLocalStorageManDays] = useState(localStorage.getItem("totalManDays"));
 
         const [selectedTotalManDays, setSelectedTotalManDays] = useState();
 
@@ -13,25 +18,77 @@ function TotalManDays() {
                 let getNumberFromArray = [];
                 parsManDays.map((item, index) => {
                         getNumberFromArray.push(item[2]);
-                 })
+                })
                 const daysSum = getNumberFromArray.reduce((partialSum, a) => partialSum + a, 0);
                 setSelectedTotalManDays(daysSum);
         }, []);
 
- 
+        
+
+
         return (
                 <Box>
-                        <Box className="resultBox" style={{ backgroundImage: `url(${ResultsBG})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-                                <Typography variant='p' sx={{ color: "#fff", fontSize: "1.3vw" , pb: 1 }}>
-                                        <b> Choose Intagleo </b> for a fast delivery in
+                        <Box>
+                                <Typography variant='h6' sx={{ color: "#fff", fontSize: "32px", pb: 1 , fontWeight : "700"  }}>
+                                        Enter information for final results
                                 </Typography>
-                                <Typography className="manDays" variant='h4' sx={{ color: "#fff", fontSize: "3vw", fontWeight: "700" }}>
-                                        {selectedTotalManDays ? selectedTotalManDays : ""} Man Days
-                                </Typography>
+                                <Box className="resultBox" >
+                                        <Grid container spacing={2}>
+                                                <Grid sx={{ padding: "0" }} item xs={6}>
+                                                        <TextField 
+                                                          id="name" 
+                                                          label="Name"
+                                                          variant="standard"
+                                                                fullWidth
+                                                        sx={{
+                                                                "& .MuiInputLabel-root": { color: "#fff" },
+                                                                borderBottom: "1px solid #fff",
+                                                          }} 
+                                                                InputProps={{ 
+                                                                        disableUnderline: true, 
+                                                                        style: { color: "#fff" },
+                                                                        endAdornment: (
+                                                                                 <InputAdornment position="end">
+                                                                                        <PersonIcon sx={{color : "#fff"}} />
+                                                                                </InputAdornment>
+                                                                        )
+                                                                 }}
+                                                                />
+                                                </Grid>
+                                                <Grid item xs={6}>
+                                                        <TextField fullWidth id="phone" label="Phone" variant="standard" sx={{
+                                                                "& .MuiInputLabel-root": { color: "#fff" },
+                                                                borderBottom: "1px solid #fff",
+                                                         }}
+                                                                InputProps={{ disableUnderline: true,
+                                                                 style: { color: "#fff" },
+                                                                        endAdornment: (
+                                                                                <InputAdornment position="end">
+                                                                                        <PhoneEnabledIcon sx={{ color: "#fff" }} />
+                                                                                </InputAdornment>
+                                                                        )
+                                                                  }} />
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                        <TextField fullWidth id="email" label="Email" variant="standard" sx={{
+                                                                "& .MuiInputLabel-root": { color: "#fff" },
+                                                                borderBottom: "1px solid #fff",
+                                                         }}
+                                                                InputProps={{ disableUnderline: true,
+                                                                 style: { color: "#fff" },
+                                                                        endAdornment: (
+                                                                                <InputAdornment position="end">
+                                                                                        <MailIcon sx={{ color: "#fff" }} />
+                                                                                </InputAdornment>
+                                                                        )
+                                                                 }} />
+                                                </Grid>
+                                        </Grid>
+                                </Box>
                         </Box>
 
                         <Box>
-                                <Typography sx={{ fontSize: "1.8vw", color: "#fff", fontWeight: "700" }}>
+                                <Typography sx={{ fontSize: { xs: "32px", md: "27px" }, color: "#fff", fontWeight: "700" }}>
                                         Why you should choose intagleo
                                 </Typography>
 

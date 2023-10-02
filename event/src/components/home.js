@@ -72,7 +72,7 @@ function StepperComponent() {
 
             {activeStep == 0 ?
             <Container sx={{ height: "100%", zIndex: "123"}}>
-                <Box sx={{ transform: "translate(50%,-50%)", right: "50%", top: "42%", position: "absolute" }}>
+                <Box sx={{ transform: "translate(50%,-50%)", right: "50%", top: "42%", position: "absolute" ,width:"100%" }}>
                     <Typography variant='h2'>
                         <img src={Logo} />
                     </Typography>
@@ -81,7 +81,7 @@ function StepperComponent() {
                         <Typography sx={{ fontSize: "32px", color: "#fff" }}>Hey there 👋 </Typography>
                         <Typography sx={{ pt: 5, fontSize: "60px", color: "#fff" }}>
                             <strong>Have a product idea? </strong></Typography>
-                            <Typography sx={{ fontSize: "3.4vw", color: "#fff" }}> Get time and workforce estimations now!  </Typography>
+                            <Typography sx={{ fontSize: "60px", color: "#fff" }}> Get time and workforce estimations now!  </Typography>
                     </Box>
 
                 </Box>

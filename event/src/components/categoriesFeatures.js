@@ -37,7 +37,7 @@ function CategoriesFeatures(props) {
     const handleChange = (event) => {
         const { checked, value, name, ariaLabel } = event.target;
         let updatedManDays = [...totalManDays];
-
+        
         if (checked) {
             const parsedValue = parseInt(value, 10);
             updatedManDays.push({
@@ -297,7 +297,7 @@ function CategoriesFeatures(props) {
 
     return (
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: "1.8vw" }}>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "18px 0", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
                 What features do you envision for the {localStorageCategory} in {localStorageIndustry}?
             </Typography>
             <Stack {...events} ref={ref} sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
