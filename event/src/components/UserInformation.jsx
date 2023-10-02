@@ -12,7 +12,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 
 function  UserInformation (props)  {
-    const {enableActionButton} = this.props;
+    const {enableActionButton} = props;
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -89,7 +89,7 @@ function  UserInformation (props)  {
                                            </InputAdornment>
                                        )
                                    }}
-                                   onChange={(e) => setEmail(e.target.value)}/>
+                                   onChange={(e) => setEmail(e.target.value)}
 
                         />
                     </Grid>

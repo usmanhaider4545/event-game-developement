@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
-import userInformation from "./UserInformation";
+import UserInformation from "./UserInformation";
 
 
-function TotalManDays({activeDisabledBtn}) {
-
+function TotalManDays(props) {
         const localStorageManDays = localStorage.getItem("totalManDays");
 
         const [selectedTotalManDays, setSelectedTotalManDays] = useState();
@@ -20,13 +19,13 @@ function TotalManDays({activeDisabledBtn}) {
         }, []);
 
         const enableActionButton = () => {
-                activeDisabledBtn();
+                props.removeDisabledButton();
         };
 
 
         return (
                 <Box>
-                        <userInfo enableActionButton={enableActionButton} />
+                        <UserInformation enableActionButton={enableActionButton} />
 
                         <Box>
                                 <Typography sx={{ fontSize: { xs: "32px", md: "27px" }, color: "#fff", fontWeight: "700" }}>
