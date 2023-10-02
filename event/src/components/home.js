@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Step, StepLabel, Stepper, Typography, Container, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { Button, Typography, Container, Box } from '@mui/material';
 import stepsData from '../steps.json';
 import Logo from "../images/logo.png"
 import MobileStepper from '@mui/material/MobileStepper';
@@ -12,6 +12,7 @@ import CategoriesFeatures from "./categoriesFeatures";
 import TotalManDays from "./totalDays";
 import GetFinalEstimates from "./getFinalEstimates";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import ActionButton from "./ActionButton";
 
 
  
@@ -40,6 +41,8 @@ function StepperComponent() {
 
     const resetAction = () => {
         setActiveStep(0)
+        localStorage.clear();
+
     };
 
     return (
@@ -47,7 +50,7 @@ function StepperComponent() {
             {activeStep !== stepsData.length && activeStep !== 0 ?
             <Stack className='progressBar' sx={{ position: "fixed", top: "40px", right: "0", left: "0", zIndex : "999" , margin: "auto", maxWidth: "1030px", flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
                 <Typography variant='p' onClick={handleBack} sx={{ cursor: "pointer" }}>
-                    {activeStep == 1 ?
+                    {activeStep === 1 ?
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -116,7 +119,7 @@ function StepperComponent() {
                                                     <GetFinalEstimates />
                                                     :
                                                 activeStep === 7 ? 
-                                                            <TotalManDays resetAction={resetAction}/>
+                                                            <TotalManDays resetAction={resetAction} activeDisabledBtn={activeDisabledBtn}/>
                                                 :
                                             ""
                                 }
@@ -128,14 +131,7 @@ function StepperComponent() {
             }
            
 
-            {activeStep !== 7 ? 
-          <Box className="actionButton" sx={{ position: "fixed", bottom: "43px", right: "0", left: "0", zIndex: "999" }}>  
-              <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? "disabled" : ""} onClick={handleNext} sx={{ fontWeight: "700", background: "#3B82F6 !important", width: "100%", maxWidth: "890px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
-                    {activeStep === 0 ? "Get Started" : activeStep === 6 ? "Get final estimates" : "Next"}
-            </Button>
-                </Box>
-            : ""
-            }
+           <ActionButton activeStep={activeStep} handleNext={handleNext} disabledButton={disabledButton}/>
         </>
 
     );
