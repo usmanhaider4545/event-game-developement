@@ -11,6 +11,7 @@ import Categories from "./categories";
 import CategoriesFeatures from "./categoriesFeatures";
 import TotalManDays from "./totalDays";
 import GetFinalEstimates from "./getFinalEstimates";
+import GaintCharts from "./gaintChart";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 
@@ -118,6 +119,9 @@ function StepperComponent() {
                                                 activeStep === 7 ? 
                                                             <TotalManDays resetAction={resetAction}/>
                                                 :
+                                                activeStep === 8 ?
+                                                    <GaintCharts resetAction={resetAction} />
+                                                    :
                                             ""
                                 }
                           </>
@@ -128,10 +132,10 @@ function StepperComponent() {
             }
            
 
-            {activeStep !== 7 ? 
+            {activeStep !== 8 ? 
           <Box className="actionButton" sx={{ position: "fixed", bottom: "43px", right: "0", left: "0", zIndex: "999" }}>  
-              <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? "disabled" : ""} onClick={handleNext} sx={{ fontWeight: "700", background: "#3B82F6 !important", width: "100%", maxWidth: "890px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
-                    {activeStep === 0 ? "Get Started" : activeStep === 6 ? "Get final estimates" : "Next"}
+              <Button className={disabledButton && activeStep !== 0 && activeStep !== 6 ? " " : ""} onClick={handleNext} sx={{ fontWeight: "700", background: "#3B82F6 !important", width: "100%", maxWidth: "890px", height: "70px", borderRadius: "40px", fontSize: "32px", color: "#fff" }}>
+                    {activeStep === 0 ? "Get Started" : activeStep === 7 ? "Get final estimates" : "Next"}
             </Button>
                 </Box>
             : ""
