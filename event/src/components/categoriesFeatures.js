@@ -5,14 +5,14 @@ import { Fintech } from "../projectsData/Fintech";
 import { WayFinding } from "../projectsData/WayFinding";
 import { EmbeddedSystemsIoT } from "../projectsData/EmbeddedSystemsIot";
 import { BackupRecovery } from "../projectsData/BackupandRecovery";
-import { Ecommerce } from "../projectsData/eCommerce";
+import { ECommerce } from "../projectsData/eCommerce";
 import { RealEstate } from "../projectsData/RealEstate";
 import { IndustrialCompliance } from "../projectsData/IndustrialCompliance";
 import { TransportManagementSystem } from "../projectsData/TransportManagement";
 import { HealthTech } from "../projectsData/HealthCare";
 import { ComputerVision } from "../projectsData/ComputerVision";
 import { VirtualReality } from "../projectsData/VirtualReality";
-import { ArtificialInteligence } from "../projectsData/ArtificialInteligence";
+import { ArtificialIntelligence } from "../projectsData/ArtificialInteligence";
 import { MachineLearning } from "../projectsData/MachineLearning";
 import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
@@ -35,15 +35,17 @@ function CategoriesFeatures(props) {
     });
 
     const handleChange = (event) => {
-        const { checked, value, name, ariaLabel } = event.target;
+        let { checked, value, name, ariaLabel } = event.target;
         let updatedManDays = [...totalManDays];
-        
+        value = JSON.parse(value)
         if (checked) {
-            const parsedValue = parseInt(value, 10);
+            const parsedValue = parseInt(value.totalManDays, 10);
             updatedManDays.push({
                 name,
                 ariaLabel,
-                value: parsedValue
+                value: parsedValue,
+                resources: value.resources,
+                developers: value.dev,
             });
         } else {
             updatedManDays = updatedManDays.filter(day => day.name !== name);
@@ -58,12 +60,13 @@ function CategoriesFeatures(props) {
         }
 
         const totalManDaysStringify = JSON.stringify(updatedManDays);
+        console.log(totalManDaysStringify);
         localStorage.setItem("totalManDays", totalManDaysStringify);
     };
 
     useEffect(() => {
-         window.onbeforeunload = closeIt;
-            getDataCategories();
+        window.onbeforeunload = closeIt;
+        getDataCategories();
         if (totalManDays.length === 0) {
             props.activeDisabledBtn();
         } else {
@@ -77,21 +80,22 @@ function CategoriesFeatures(props) {
     }
 
     const getDataCategories = () => {
- 
+
         if (localStorageIndustry === "Digital Signage") {
             let combineCategories = []
-             DigitalSignage.map((item, index) => {
-                 if (item.category === localStorageCategory) {
-                 combineCategories = item?.features.map((feature, index) => {
-                    return {
-                        "name" : feature.name ? feature.name : "-",
-                        "manDays": feature.manDays ? feature.manDays : "-",
-                        "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
-
-                    }
-                })
-            }
-                 setFeatures(combineCategories);
+            DigitalSignage.map((item, index) => {
+                if (item.category === localStorageCategory) {
+                    combineCategories = item?.features.map((feature, index) => {
+                        return {
+                            "name" : feature.name ? feature.name : "-",
+                            "manDays": feature.manDays ? feature.manDays : "-",
+                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
+                        }
+                    })
+                }
+                setFeatures(combineCategories);
             })
         } else if (localStorageIndustry === "Fintech") {
             let combineCategories = []
@@ -102,6 +106,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -116,6 +122,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -130,6 +138,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -144,20 +154,24 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
                 setFeatures(combineCategories);
             })
-        } else if (localStorageIndustry === "Ecommerce and Retail") {
+        } else if (localStorageIndustry === "ECommerce and Retail") {
             let combineCategories = []
-            Ecommerce.map((item, index) => {
+            ECommerce.map((item, index) => {
                 if (item.category === localStorageCategory) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -172,6 +186,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -186,6 +202,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -200,6 +218,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -214,6 +234,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -228,6 +250,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -242,6 +266,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -249,13 +275,15 @@ function CategoriesFeatures(props) {
             })
         } else if (localStorageIndustry === "Artificial Inteligence") {
             let combineCategories = []
-            ArtificialInteligence.map((item, index) => {
+            ArtificialIntelligence.map((item, index) => {
                 if (item.category === localStorageCategory) {
                     combineCategories = item?.features.map((feature, index) => {
                         return {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -270,6 +298,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -284,6 +314,8 @@ function CategoriesFeatures(props) {
                             "name": feature.name ? feature.name : "-",
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                            "resources": feature.numResources ? feature.numResources : "-",
+                            "dev": feature.devRequired ? feature.devRequired : "-"
                         }
                     })
                 }
@@ -301,57 +333,15 @@ function CategoriesFeatures(props) {
                 What features do you envision for the {localStorageCategory} in {localStorageIndustry}?
             </Typography>
             <Stack {...events} ref={ref} sx={{ overflowX: "auto" , width: "100%"}} className='optionsBlocks' display="-webkit-inline-box" flexDirection="initial" justifyContent="center">
-                <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${features.length > 6 ? "80px" : ""}` }}> 
-                {features.length > 0 ? features.slice(0, 6).map((f , i) => (
-                  <FormControlLabel
-                        control={
-                          <Checkbox 
-                            onChange={handleChange} 
-                            name={f.name} 
-                            inputProps={{ 'aria-label': f.manDays }}
-                            value={f.totalManDays} 
-                            style={{ color: '#fff' }}
-                            defaultChecked={totalManDays.some(day => day.name === f.name)}
-                            />
-                        }
-                        label={f.name}
-                    />  
-                   ))
-                    : ""
-                }
-                </Box>
-                {features.length > 6 ?
-                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
-                    {features.length > 0 ? features.slice(6, 12).map((f, i) => (
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    onChange={handleChange}
-                                    name={f.name}
-                                    inputProps={{ 'aria-label': f.manDays }}
-                                    value={f.totalManDays}
-                                    style={{ color: '#fff' }}
-                                    defaultChecked={totalManDays.some(day => day.name === f.name)}
-                                />
-                            }
-                            label={f.name}
-                        />
-                    ))
-                        : ""
-                    }
-
-                </Box>
-                : "" }
-                {features.length > 12 ?
-                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
-                        {features.length > 0 ? features.slice(12, 18).map((f, i) => (
+                <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${features.length > 6 ? "80px" : ""}` }}>
+                    {features.length > 0 ? features.slice(0, 6).map((f , i) => (
                             <FormControlLabel
                                 control={
                                     <Checkbox
                                         onChange={handleChange}
                                         name={f.name}
                                         inputProps={{ 'aria-label': f.manDays }}
-                                        value={f.totalManDays}
+                                        value={JSON.stringify(f)}
                                         style={{ color: '#fff' }}
                                         defaultChecked={totalManDays.some(day => day.name === f.name)}
                                     />
@@ -359,6 +349,48 @@ function CategoriesFeatures(props) {
                                 label={f.name}
                             />
                         ))
+                        : ""
+                    }
+                </Box>
+                {features.length > 6 ?
+                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
+                        {features.length > 0 ? features.slice(6, 12).map((f, i) => (
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            onChange={handleChange}
+                                            name={f.name}
+                                            inputProps={{ 'aria-label': f.manDays }}
+                                            value={JSON.stringify(f)}
+                                            style={{ color: '#fff' }}
+                                            defaultChecked={totalManDays.some(day => day.name === f.name)}
+                                        />
+                                    }
+                                    label={f.name}
+                                />
+                            ))
+                            : ""
+                        }
+
+                    </Box>
+                    : "" }
+                {features.length > 12 ?
+                    <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
+                        {features.length > 0 ? features.slice(12, 18).map((f, i) => (
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            onChange={handleChange}
+                                            name={f.name}
+                                            inputProps={{ 'aria-label': f.manDays }}
+                                            value={JSON.stringify(f)}
+                                            style={{ color: '#fff' }}
+                                            defaultChecked={totalManDays.some(day => day.name === f.name)}
+                                        />
+                                    }
+                                    label={f.name}
+                                />
+                            ))
                             : ""
                         }
 
@@ -367,26 +399,26 @@ function CategoriesFeatures(props) {
                 {features.length > 18 ?
                     <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}>
                         {features.length > 0 ? features.slice(18, 25).map((f, i) => (
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        onChange={handleChange}
-                                        name={f.name}
-                                        inputProps={{ 'aria-label': f.manDays }}
-                                        value={f.totalManDays}
-                                        style={{ color: '#fff' }}
-                                        defaultChecked={totalManDays.some(day => day.name === f.name)}
-                                    />
-                                }
-                                label={f.name}
-                            />
-                        ))
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            onChange={handleChange}
+                                            name={f.name}
+                                            inputProps={{ 'aria-label': f.manDays }}
+                                            value={JSON.stringify(f)}
+                                            style={{ color: '#fff' }}
+                                            defaultChecked={totalManDays.some(day => day.name === f.name)}
+                                        />
+                                    }
+                                    label={f.name}
+                                />
+                            ))
                             : ""
                         }
 
                     </Box>
                     : ""}
-             </Stack>
+            </Stack>
         </Box>
 
     )
