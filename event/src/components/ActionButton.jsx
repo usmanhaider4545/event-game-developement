@@ -36,7 +36,7 @@ const ActionButton = ({ activeStep, handleNext, disabledButton }) => {
     return (
         <ButtonWrapper>
             <ButtonStyled
-              //  disabled={disabledButton && activeStep !== 0 && activeStep !== 6}
+                disabled={disabledButton && activeStep !== 0 && activeStep !== 6}
                 onClick={handleNext}
             >
                 {buttonText}
