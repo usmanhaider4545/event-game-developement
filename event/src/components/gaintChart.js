@@ -36,7 +36,7 @@ function GaintCharts() {
             background: "rgba(255, 255, 255, 0.09)",
             boxShadow: "0px 0px 53.9px 0px rgba(0, 163, 255, 0.05)",
             backdropFilter: "blur(26.94999885559082px)",
-            minHeight: { xs: "539.166px", md: "389.166px" },
+            minHeight: { xl: "539.166px", lg: "389.166px" },
         },
         twentyMarginRight: {
             marginRight: '20px'
