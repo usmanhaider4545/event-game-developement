@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 const ButtonWrapper = styled(Box)`
   position: fixed;
-  bottom: 43px;
+  bottom: 17px;
   right: 0;
   left: 0;
   z-index: 999;
@@ -36,7 +36,7 @@ const ActionButton = ({ activeStep, handleNext, disabledButton }) => {
     return (
         <ButtonWrapper>
             <ButtonStyled
-                disabled={disabledButton && activeStep !== 0 && activeStep !== 6}
+              //  disabled={disabledButton && activeStep !== 0 && activeStep !== 6}
                 onClick={handleNext}
             >
                 {buttonText}

@@ -169,7 +169,7 @@ td {
 
 .App::before {
     content: "";
-    background-image: url(http://192.168.101.139:3000/static/media/bgGifImage.940484df8e074a359374.gif);
+    background-image: url('./images/bgGifImage.gif');
     background-repeat: no-repeat;
     background-size: 750px;
     background-position: center center;
@@ -185,10 +185,13 @@ td {
     top: 0;
     z-index: 0;
 }
-
+ 
 
 
 @media all and (max-width:1367px) {
+    .resultBox {
+            margin: 0px auto 0px;
+        }
     .actionButton {
         bottom: 23px !important;
     }
