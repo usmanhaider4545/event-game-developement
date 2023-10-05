@@ -9,7 +9,7 @@ import AppType from "./appType";
 import AppDesignedFor from "./appDesignedFor";
 import Categories from "./categories";
 import CategoriesFeatures from "./categoriesFeatures";
-import TotalManDays from "./totalDays";
+import CustomerInfo from "./customerInfo";
 import GetFinalEstimates from "./getFinalEstimates";
 import GaintCharts from "./gaintChart";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
@@ -49,7 +49,7 @@ function StepperComponent() {
     return (
    <>
             {activeStep !== stepsData.length && activeStep !== 0 ?
-            <Stack className='progressBar' sx={{ position: "fixed", top: "40px", right: "0", left: "0", zIndex : "999" , margin: "auto", maxWidth: "1030px", flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
+            <Stack className='progressBar' sx={{ position: "fixed", top: "17px", right: "0", left: "0", zIndex : "999" , margin: "auto", maxWidth: "1030px", flexDirection: "inherit", alignItems: "center", justifyContent: "center" }}>
                 <Typography variant='p' onClick={handleBack} sx={{ cursor: "pointer" }}>
                     {activeStep === 1 ?
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -120,7 +120,7 @@ function StepperComponent() {
                                                     <GetFinalEstimates />
                                                     :
                                                 activeStep === 7 ? 
-                                                            <TotalManDays resetAction={resetAction} removeDisabledButton={removeDisabledButton} activeDisabledBtn={activeDisabledBtn}/>
+                                                                    <CustomerInfo resetAction={resetAction} removeDisabledButton={removeDisabledButton} activeDisabledBtn={activeDisabledBtn}/>
                                                 :
                                                 activeStep === 8 ?
                                                     <GaintCharts resetAction={resetAction} />
