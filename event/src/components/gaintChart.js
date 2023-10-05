@@ -73,15 +73,15 @@ function GaintCharts() {
                 <Box>
                     <Stack sx={{flexDirection :"inherit" , marginBottom : "20px"}}>
                         <Box sx={[styles.threeBoxes, styles.twentyMarginRight, styles.themeBackgroundwithBorder, styles.resourcesBg]}>
-                            <Typography variant='p' sx={{fontSize : "14px" , fontWeight : "300", color : "#fff"}}> Total No. Resources </Typography>
-                            <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}> 6 </Typography>
+                            <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important' ,fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase'}}> Total No. Resources </Typography>
+                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> 6 </Typography>
                         </Box>
                         <Box sx={[styles.threeBoxes, styles.twentyMarginRight, styles.themeBackgroundwithBorder, styles.projectDurationBg]}>
-                            <Typography variant='p' sx={{ fontSize: "14px", fontWeight: "300", color: "#fff" }}> Project Duration </Typography>
-                            <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}> 2 months</Typography>
+                            <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important',fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Project Duration </Typography>
+                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> 2 months</Typography>
                         </Box>
                         <Box sx={[styles.threeBoxes, styles.themeBackgroundwithBorder, styles.totalManDaysBg]}>
-                            <Typography variant='p' sx={{ fontSize: "14px", fontWeight: "300", color: "#fff" }}> Total Man Days </Typography>
+                            <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important', fontFamily: 'IBM Plex Mono !important', fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Total Man Days </Typography>
                             <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}> 72 </Typography>
                         </Box>
                     </Stack>
@@ -92,7 +92,7 @@ function GaintCharts() {
             </Grid>
             <Grid   item xs={4}>
                 <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding, styles.twentyMarginBottom ]}>
-                    <Typography variant='h6' sx={{ color: "#fff" , textAlign : "left" }}>Recommended team</Typography>
+                    <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "18px", fontWeight: "700", textTransform: 'uppercase',  color: "#fff" , textAlign : "left" }}>Recommended team</Typography>
                 <Box>
                         <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
                             <ListItem sx={{ maxWidth: '50%', paddingLeft : "0" , paddingRight : "0"}}>
@@ -108,6 +108,7 @@ function GaintCharts() {
                                         </svg>
                                     </ListItemIcon>
                                     <ListItemText
+                                        className='techName'
                                         primary="front end Developer"
                                         secondary={null}
                                         sx={{ color: "#fff" }}
@@ -129,6 +130,7 @@ function GaintCharts() {
                                         </svg>
                                     </ListItemIcon>
                                     <ListItemText
+                                        className='techName'
                                         primary="front end Developer"
                                         secondary={null}
                                         sx={{ color: "#fff" }}
@@ -149,6 +151,7 @@ function GaintCharts() {
                                         </svg>
                                     </ListItemIcon>
                                     <ListItemText
+                                        className='techName'
                                         primary="front end Developer"
                                         secondary={null}
                                         sx={{ color: "#fff" }}
@@ -169,9 +172,10 @@ function GaintCharts() {
                                     </svg>
                                 </ListItemIcon>
                                 <ListItemText
+                                className='techName'
                                     primary="front end Developer"
                                     secondary={null}
-                                    sx={{ color: "#fff" }}
+                                    sx={{ color: "#fff",}}
                                 />
                                 </Box>
                             </ListItem> 
@@ -180,37 +184,37 @@ function GaintCharts() {
                    </Box>
                 </Box>
                 <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding]}>
-                    <Typography variant='h6' sx={{ color: "#fff", textAlign: "left" }}>Recommended technology</Typography>
+                    <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', color: "#fff", textAlign: "left", fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', }}>Recommended technology</Typography>
                 <Box>
                         <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0" , justifyContent : "center" }}>
                         <Box>
                                 <img src={JavaImage} />
-                                <Typography sx={{color : "#fff", fontSize : "14px"}}>Python</Typography>
+                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase'}}>Python</Typography>
                         </Box>
                         </ListItem> 
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px" }}>Python</Typography>
+                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
                             </ListItem> 
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px" }}>Python</Typography>
+                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
                             </ListItem> 
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px" }}>Python</Typography>
+                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
                             </ListItem> 
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px" }}>Python</Typography>
+                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
                             </ListItem> 
  

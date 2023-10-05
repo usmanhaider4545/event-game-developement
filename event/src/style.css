@@ -185,7 +185,14 @@ td {
     top: 0;
     z-index: 0;
 }
- 
+ .techName span {
+     font-family: 'IBM Plex Mono' !important;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: uppercase;
+ }
 
 
 @media all and (max-width:1367px) {
