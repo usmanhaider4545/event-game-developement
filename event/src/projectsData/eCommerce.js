@@ -1,119 +1,198 @@
-export const Ecommerce = [
+export const ECommerce = [
   {
-    category: "Frontend",
+    category: "Product Management",
     features: [
       {
-        name: "Homepage",
-        manDays: "20-25 man-days",
-        totalManDays: 100,
-      },
-      {
-        name: "Category pages",
-        manDays: "20-25 man-days",
-        totalManDays: 30,
-      },
-      {
-        name: "Product page",
-        manDays: "20-25 man-days",
+        name: "Product catalog and listing",
+        manDays: "12-24 days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Cart page",
-        manDays: "20-25 man-days",
+        name: "Inventory management",
+        manDays: "12-24 days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Checkout page",
-        manDays: "20-25 man-days",
+        name: "Product search and filtering",
+        manDays: "12-24 days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Custom pages (about/faqs/Terms and conditions etc)",
-        manDays: "20-25 man-days",
+        name: "Product reviews and ratings",
+        manDays: "8-16 days",
+        totalManDays: 14,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+      {
+        name: "Product recommendations",
+        manDays: "12-24 days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
     ],
   },
   {
-    category: "Email templates",
+    category: "Shopping Cart and Checkout",
     features: [
       {
-        name: "Welcome to store",
-        manDays: "20-25 man-days",
-        totalManDays: 10,
-      },
-      {
-        name: "Forget password",
-        manDays: "20-25 man-days",
-        totalManDays: 10,
-      },
-      {
-        name: "Order placed",
-        manDays: "20-25 man-days",
-        totalManDays: 10,
-      },
-      {
-        name: "Order shipped",
-        manDays: "20-25 man-days",
-        totalManDays: 10,
-      },
-      {
-        name: "Abandoned cart",
-        manDays: "20-25 man-days",
+        name: "Add to cart and cart management",
+        manDays: "12-24 days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Custom emails (if required)",
-        manDays: "20-25 man-days",
-        totalManDays: 10,
+        name: "Checkout process",
+        manDays: "12-24 days",
+        totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+      {
+        name: "Payment processing",
+        manDays: "12-24 days",
+        totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+      {
+        name: "Order confirmation and tracking",
+        manDays: "8-16 days",
+        totalManDays: 14,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
     ],
   },
   {
-    category: "Data Integration",
+    category: "User Accounts and Authentication",
     features: [
       {
-        name: "Customers Import",
-        manDays: "15-20 man-days",
-        totalManDays: 20,
+        name: "User registration and login",
+        manDays: "8-16 days",
+        totalManDays: 14,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Orders Import",
-        manDays: "15-20 man-days",
-        totalManDays: 15,
+        name: "User profiles and preferences",
+        manDays: "12-24 days",
+        totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "Products Import",
-        manDays: "15-20 man-days",
-        totalManDays: 20,
+        name: "Password reset and security",
+        manDays: "8-16 days",
+        totalManDays: 14,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
     ],
   },
   {
-    category: "Payment methods",
+    category: "Search and Navigation",
     features: [
       {
-        name: "Stripe",
-        manDays: "5-10 man-days",
-        totalManDays: 10,
+        name: "Site search functionality",
+        manDays: "12-24 days",
+        totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
       {
-        name: "PayPal",
-        manDays: "5-10 man-days",
-        totalManDays: 10,
+        name: "Navigation and filters",
+        manDays: "12-24 days",
+        totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
     ],
   },
   {
-    category: "Shipping Methods",
+    category: "Reviews and Ratings",
     features: [
       {
-        name: "Standard Shipping",
-        manDays: "35 man-days",
-        totalManDays: 30,
+        name: "Customer reviews and ratings",
+        manDays: "12-24 days",
+        totalManDays: 18,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+    ],
+  },
+  {
+    category: "Order Management",
+    features: [
+      {
+        name: "Order history and tracking",
+        manDays: "12-24 days",
+        totalManDays: 18,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+    ],
+  },
+  {
+    category: "Security and Compliance",
+    features: [
+      {
+        name: "Payment security and compliance",
+        manDays: "12-24 days",
+        totalManDays: 18,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
+      },
+    ],
+  },
+  {
+    category: "Admin Dashboard",
+    features: [
+      {
+        name: "Product and order management",
+        manDays: "12-24 days",
+        totalManDays: 18,
+        numResources: 2,
+        devRequired: ["Frontend Developer", "Backend Developer"],
       },
     ],
   },
 ];
 
- 
+export const ECommerceResources = [
+  {
+    role: "Frontend Developer",
+    skills: ["React.js", "HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    role: "Backend Developer",
+    skills: ["Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    role: "DevOps Engineer",
+    skills: ["Docker", "AWS", "Jenkins"],
+  },
+  {
+    role: "UI/UX Designer",
+    skills: ["UI/UX Design", "Prototyping"],
+  },
+];
+
+export const ECommerceTechStack = [
+  "React.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Docker",
+  "AWS",
+  "Jenkins",
+  "UI/UX Design",
+];
