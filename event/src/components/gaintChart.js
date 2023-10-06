@@ -8,6 +8,8 @@ import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
 import JavaImage from "../images/java.png";
 import { pushDataToFirestore } from '../utils/firebaseUtils';
+import { Chart } from "react-google-charts";
+
 
 function GaintCharts() {
     useEffect(() => {
@@ -22,7 +24,42 @@ function GaintCharts() {
         pushDataToFirestore(data);
 
       }, []);
+      const columns = [
+        { type: 'string', label: 'Task ID' },
+        { type: 'string', label: 'Task Name' },
+        { type: 'string', label: 'Resource' },
+        { type: 'date', label: 'Start Date' },
+        { type: 'date', label: 'End Date' },
+        { type: 'number', label: 'Duration' },
+        { type: 'number', label: 'Percent Complete' },
+        { type: 'string', label: 'Dependencies' },
+      ];
+    const today = new Date();
+    let endDate = today;
 
+    const rows = JSON.parse(localStorage.getItem("totalManDays")).map((item, index) => {
+    const startDate = endDate;
+    endDate = new Date(endDate.getTime() + item.value * 24 * 60 * 60 * 1000);
+
+    return [
+      `Task ${index + 1}`,
+      item.name,
+      item.developers.join(', '),
+      startDate,
+      endDate,
+      item.value,
+      100,
+      null,
+    ];
+  });
+      const chart_data = [columns, ...rows];
+    
+      const options = {
+        height: 400,
+        gantt: {
+          trackHeight: 30,
+        },
+      };
     const styles = {
 
         themeBackgroundwithBorder: {
@@ -111,8 +148,14 @@ function GaintCharts() {
                             <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}>{data.manDays}</Typography>
                         </Box>
                     </Stack>
-                    <Box sx={[styles.chartContainer, styles.themeBackgroundwithBorder]}>
-
+                    <Box sx={[styles.chartContainer, styles.themeBackgroundwithBorder, styles.twentyPadding]}>
+                    <Chart
+                            chartType="Gantt"
+                            width="100%"
+                            height="100%"
+                            data={chart_data}
+                            options={options}
+                        />
                     </Box>
                 </Box>
             </Grid>
