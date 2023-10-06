@@ -7,9 +7,21 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
 import JavaImage from "../images/java.png";
-
+import { pushDataToFirestore } from '../utils/firebaseUtils';
 
 function GaintCharts() {
+    useEffect(() => {
+        const data = {
+          appSoftware: localStorage.getItem("appSoftware"),
+          appDesignedFor: localStorage.getItem("appDesignedFor"),
+          industry: localStorage.getItem("industry"),
+          appCategory: localStorage.getItem("appCategory"),
+          userProfile: localStorage.getItem("userProfile"),
+          totalManDays: localStorage.getItem("totalManDays"),
+        };
+        pushDataToFirestore(data);
+
+      }, []);
 
     const styles = {
 
