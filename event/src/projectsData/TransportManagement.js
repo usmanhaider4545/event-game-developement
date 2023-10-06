@@ -1,30 +1,48 @@
 export const TransportManagementSystem = [
   {
-    category: "Carriers Integration",
+    category: "Carrier Integration (for 1 Career)",
     features: [
       {
         name: "Setup customer's account to integrate the APIs",
+        manDays: "2 Man Days",
         totalManDays: 2,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "Carriers quote generation",
+        manDays: "10 Man Days",
         totalManDays: 10,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "Carriers shipment",
+        manDays: "25 Man Days",
         totalManDays: 25,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "Carriers tracking",
+        manDays: "20 Man Days",
         totalManDays: 20,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "Carriers pickup",
+        manDays: "10 Man Days",
         totalManDays: 10,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "Carriers label generation",
+        manDays: "25 Man Days",
         totalManDays: 25,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
     ],
   },
@@ -33,19 +51,31 @@ export const TransportManagementSystem = [
     features: [
       {
         name: "Setup customer's account to integrate the APIs",
+        manDays: "2 Man Days",
         totalManDays: 2,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "ERP order fetching + mapping",
+        manDays: "10 Man Days",
         totalManDays: 10,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "ERP order processing",
+        manDays: "10 Man Days",
         totalManDays: 10,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
       {
         name: "ERP order status update",
+        manDays: "5 Man Days",
         totalManDays: 5,
+        numResources: 1,
+        devRequired: ["Backend"],
       },
     ],
   },
@@ -53,80 +83,137 @@ export const TransportManagementSystem = [
     category: "Web application",
     features: [
       {
-        name: "Multi-tennant",
+        name: "Multi-tenant",
+        manDays: "15+15 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Reports (5-20)",
+        manDays: "15+15 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Events and alerts",
+        manDays: "15+15 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Quote lookup",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Shipment processing page",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Shipment page integration + development",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "User management",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Tracking page implementation",
+        manDays: "10+5 Man Days",
         totalManDays: 15,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Pickup page implementation",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Multiple themes",
+        manDays: "25+5 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Batch shipment processing (BE + FE)",
+        manDays: "30+60 Man Days",
         totalManDays: 90,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Shipment labels generation (different sizes and dimensions)",
+        manDays: "15+15 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Reorder shipment",
+        manDays: "5+5 Man Days",
         totalManDays: 10,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Cancel shipment",
+        manDays: "5+5 Man Days",
         totalManDays: 10,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Order Management",
+        manDays: "20+20 Man Days",
         totalManDays: 40,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "ERP order mapping and lookup",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "ERP order processing page",
+        manDays: "5+5 Man Days",
         totalManDays: 10,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "ERP integration page",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
       {
         name: "Reports and Alerts",
+        manDays: "10+10 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["Frontend", "Backend"],
       },
     ],
   },
@@ -135,11 +222,17 @@ export const TransportManagementSystem = [
     features: [
       {
         name: "Label printing setup + application",
+        manDays: "60 Man Days",
         totalManDays: 60,
+        numResources: 1,
+        devRequired: ["DesktopAppDev"],
       },
       {
         name: "Weight scale setup + application",
+        manDays: "50 Man Days",
         totalManDays: 50,
+        numResources: 1,
+        devRequired: ["DesktopAppDev"],
       },
     ],
   },
@@ -148,21 +241,87 @@ export const TransportManagementSystem = [
     features: [
       {
         name: "Reporting",
+        manDays: "25+5 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["MobileAppDev", "Backend"],
       },
       {
         name: "Alerting",
+        manDays: "15+5 Man Days",
         totalManDays: 20,
+        numResources: 2,
+        devRequired: ["MobileAppDev", "Backend"],
       },
       {
         name: "Order Management",
+        manDays: "25+5 Man Days",
         totalManDays: 30,
+        numResources: 2,
+        devRequired: ["MobileAppDev", "Backend"],
       },
       {
         name: "All other features available on the web application",
+        manDays: "60+20 Man Days",
         totalManDays: 80,
+        numResources: 2,
+        devRequired: ["MobileAppDev", "Backend"],
       },
     ],
   },
 ];
- 
+
+export const TransportManagementSystemResources = [
+  {
+    role: "Frontend Developer",
+    skills: ["React", "TypeScript", "JavaScript"],
+  },
+  {
+    role: "Backend Developer",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      ".NET",
+      "SQL Server",
+      "PostgreSQL",
+    ],
+  },
+  {
+    role: "Desktop App Developer",
+    skills: ["C#", ".NET", "WPF"],
+  },
+  {
+    role: "Mobile App Developer",
+    skills: ["iOS native", "Android native", "React native"],
+  },
+  {
+    role: "Project Manager",
+    skills: ["Project Management"],
+  },
+  {
+    role: "QA",
+    skills: ["Quality Assurance"],
+  },
+  {
+    role: "UI/UX Designer",
+    skills: ["UI/UX Design", "Prototyping"],
+  },
+  {
+    role: "Printer/Scales setup expert",
+    skills: ["Printers setup", "Scales setup"],
+  },
+];
+
+// Recommended tech stack for the Digital Signage project
+export const RecommendedTechStack = [
+  ".NET",
+  "React",
+  "TypeScript",
+  "SQL Server",
+  "Mongo DB",
+  "MongoDB",
+  "Docker",
+  "Kubernetes",
+  "WPF",
+];

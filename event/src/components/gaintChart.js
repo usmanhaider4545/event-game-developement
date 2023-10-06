@@ -20,7 +20,7 @@ function GaintCharts() {
           totalManDays: localStorage.getItem("totalManDays"),
         };
         pushDataToFirestore(data);
-    
+
       }, []);
 
     const styles = {
@@ -76,9 +76,23 @@ function GaintCharts() {
         totalManDaysBg: {
             background: `radial-gradient(101.65% 101.64% at 50% 50%, #265874 0%, rgba(44, 41, 58, 0.71) 100%)`
         }
-        
-    }
 
+    }
+    const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "" });
+
+    useEffect(() => {
+        const parsedManDays = JSON.parse(localStorage.getItem("totalManDays"));
+        const manDays = parsedManDays.reduce((acc, item) => acc + item.value, 0);
+        const months = Math.floor(manDays / 30);
+        const days = manDays % 30;
+        const resources = parsedManDays.reduce((sum, feature) => sum + feature.resources, 0);
+
+
+        setData({ months, days, manDays, resources });
+    }, []);
+    localStorage.setItem("Estimations", JSON.stringify(data));
+    const displayText =
+        data.months === 0 ? `${data.days} DAYS` : `${data.months} MONTHS`;
     return (
         <Grid container spacing={2}>
             <Grid sx={{ padding: "0" }} item xs={8}>
@@ -86,15 +100,15 @@ function GaintCharts() {
                     <Stack sx={{flexDirection :"inherit" , marginBottom : "20px"}}>
                         <Box sx={[styles.threeBoxes, styles.twentyMarginRight, styles.themeBackgroundwithBorder, styles.resourcesBg]}>
                             <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important' ,fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase'}}> Total No. Resources </Typography>
-                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> 6 </Typography>
+                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> {data.resources} </Typography>
                         </Box>
                         <Box sx={[styles.threeBoxes, styles.twentyMarginRight, styles.themeBackgroundwithBorder, styles.projectDurationBg]}>
                             <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important',fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Project Duration </Typography>
-                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> 2 months</Typography>
+                            <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> {displayText}</Typography>
                         </Box>
                         <Box sx={[styles.threeBoxes, styles.themeBackgroundwithBorder, styles.totalManDaysBg]}>
                             <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important', fontFamily: 'IBM Plex Mono !important', fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Total Man Days </Typography>
-                            <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}> 72 </Typography>
+                            <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}>{data.manDays}</Typography>
                         </Box>
                     </Stack>
                     <Box sx={[styles.chartContainer, styles.themeBackgroundwithBorder]}>
@@ -105,74 +119,10 @@ function GaintCharts() {
             <Grid   item xs={4}>
                 <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding, styles.twentyMarginBottom ]}>
                     <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "18px", fontWeight: "700", textTransform: 'uppercase',  color: "#fff" , textAlign : "left" }}>Recommended team</Typography>
-                <Box>
+                    <Box>
                         <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
                             <ListItem sx={{ maxWidth: '50%', paddingLeft : "0" , paddingRight : "0"}}>
                                 <Box sx={[styles.teamBoxs ]}>                                    <ListItemIcon>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
-                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
-                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
-                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
-                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
-                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
-                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
-                                        </svg>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        className='techName'
-                                        primary="front end Developer"
-                                        secondary={null}
-                                        sx={{ color: "#fff" }}
-                                    />
-                                </Box>
-
-                                </ListItem> 
-                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
-                                <Box sx={[styles.teamBoxs]}>  
-                                    <ListItemIcon>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
-                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
-                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
-                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
-                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
-                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
-                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
-                                        </svg>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        className='techName'
-                                        primary="front end Developer"
-                                        secondary={null}
-                                        sx={{ color: "#fff" }}
-                                    />
-                                    </Box>
-                                </ListItem> 
-                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
-                                <Box sx={[styles.teamBoxs]}>  
-                                    <ListItemIcon>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
-                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
-                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
-                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
-                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
-                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
-                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
-                                        </svg>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        className='techName'
-                                        primary="front end Developer"
-                                        secondary={null}
-                                        sx={{ color: "#fff" }}
-                                    />
-                                    </Box>
-                                </ListItem> 
-                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
-                                <Box sx={[styles.teamBoxs]}>  
-                                <ListItemIcon>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                         <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
                                         <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
@@ -183,56 +133,120 @@ function GaintCharts() {
                                         <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
                                     </svg>
                                 </ListItemIcon>
-                                <ListItemText
-                                className='techName'
-                                    primary="front end Developer"
-                                    secondary={null}
-                                    sx={{ color: "#fff",}}
-                                />
+                                    <ListItemText
+                                        className='techName'
+                                        primary="front end Developer"
+                                        secondary={null}
+                                        sx={{ color: "#fff" }}
+                                    />
                                 </Box>
-                            </ListItem> 
-                         </List>
- 
-                   </Box>
+
+                            </ListItem>
+                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
+                                <Box sx={[styles.teamBoxs]}>
+                                    <ListItemIcon>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
+                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
+                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
+                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
+                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
+                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
+                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
+                                        </svg>
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        className='techName'
+                                        primary="front end Developer"
+                                        secondary={null}
+                                        sx={{ color: "#fff" }}
+                                    />
+                                </Box>
+                            </ListItem>
+                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
+                                <Box sx={[styles.teamBoxs]}>
+                                    <ListItemIcon>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
+                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
+                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
+                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
+                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
+                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
+                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
+                                        </svg>
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        className='techName'
+                                        primary="front end Developer"
+                                        secondary={null}
+                                        sx={{ color: "#fff" }}
+                                    />
+                                </Box>
+                            </ListItem>
+                            <ListItem sx={{ maxWidth: '50%', paddingLeft: "0", paddingRight: "0" }}>
+                                <Box sx={[styles.teamBoxs]}>
+                                    <ListItemIcon>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <path d="M39.9998 39.7377H2.97949V0.865326H25.1917L28.5325 4.15658H39.9095V39.7377H39.9998ZM3.88243 38.8482H39.0969V5.04611H28.1714L24.8305 1.75485H3.88243V38.8482Z" fill="#3B82F6" />
+                                            <path d="M6.41113 36.3574V4.24539H23.8378L27.1786 7.53665H36.5691V36.3574H6.41113Z" fill="#3B82F6" />
+                                            <path d="M36.8399 36.6242H6.23047V3.97858H23.928L27.2688 7.26983H36.8399V36.6242ZM6.68194 36.1795H36.3885V7.80355H27.0883L23.7474 4.42334H6.68194V36.1795Z" fill="#3B82F6" />
+                                            <path d="M0 30.5756L3.79232 31.9989V31.0204L0 29.5971V30.5756Z" fill="#3B82F6" />
+                                            <path d="M0 27.1953L3.79232 28.6185V27.64L0 26.2168V27.1953Z" fill="#3B82F6" />
+                                            <path d="M0 19.4566V20.4351L3.79232 21.8584V20.8799L0 19.4566Z" fill="#3B82F6" />
+                                            <path d="M0 23.8152L3.79232 25.2385V24.26L0 22.8367V23.8152Z" fill="#3B82F6" />
+                                        </svg>
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        className='techName'
+                                        primary="front end Developer"
+                                        secondary={null}
+                                        sx={{ color: "#fff",}}
+                                    />
+                                </Box>
+                            </ListItem>
+                        </List>
+
+                    </Box>
                 </Box>
                 <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding]}>
                     <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', color: "#fff", textAlign: "left", fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', }}>Recommended technology</Typography>
-                <Box>
+                    <Box>
                         <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0" , justifyContent : "center" }}>
-                        <Box>
-                                <img src={JavaImage} />
+                                <Box>
+                                    <img src={JavaImage} />
                                     <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase'}}>Python</Typography>
-                        </Box>
-                        </ListItem> 
+                                </Box>
+                            </ListItem>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
                                     <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
-                            </ListItem> 
+                            </ListItem>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
                                     <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
-                            </ListItem> 
+                            </ListItem>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
                                     <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
-                            </ListItem> 
+                            </ListItem>
                             <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
                                 <Box>
                                     <img src={JavaImage} />
                                     <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
                                 </Box>
-                            </ListItem> 
- 
-                    </List>
+                            </ListItem>
+
+                        </List>
+                    </Box>
                 </Box>
-              </Box>
             </Grid>
         </Grid>
 

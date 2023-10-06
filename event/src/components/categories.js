@@ -9,14 +9,14 @@ import { Fintech } from "../projectsData/Fintech";
 import { WayFinding } from "../projectsData/WayFinding";
 import { EmbeddedSystemsIoT } from "../projectsData/EmbeddedSystemsIot";
 import { BackupRecovery } from "../projectsData/BackupandRecovery";
-import { Ecommerce } from "../projectsData/eCommerce";
+import { ECommerce } from "../projectsData/eCommerce";
 import { RealEstate } from "../projectsData/RealEstate";
 import { IndustrialCompliance } from "../projectsData/IndustrialCompliance";
 import { TransportManagementSystem } from "../projectsData/TransportManagement";
 import { HealthTech } from "../projectsData/HealthCare";
 import { ComputerVision } from "../projectsData/ComputerVision";
 import { VirtualReality } from "../projectsData/VirtualReality";
-import { ArtificialInteligence } from "../projectsData/ArtificialInteligence";
+import { ArtificialIntelligence } from "../projectsData/ArtificialInteligence";
 import { MachineLearning } from "../projectsData/MachineLearning";
 import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
@@ -89,8 +89,8 @@ function Categories(props) {
             })
             setCategories(combineCategories);
         }
-        else if (checkSelectedProjects === "Ecommerce and Retail") {
-            let combineCategories = Ecommerce.map((item, index) => {
+        else if (checkSelectedProjects === "ECommerce and Retail") {
+            let combineCategories = ECommerce.map((item, index) => {
                 return item.category ? item.category : "-"
             })
             setCategories(combineCategories);
@@ -132,7 +132,7 @@ function Categories(props) {
             setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Artificial Inteligence") {
-            let combineCategories = ArtificialInteligence.map((item, index) => {
+            let combineCategories = ArtificialIntelligence.map((item, index) => {
                 return item.category ? item.category : "-"
             })
             setCategories(combineCategories);
@@ -160,7 +160,7 @@ function Categories(props) {
                 What type of {localStorageIndustry} product do you want?
             </Typography>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" margin="auto">
-             <FormControl>
+                <FormControl>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
                         defaultValue=""
@@ -172,26 +172,26 @@ function Categories(props) {
                             <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: `${categories.length > 6 ? "80px" : ""}` }} className={categories.length > 5 ? "largeCatelog" : ""}>
 
                                 {categories.length > 0 ? categories.slice(0, 6).map((c) => (
-                                    <FormControlLabel value={c} control={<Radio />} label={c} />
-                                ))
+                                        <FormControlLabel value={c} control={<Radio />} label={c} />
+                                    ))
                                     : ""
                                 }
                             </Box>
                             {categories.length > 6 ?
                                 <Box sx={{ width: "100%", maxWidth: "450px", paddingRight: "80px" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
-                                {categories.length > 0 ? categories.slice(6, 12).map((c) => (
-                                    <FormControlLabel value={c} control={<Radio />} label={c} />
-                                ))
-                                    : ""
-                                }
-                            </Box>
-                            : 
-                            ""}
+                                    {categories.length > 0 ? categories.slice(6, 12).map((c) => (
+                                            <FormControlLabel value={c} control={<Radio />} label={c} />
+                                        ))
+                                        : ""
+                                    }
+                                </Box>
+                                :
+                                ""}
                             {categories.length > 12 ?
                                 <Box sx={{ width: "40%" }}  className={categories.length > 5 ? "largeCatelog" : ""}>
                                     {categories.length > 0 ? categories.slice(12, 18).map((c) => (
-                                        <FormControlLabel value={c} control={<Radio />} label={c} />
-                                    ))
+                                            <FormControlLabel value={c} control={<Radio />} label={c} />
+                                        ))
                                         : ""
                                     }
                                 </Box>
