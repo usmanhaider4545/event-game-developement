@@ -6,7 +6,7 @@ import { WayFinding } from "../projectsData/WayFinding";
 import { EmbeddedSystemsIoT } from "../projectsData/EmbeddedSystemsIot";
 import { BackupRecovery } from "../projectsData/BackupandRecovery";
 import { ECommerce } from "../projectsData/eCommerce";
-import { RealEstate } from "../projectsData/RealEstate";
+import { RealEstate, RealEstateTechStack } from "../projectsData/RealEstate";
 import { IndustrialCompliance } from "../projectsData/IndustrialCompliance";
 import { TransportManagementSystem } from "../projectsData/TransportManagement";
 import { HealthTech } from "../projectsData/HealthCare";
@@ -46,6 +46,8 @@ function CategoriesFeatures(props) {
                 value: parsedValue,
                 resources: value.resources,
                 developers: value.dev,
+                technologies: value?.technologies,
+                techStack: value.techStack
             });
         } else {
             updatedManDays = updatedManDays.filter(day => day.name !== name);
@@ -83,19 +85,19 @@ function CategoriesFeatures(props) {
 
         if (localStorageIndustry === "Digital Signage") {
             let combineCategories = []
-            DigitalSignage.map((item, index) => {
-                if (item.category === localStorageCategory) {
-                    combineCategories = item?.features.map((feature, index) => {
-                        return {
-                            "name" : feature.name ? feature.name : "-",
-                            "manDays": feature.manDays ? feature.manDays : "-",
-                            "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
-                            "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
-                        }
-                    })
-                }
-                setFeatures(combineCategories);
+             DigitalSignage.map((item, index) => {
+                 if (item.category === localStorageCategory) {
+                 combineCategories = item?.features.map((feature, index) => {
+                    return {
+                        "name" : feature.name ? feature.name : "-",
+                        "manDays": feature.manDays ? feature.manDays : "-",
+                        "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
+                        "resources": feature.numResources ? feature.numResources : "-",
+                        "dev": feature.devRequired ? feature.devRequired : "-",
+                    }
+                })
+            }
+                 setFeatures(combineCategories);
             })
         } else if (localStorageIndustry === "Fintech") {
             let combineCategories = []
@@ -187,7 +189,9 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
+                            "techStack": RealEstateTechStack
                         }
                     })
                 }

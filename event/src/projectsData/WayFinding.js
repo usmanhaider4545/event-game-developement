@@ -116,7 +116,7 @@ export const WayFindingResources = [
   {
     role: "UI/UX Designer",
     description:
-        "Responsible for designing user interfaces and user experience.",
+      "Responsible for designing user interfaces and user experience.",
   },
   {
     role: "Integration Specialist",

@@ -523,5 +523,4 @@ export const HealthCareTechStack = [
   "Machine Learning",
   "Big Data Technologies",
   "Natural Language Processing",
-  // Add more technologies as needed.
 ];

@@ -231,7 +231,6 @@ export const DigitalSignageResources = [
   },
 ];
 
-// Recommended tech stack for the Digital Signage project
 export const DigitalSignageTechStack = [
   "React.js",
   "Node.js",
