@@ -14,14 +14,21 @@ const TechStack = ({ data }) => {
     twentyPadding: {
       padding: '15px'
     },
+    listItem:{
+      display: "flex",
+      alignItems: "flex-start",
+      alignContent: "flex-start",
+      gap: "0.5rem",
+      flexWrap: "wrap",
+    }
   };
 
   return (
     <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding]}>
-      <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', color: "#fff", textAlign: "left", fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', }}>Recommended technology</Typography>
-      <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
+      <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', color: "#fff", textAlign: "left", fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', paddingBottom: "10px"}}>Recommended technology</Typography>
+      <List sx={[styles.listItem]}>
         {data?.TechStack?.map((technology) => (
-          <Technologies heading={technology} key={technology} />
+          <Technologies heading={technology}/>
         ))}
       </List>
     </Box>

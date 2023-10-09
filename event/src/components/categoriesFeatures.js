@@ -6,7 +6,7 @@ import { WayFinding } from "../projectsData/WayFinding";
 import { EmbeddedSystemsIoT } from "../projectsData/EmbeddedSystemsIot";
 import { BackupRecovery } from "../projectsData/BackupandRecovery";
 import { ECommerce } from "../projectsData/eCommerce";
-import { RealEstate, RealEstateTechStack } from "../projectsData/RealEstate";
+import { RealEstate } from "../projectsData/RealEstate";
 import { IndustrialCompliance } from "../projectsData/IndustrialCompliance";
 import { TransportManagementSystem } from "../projectsData/TransportManagement";
 import { HealthTech } from "../projectsData/HealthCare";
@@ -47,7 +47,6 @@ function CategoriesFeatures(props) {
                 resources: value.resources,
                 developers: value.dev,
                 technologies: value?.technologies,
-                techStack: value.techStack
             });
         } else {
             updatedManDays = updatedManDays.filter(day => day.name !== name);
@@ -62,7 +61,6 @@ function CategoriesFeatures(props) {
         }
 
         const totalManDaysStringify = JSON.stringify(updatedManDays);
-        console.log(totalManDaysStringify);
         localStorage.setItem("totalManDays", totalManDaysStringify);
     };
 
@@ -191,7 +189,6 @@ function CategoriesFeatures(props) {
                             "resources": feature.numResources ? feature.numResources : "-",
                             "dev": feature.devRequired ? feature.devRequired : "-",
                             "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
-                            "techStack": RealEstateTechStack
                         }
                     })
                 }

@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import List from '@mui/material/List';
 import UniqueDevs from "./uniqueDevs";
 import TechStack from './techStack';
-import JavaImage from "../images/java.png";
 import { pushDataToFirestore } from '../utils/firebaseUtils';
 import { Chart } from "react-google-charts";
 
@@ -56,7 +50,7 @@ function GaintCharts() {
       const chart_data = [columns, ...rows];
     
       const options = {
-        height: 400,
+        height: 600,
         gantt: {
           trackHeight: 30,
         },
@@ -146,7 +140,6 @@ parsedManDays.forEach((item) => {
 });
 
 const TechStack = Array.from(technology);
-console.log(TechStack);
 
     setData({ months, days, manDays, resources, uniqueDevelopers, TechStack });
     }, []);
@@ -167,7 +160,7 @@ console.log(TechStack);
                         <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "30px", fontWeight: "600", color: "#fff" }}> {displayText}</Typography>
                     </Box>
                     <Box sx={[styles.threeBoxes, styles.themeBackgroundwithBorder, styles.totalManDaysBg]}>
-                        <Typography variant='p' sx={{ fontFamily: 'IBM Plex Mono !important', fontFamily: 'IBM Plex Mono !important', fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Total Man Days </Typography>
+                        <Typography variant='p' sx={{fontFamily: 'IBM Plex Mono !important', fontSize: "14px", fontWeight: "300", color: "#fff", textTransform: 'uppercase' }}> Total Man Days </Typography>
                         <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}>{data.manDays}</Typography>
                     </Box>
                 </Stack>
