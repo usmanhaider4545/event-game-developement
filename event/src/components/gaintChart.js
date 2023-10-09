@@ -6,7 +6,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
-import UniqueDevs from "./uniqueDevs"
+import UniqueDevs from "./uniqueDevs";
+import TechStack from './techStack';
 import JavaImage from "../images/java.png";
 import { pushDataToFirestore } from '../utils/firebaseUtils';
 import { Chart } from "react-google-charts";
@@ -105,7 +106,7 @@ function GaintCharts() {
         }
         
     }
-    const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"" });
+    const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"", technology:"" });
 
     useEffect(() => {
       const parsedManDays = JSON.parse(localStorage.getItem("totalManDays"));
@@ -128,10 +129,26 @@ function GaintCharts() {
         });
     }
     });
+    const uniqueDevelopers = Array.from(uniqueDevelopersSet);    
+    const technology = new Set();
 
-    const uniqueDevelopers = Array.from(uniqueDevelopersSet);
-    console.log(uniqueDevelopers);
-            setData({ months, days, manDays, resources, uniqueDevelopers });
+parsedManDays.forEach((item) => {
+  if (typeof item.technologies === 'string') {
+    const technologiesArray = item.technologies.split(', ');
+    technologiesArray.forEach((tech) => {
+      technology.add(tech);
+    });
+  } else if (Array.isArray(item.technologies)) {
+    item.technologies.forEach((tech) => {
+      technology.add(tech);
+    });
+  }
+});
+
+const TechStack = Array.from(technology);
+console.log(TechStack);
+
+    setData({ months, days, manDays, resources, uniqueDevelopers, TechStack });
     }, []);
     localStorage.setItem("Estimations", JSON.stringify(data));
     const displayText =
@@ -167,42 +184,7 @@ function GaintCharts() {
         </Grid>
             <Grid   item xs={4}>
                 <UniqueDevs data={data}/>
-                <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding]}/>
-                    <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', color: "#fff", textAlign: "left", fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', }}>Recommended technology</Typography>
-                <Box>
-                    <List sx={{ flexDirection: "inherit", justifyContent: "center", display: "flex", flexWrap: "wrap" }}>
-                        <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0" , justifyContent : "center" }}>
-                        <Box>
-                        <img src="event\src\svgs\NodeJS.svg" />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase'}}>Python</Typography>
-                        </Box>
-                        </ListItem> 
-                        {/* <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
-                                <Box>
-                                    <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
-                                </Box>
-                        </ListItem> 
-                        <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
-                                <Box>
-                                    <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
-                                </Box>
-                        </ListItem> 
-                        <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
-                                <Box>
-                                    <img src={JavaImage} />
-                                    <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
-                                </Box>
-                        </ListItem> 
-                        <ListItem sx={{ width: '20%', paddingLeft: "0", paddingRight: "0", justifyContent: "center" }}>
-                        <Box>
-                            <img src={JavaImage} />
-                            <Typography sx={{ color: "#fff", fontSize: "14px", fontFamily: 'IBM Plex Mono !important', fontWeight: "400", textTransform: 'uppercase' }}>Python</Typography>
-                        </Box>
-                        </ListItem>  */}
-                    </List>
-                </Box>
+                <TechStack  data={data}/>
             </Grid>
         </Grid>
 
