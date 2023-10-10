@@ -1,26 +1,27 @@
 import { useState, useEffect } from 'react';
-
-export const useUserProfile = (enableActionButton,disableActionButton) => {
+export const useUserProfile = (enableActionButton, disableActionButton) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-
+    const [isValid, setIsValid] = useState(false);
     useEffect(() => {
         const userProfile = JSON.parse(localStorage.getItem('userProfile')) || {};
         if (userProfile.name) setName(userProfile.name);
         if (userProfile.email) setEmail(userProfile.email);
-        if (userProfile.phone) setPhone(userProfile.phone);
     }, []);
-
     useEffect(() => {
-        const isAnyFieldEmpty = !name || !email || !phone;
-        if (!isAnyFieldEmpty) {
-            localStorage.setItem('userProfile', JSON.stringify({ name, email, phone }));
-            enableActionButton();
-        } else {
-            disableActionButton()
-        }
-    }, [name, email, phone]);
+        const isAnyFieldEmpty = !name || !email;
+        const isEmailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
+        const isValidInput = !isAnyFieldEmpty && isEmailValid;
 
-    return { name, setName, email, setEmail, phone, setPhone };
-}
+        if (isValidInput) {
+            localStorage.setItem('userProfile', JSON.stringify({ name, email }));
+            enableActionButton();
+            setIsValid(true);
+        } else {
+            disableActionButton();
+            setIsValid(false);
+        }
+    }, [name, email, enableActionButton, disableActionButton]);
+
+    return { name, setName, email, setEmail, isValid };
+};
