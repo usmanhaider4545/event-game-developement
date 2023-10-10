@@ -166,7 +166,7 @@ function CategoriesFeatures(props) {
                 }
                 setFeatures(combineCategories);
             })
-        } else if (localStorageIndustry === "ECommerce and Retail") {
+        } else if (localStorageIndustry === "Ecommerce and Retail") {
             let combineCategories = []
             ECommerce.map((item, index) => {
                 if (item.category === localStorageCategory) {

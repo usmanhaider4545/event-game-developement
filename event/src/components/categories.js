@@ -22,6 +22,7 @@ import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
 
 function Categories(props) {
+    console.log("abc", ECommerce)
 
     const [value, setValue] = useState('');
 
@@ -89,7 +90,7 @@ function Categories(props) {
             })
             setCategories(combineCategories);
         }
-        else if (checkSelectedProjects === "ECommerce and Retail") {
+        else if (checkSelectedProjects === "Ecommerce and Retail") {
             let combineCategories = ECommerce.map((item, index) => {
                 return item.category ? item.category : "-"
             })
