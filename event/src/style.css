@@ -193,8 +193,15 @@ td {
      line-height: normal;
      text-transform: uppercase;
  }
-
-
+.gantChart  rect {
+     fill: rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+    -webkit-backdrop-filter: blur(26.94999885559082px);
+    backdrop-filter: blur(26.94999885559082px);
+}
+.gantChart text {
+    fill: #fff;
+}
 @media all and (max-width:1367px) {
     .resultBox {
             margin: 0px auto 0px;
