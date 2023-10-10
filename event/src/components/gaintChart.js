@@ -98,7 +98,7 @@ function GaintCharts() {
         totalManDaysBg: {
             background: `radial-gradient(101.65% 101.64% at 50% 50%, #265874 0%, rgba(44, 41, 58, 0.71) 100%)`
         }
-        
+
     }
     const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"", technology:"" });
 
@@ -123,7 +123,7 @@ function GaintCharts() {
         });
     }
     });
-    const uniqueDevelopers = Array.from(uniqueDevelopersSet);    
+    const uniqueDevelopers = Array.from(uniqueDevelopersSet);
     const technology = new Set();
 
 parsedManDays.forEach((item) => {
