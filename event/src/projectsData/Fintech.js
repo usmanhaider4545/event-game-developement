@@ -7,140 +7,194 @@ export const Fintech = [
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: "UI/UX Designer, Mobile App Developer",
+        devRequired: ["UI/UX Designer", "Mobile App Developer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "Security",
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: "Security Expert, Backend Developer",
+        devRequired: ["Security Expert", "Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "MongoDB"],
       },
       {
         name: "Payment Methods",
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer", "Mobile App Developer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "Mobile Payments",
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: "Mobile App Developer, UI/UX Designer",
+        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "International Transfers",
         manDays: "60-120 man-days",
         totalManDays: 100,
         numResources: 2,
-        devRequired: "Backend Developer, Security Expert",
+        devRequired: ["Backend Developer", "Security Expert"],
+        recommendedStack: ["Node.js", "Express", "MongoDB"],
       },
       {
         name: "Payment Scheduling",
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "Transaction History",
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 2,
-        devRequired: "Backend Developer, Data Analyst",
+        devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["Node.js", "Express", "MongoDB", "Python", "Pandas"],
       },
       {
         name: "Notifications",
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Split and Group Payments",
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "Bill Payment Services",
         manDays: "60-120 man-days",
         totalManDays: 120,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer", "Mobile App Developer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "Payment Request",
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Instant Transfers",
         manDays: "40-80 man-days",
         totalManDays: 80,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer", "Mobile App Developer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "P2P Transfers",
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: [
+          "Node.js",
+          "React Native",
+          "Swift (iOS)",
+          "Kotlin (Android)",
+        ],
       },
       {
         name: "Merchant Integration",
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["Node.js", "React", "React Native"],
       },
       {
         name: "Rewards and Loyalty Programs",
         manDays: "30-60 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["Node.js", "React", "React Native"],
       },
       {
         name: "Customer Support",
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Account Management",
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Regulatory Compliance",
         manDays: "Ongoing and may require dedicated resources",
         totalManDays: 20,
         numResources: 1,
-        devRequired: "Security Expert",
+        devRequired: ["Security Expert"],
+        recommendedStack: ["Ongoing Compliance Management"],
       },
       {
         name: "Accessibility",
         manDays: "Ongoing and integrated throughout development",
         totalManDays: 20,
         numResources: 1,
-        devRequired: "UI/UX Designer",
+        devRequired: ["UI/UX Designer"],
+        recommendedStack: ["Ongoing Accessibility Integration"],
       },
       {
         name: "Cross-Platform Compatibility",
         manDays: "30-60 man-days per platform (iOS, Android, web)",
         totalManDays: 40,
         numResources: 3,
-        devRequired: "UI/UX Designer, Mobile App Developer, Backend Developer",
+        devRequired: [
+          "UI/UX Designer",
+          "Mobile App Developer",
+          "Backend Developer",
+        ],
+        recommendedStack: ["React", "React Native", "Node.js"],
       },
     ],
   },
@@ -153,6 +207,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Loan Application",
@@ -160,6 +215,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Credit Scoring and Risk Assessment",
@@ -167,6 +223,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["Python", "Scikit-Learn", "TensorFlow"],
       },
       {
         name: "Loan Approval and Disbursement",
@@ -174,6 +231,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Loan Repayment and Amortization",
@@ -181,6 +239,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Investor Account Management",
@@ -188,6 +247,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Loan Listing and Marketplace",
@@ -195,6 +255,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Payment Processing and Escrow",
@@ -202,6 +263,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Payment Integration Specialist"],
+        recommendedStack: ["Node.js", "Express", "Payment Gateway SDK"],
       },
       {
         name: "Auto-Invest Features",
@@ -209,6 +271,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["Python", "Scikit-Learn", "TensorFlow"],
       },
       {
         name: "Loan Servicing and Collections",
@@ -216,6 +279,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Collections Specialist"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Secondary Market Trading",
@@ -223,6 +287,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Marketplace Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Reporting and Analytics",
@@ -230,6 +295,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "Data Analytics Tools"],
       },
       {
         name: "Notifications and Alerts",
@@ -237,6 +303,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Regulatory Compliance",
@@ -244,6 +311,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Compliance Management Tools"],
       },
       {
         name: "Customer Support",
@@ -251,6 +319,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Customer Support Specialist"],
+        recommendedStack: ["Customer Support Tools"],
       },
       {
         name: "Security and Fraud Prevention",
@@ -258,6 +327,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Tools and Frameworks"],
       },
       {
         name: "Mobile App Development",
@@ -265,6 +335,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "Investor and Borrower Onboarding",
@@ -272,6 +343,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "KYC/AML Verification",
@@ -279,6 +351,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Compliance Management Tools"],
       },
       {
         name: "Documentation and Legal Compliance",
@@ -286,6 +359,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Legal Specialist"],
+        recommendedStack: ["Legal Compliance Tools"],
       },
     ],
   },
@@ -298,6 +372,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Cryptocurrency Transactions",
@@ -305,6 +380,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Cryptocurrency Exchange Integration",
@@ -312,6 +388,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Exchange Integration Specialist"],
+        recommendedStack: ["Node.js", "Express", "Exchange API"],
       },
       {
         name: "Multi-Currency Wallet",
@@ -319,6 +396,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Security and Encryption",
@@ -326,6 +404,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks"],
       },
       {
         name: "Private Key Management",
@@ -333,6 +412,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks"],
       },
       {
         name: "Cryptocurrency Price Tracking",
@@ -340,6 +420,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Trading Features (Buy/Sell Orders)",
@@ -347,6 +428,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Trading Specialist"],
+        recommendedStack: ["Node.js", "Express", "Trading API"],
       },
       {
         name: "Liquidity and Order Matching",
@@ -354,6 +436,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Trading Specialist"],
+        recommendedStack: ["Node.js", "Express", "Trading Algorithms"],
       },
       {
         name: "KYC/AML Verification",
@@ -361,6 +444,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Compliance Management Tools"],
       },
       {
         name: "Blockchain Explorer",
@@ -368,6 +452,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Blockchain Developer"],
+        recommendedStack: ["Blockchain Explorer Tools"],
       },
       {
         name: "Cryptocurrency Staking and Yield Farming",
@@ -375,6 +460,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Blockchain Developer"],
+        recommendedStack: ["Node.js", "Express", "Smart Contracts"],
       },
       {
         name: "Mining Pool Integration",
@@ -382,6 +468,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Mining Specialist"],
+        recommendedStack: ["Node.js", "Express", "Mining Pool Software"],
       },
       {
         name: "Wallet Recovery Options",
@@ -389,6 +476,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks"],
       },
       {
         name: "Mobile App Development",
@@ -396,6 +484,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "Smart Contract Development",
@@ -403,6 +492,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Blockchain Developer", "Smart Contract Developer"],
+        recommendedStack: ["Solidity", "Ethereum Smart Contracts"],
       },
       {
         name: "Decentralized Finance (DeFi) Integration",
@@ -410,6 +500,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Backend Developer", "DeFi Specialist"],
+        recommendedStack: ["DeFi Protocols", "Web3.js"],
       },
       {
         name: "Security Audits and Penetration Testing",
@@ -417,6 +508,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Auditing Tools"],
       },
       {
         name: "User Support and Help Center",
@@ -424,6 +516,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Customer Support Specialist"],
+        recommendedStack: ["Customer Support Tools"],
       },
       {
         name: "Regulatory Compliance",
@@ -431,6 +524,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Compliance Management Tools"],
       },
     ],
   },
@@ -443,6 +537,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Insurance Quote Generation",
@@ -450,6 +545,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Python", "Django", "Machine Learning Frameworks"],
       },
       {
         name: "Policy Purchase and Management",
@@ -457,6 +553,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Claims Submission",
@@ -464,6 +561,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Claims Processing and Verification",
@@ -471,6 +569,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Python", "Django", "Machine Learning Frameworks"],
       },
       {
         name: "Document Management (Policies, Certificates)",
@@ -478,6 +577,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Premium Payments and Billing",
@@ -485,6 +585,7 @@ export const Fintech = [
         totalManDays: 50,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Policy Recommendation Engine",
@@ -492,6 +593,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Python", "Django", "Machine Learning Frameworks"],
       },
       {
         name: "Customer Support and Communication",
@@ -499,6 +601,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Customer Support Specialist"],
+        recommendedStack: ["Customer Support Tools"],
       },
       {
         name: "AI-Based Risk Assessment",
@@ -506,6 +609,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Data Scientist", "Machine Learning Engineer"],
+        recommendedStack: ["Machine Learning Frameworks"],
       },
       {
         name: "Fraud Detection and Prevention",
@@ -513,6 +617,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Security Specialist"],
+        recommendedStack: ["Node.js", "Express", "Security Frameworks"],
       },
       {
         name: "Integration with Third-Party Data Providers",
@@ -520,6 +625,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Claims History and Analytics",
@@ -527,6 +633,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Python", "Django", "Machine Learning Frameworks"],
       },
       {
         name: "Mobile App Development",
@@ -534,6 +641,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "Insurance Product Customization",
@@ -541,6 +649,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Regulatory Compliance",
@@ -548,6 +657,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Compliance Management Tools"],
       },
       {
         name: "Machine Learning Model Development",
@@ -555,6 +665,7 @@ export const Fintech = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Data Scientist", "Machine Learning Engineer"],
+        recommendedStack: ["Machine Learning Frameworks"],
       },
       {
         name: "Policy Comparison and Recommendations",
@@ -562,6 +673,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Python", "Django", "Machine Learning Frameworks"],
       },
       {
         name: "Data Privacy and Security Measures",
@@ -569,6 +681,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks"],
       },
       {
         name: "Customer Education and Content Creation",
@@ -576,6 +689,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Content Creator"],
+        recommendedStack: ["Content Creation Tools"],
       },
     ],
   },
@@ -588,6 +702,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Expense Tracking",
@@ -595,6 +710,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Income Tracking",
@@ -602,6 +718,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Budget Creation and Management",
@@ -609,6 +726,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Transaction Categorization",
@@ -616,6 +734,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Bill Reminder and Payment Tracking",
@@ -623,6 +742,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Financial Goal Setting",
@@ -630,6 +750,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Debt Management and Tracking",
@@ -637,6 +758,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Net Worth Calculation",
@@ -644,6 +766,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Financial Reports and Analytics",
@@ -651,6 +774,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Bank Account Integration",
@@ -658,6 +782,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "API Integration Specialist"],
+        recommendedStack: ["Node.js", "Express", "API Integration Tools"],
       },
       {
         name: "Credit Score Monitoring",
@@ -665,6 +790,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Investment Portfolio Tracking",
@@ -672,6 +798,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Data Import/Export",
@@ -679,6 +806,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Mobile App Development",
@@ -686,6 +814,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
         name: "Expense Analysis and Insights",
@@ -693,6 +822,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["React", "Node.js", "Data Analysis Tools"],
       },
       {
         name: "Customizable Budget Categories",
@@ -700,6 +830,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Financial Education Content",
@@ -707,6 +838,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Content Creator"],
+        recommendedStack: ["Content Management Tools"],
       },
       {
         name: "Security and Data Privacy Measures",
@@ -714,6 +846,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks"],
       },
       {
         name: "Customer Support and Help Center",
@@ -721,6 +854,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Customer Support Specialist"],
+        recommendedStack: ["Customer Support Tools"],
       },
     ],
   },
@@ -733,6 +867,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Property Details and Descriptions",
@@ -740,6 +875,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Property Valuation Tools",
@@ -747,6 +883,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["React", "Node.js", "Data Analysis Tools"],
       },
       {
         name: "Virtual Property Tours",
@@ -754,6 +891,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Property History and Transaction Data",
@@ -761,6 +899,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Mortgage Calculator",
@@ -768,6 +907,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Property Alerts and Notifications",
@@ -775,6 +915,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Agent and Broker Profiles",
@@ -782,6 +923,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Booking and Scheduling Property Viewings",
@@ -789,6 +931,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Property Inspection Reports",
@@ -796,6 +939,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Property Financing Options",
@@ -803,6 +947,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Financial Specialist"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Property Legal and Regulatory Information",
@@ -810,6 +955,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Legal Specialist"],
+        recommendedStack: ["Legal Information Systems"],
       },
       {
         name: "Property Comparison Tools",
@@ -817,6 +963,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Property Management and Tenant Portal",
@@ -824,6 +971,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "Neighborhood and Location Information",
@@ -831,6 +979,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Feedback and Review System",
@@ -838,6 +987,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Document Management and E-signatures",
@@ -845,6 +995,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Customer Support and Help Center",
@@ -852,6 +1003,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Customer Support Specialist"],
+        recommendedStack: ["Customer Support Tools"],
       },
       {
         name: "Integration with Property Data Providers",
@@ -859,6 +1011,7 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["API Integration Tools"],
       },
       {
         name: "Property Investment Analysis Tools",
@@ -866,6 +1019,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Financial Analyst"],
+        recommendedStack: ["Data Analysis Tools"],
       },
     ],
   },
@@ -878,6 +1032,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "Swagger"],
       },
       {
         name: "API Authentication and Security",
@@ -885,6 +1040,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["OAuth 2.0", "API Security Tools"],
       },
       {
         name: "Developer Portal",
@@ -892,6 +1048,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["UI/UX Designer"],
+        recommendedStack: ["React", "Node.js", "Express"],
       },
       {
         name: "API Rate Limiting and Throttling",
@@ -899,6 +1056,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "Rate Limiting Middleware"],
       },
       {
         name: "API Versioning and Compatibility",
@@ -906,6 +1064,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Semantic Versioning", "API Versioning Tools"],
       },
       {
         name: "Data Access Consent Management",
@@ -913,6 +1072,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["OAuth 2.0", "Consent Management Tools"],
       },
       {
         name: "Transaction Data Retrieval",
@@ -920,6 +1080,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express"],
       },
       {
         name: "Payment Initiation APIs",
@@ -927,6 +1088,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Payment API Standards", "Payment Processing Tools"],
       },
       {
         name: "Account Aggregation",
@@ -934,6 +1096,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "Data Aggregation Tools"],
       },
       {
         name: "User Authentication and Authorization Flow",
@@ -941,6 +1104,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["OAuth 2.0", "Authentication Tools"],
       },
       {
         name: "Data Enrichment and Categorization",
@@ -948,6 +1112,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Data Analyst"],
+        recommendedStack: ["Data Enrichment Tools"],
       },
       {
         name: "Error Handling and Logging",
@@ -955,6 +1120,7 @@ export const Fintech = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Error Tracking Tools", "Logging Frameworks"],
       },
       {
         name: "Compliance and Regulatory Integration",
@@ -962,6 +1128,7 @@ export const Fintech = [
         totalManDays: 50,
         numResources: 1,
         devRequired: ["Compliance Specialist"],
+        recommendedStack: ["Regulatory Compliance Tools"],
       },
       {
         name: "Webhooks and Event Notifications",
@@ -969,6 +1136,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Webhooks Framework"],
       },
       {
         name: "Analytics and Reporting Dashboard",
@@ -976,6 +1144,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Data Analyst"],
+        recommendedStack: ["Data Visualization Tools", "Reporting Frameworks"],
       },
       {
         name: "Audit Trail and Activity Logs",
@@ -983,6 +1152,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Audit Trail Tools"],
       },
       {
         name: "Consent Revocation and Management",
@@ -990,6 +1160,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Consent Management Tools"],
       },
       {
         name: "Data Privacy and Security Measures",
@@ -997,6 +1168,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Security Frameworks", "Data Privacy Tools"],
       },
       {
         name: "Developer Support and Documentation",
@@ -1004,6 +1176,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Technical Writer"],
+        recommendedStack: ["Documentation Tools"],
       },
       {
         name: "Scalability and Load Testing",
@@ -1011,6 +1184,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["QA Engineer"],
+        recommendedStack: ["Load Testing Tools"],
       },
     ],
   },
@@ -1023,6 +1197,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js", "Express", "Payment Gateway SDKs"],
       },
       {
         name: "Payment Card Processing",
@@ -1030,6 +1205,10 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: [
+          "Payment Processing Libraries",
+          "Security Frameworks",
+        ],
       },
       {
         name: "Payment APIs and SDKs",
@@ -1037,6 +1216,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["API Development Tools", "SDKs"],
       },
       {
         name: "Cross-Border Payment Solutions",
@@ -1044,6 +1224,10 @@ export const Fintech = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Backend Developer", "Financial Specialist"],
+        recommendedStack: [
+          "Currency Exchange APIs",
+          "International Payment Gateways",
+        ],
       },
       {
         name: "Contactless and Mobile Payments",
@@ -1051,6 +1235,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Mobile Payment SDKs", "NFC Technology"],
       },
       {
         name: "Subscription Billing",
@@ -1058,6 +1243,10 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: [
+          "Subscription Billing Platforms",
+          "Recurring Payment Tools",
+        ],
       },
       {
         name: "Payment Reconciliation and Reporting",
@@ -1065,6 +1254,10 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: [
+          "Payment Reconciliation Tools",
+          "Reporting Frameworks",
+        ],
       },
       {
         name: "Tokenization and Data Security",
@@ -1072,6 +1265,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["Tokenization Services", "Data Encryption Tools"],
       },
       {
         name: "Payment Processing Speed and Reliability",
@@ -1079,6 +1273,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["High-Performance Payment Servers"],
       },
       {
         name: "Merchant Account Management",
@@ -1086,6 +1281,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Merchant Account Management Tools"],
       },
       {
         name: "Fraud Detection and Prevention",
@@ -1093,6 +1289,10 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: [
+          "Fraud Detection Systems",
+          "Machine Learning Models",
+        ],
       },
       {
         name: "Payment Notifications and Alerts",
@@ -1100,6 +1300,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Real-Time Messaging Services"],
       },
       {
         name: "PCI DSS Compliance",
@@ -1107,6 +1308,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Security Specialist"],
+        recommendedStack: ["PCI Compliance Tools"],
       },
       {
         name: "Payment Routing and Settlement",
@@ -1114,6 +1316,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Payment Routing Systems"],
       },
       {
         name: "Dispute Resolution and Chargeback Handling",
@@ -1121,6 +1324,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Dispute Resolution Tools"],
       },
       {
         name: "Mobile Point-of-Sale (mPOS) Systems",
@@ -1128,6 +1332,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["mPOS Hardware and Software"],
       },
       {
         name: "Real-Time Payment Processing",
@@ -1135,6 +1340,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Real-Time Payment Systems"],
       },
       {
         name: "Payment Infrastructure Scaling",
@@ -1142,6 +1348,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Scalable Infrastructure Technologies"],
       },
       {
         name: "Payment Analytics and Insights",
@@ -1149,6 +1356,7 @@ export const Fintech = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Data Analyst"],
+        recommendedStack: ["Analytics and BI Tools"],
       },
       {
         name: "Payment Recovery and Retry",
@@ -1156,47 +1364,8 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Recovery and Retry Mechanisms"],
       },
     ],
   },
-];
-export const FintechResources = [
-  {
-    role: "Backend Developer",
-    skills: ["UI/UX Design", "Wireframing", "Prototyping"],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Wireframing", "Prototyping"],
-  },
-  {
-    role: "Data Analyst",
-    skills: [
-      "Data Mining",
-      "Statistical Analysis",
-      "Machine Learning Algorithms",
-      "Python",
-      "R",
-    ],
-  },
-  {
-    role: "Mobile App Developer",
-    skills: ["Swift", "Java", "Kotlin", "React Native", "Flutter"],
-  },
-  {
-    role: "Security Expert",
-    skills: ["Security Assessment", "Fraud Detection", "Security Protocols"],
-  },
-  {
-    role: "Blockchain Developer",
-    skills: ["Blockchain Development", "Smart Contracts", "Crypto Wallets"],
-  },
-];
-export const FintechTechStack = [
-  "Node.js",
-  "React.js",
-  "React Native",
-  "Blockchain (e.g., Ethereum)",
-  "PCI DSS Compliance Tools",
-  "Machine Learning (ML)",
 ];

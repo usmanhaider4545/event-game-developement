@@ -8,6 +8,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["Python Django", "UI/UX"],
       },
       {
         name: "Property Listing",
@@ -15,6 +16,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Property Submission",
@@ -22,6 +24,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "CRM provider integration",
@@ -29,6 +32,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Integration Specialist"],
+        recommendedStack: ["Node.js", "CRM API"],
       },
       {
         name: "Data Providers Integration",
@@ -36,6 +40,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Backend Developer", "Integration Specialist"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Payment Integration",
@@ -43,6 +48,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Financial Specialist"],
+        recommendedStack: ["Node.js", "Payment Gateway API"],
       },
       {
         name: "Lead Generation Integration",
@@ -50,6 +56,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Marketing Specialist"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "API Integration",
@@ -57,6 +64,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Responsiveness for all Devices",
@@ -64,6 +72,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 1,
         devRequired: ["UI/UX Designer"],
+        recommendedStack: ["UI/UX"],
       },
       {
         name: "Map Integration",
@@ -71,6 +80,7 @@ export const RealEstate = [
         totalManDays: 45,
         numResources: 2,
         devRequired: ["Backend Developer", "Map Integration Specialist"],
+        recommendedStack: ["Node.js", "Google Maps API"],
       },
       {
         name: "Messaging and Notifications",
@@ -78,6 +88,7 @@ export const RealEstate = [
         totalManDays: 35,
         numResources: 2,
         devRequired: ["Backend Developer", "Notification Specialist"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Advance Search and Filters",
@@ -85,6 +96,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Booking and Scheduling",
@@ -92,6 +104,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Scheduling Specialist"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Admin and Agent Panels",
@@ -99,6 +112,7 @@ export const RealEstate = [
         totalManDays: 45,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Customize design page for properties",
@@ -106,6 +120,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Analytics and Reporting",
@@ -113,6 +128,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["Node.js"],
       },
     ],
   },
@@ -125,6 +141,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Showcase",
@@ -132,6 +149,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Floor Plans",
@@ -139,6 +157,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Units, Leasing Module for individual units",
@@ -146,6 +165,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive property Amenities",
@@ -153,6 +173,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "360-Degree Virtual Tours",
@@ -160,6 +181,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Neighborhood Maps Integrations",
@@ -167,6 +189,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Property Search and Filters",
@@ -174,6 +197,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Details",
@@ -181,6 +205,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Maps",
@@ -188,6 +213,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Save Favorites",
@@ -195,6 +221,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Email Favorite Items",
@@ -202,6 +229,7 @@ export const RealEstate = [
         totalManDays: 8,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Offline Mode",
@@ -209,6 +237,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
     ],
   },
@@ -221,6 +250,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Property Showcase",
@@ -228,6 +258,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Interactive Floor Plans",
@@ -235,6 +266,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Interactive Units, Leasing Module for individual units",
@@ -242,6 +274,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Interactive property Amenities",
@@ -249,6 +282,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "360-Degree Virtual Tours",
@@ -256,6 +290,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Neighborhood Maps Integrations",
@@ -263,6 +298,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native", "Google Maps API"],
       },
       {
         name: "Property Search and Filters",
@@ -270,6 +306,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Property Details",
@@ -277,6 +314,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Interactive Maps",
@@ -284,6 +322,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native", "Google Maps API"],
       },
       {
         name: "Save Favorites",
@@ -291,6 +330,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
       {
         name: "Email Favorite Items",
@@ -298,6 +338,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 1,
         devRequired: ["Mobile App Developer"],
+        recommendedStack: ["React Native"],
       },
     ],
   },
@@ -310,6 +351,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Showcase",
@@ -317,6 +359,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Floor Plans",
@@ -324,6 +367,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Units, Leasing Module for individual units",
@@ -331,6 +375,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive property Amenities",
@@ -338,6 +383,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "360-Degree Virtual Tours",
@@ -345,6 +391,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Neighborhood Maps Integrations",
@@ -352,6 +399,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Floorplates View",
@@ -359,6 +407,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Sitemap View",
@@ -366,6 +415,7 @@ export const RealEstate = [
         totalManDays: 10,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Maps",
@@ -373,6 +423,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Share Favorites",
@@ -380,6 +431,7 @@ export const RealEstate = [
         totalManDays: 8,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Save Favorites",
@@ -387,6 +439,7 @@ export const RealEstate = [
         totalManDays: 14,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Email Favorite Items",
@@ -394,81 +447,8 @@ export const RealEstate = [
         totalManDays: 9,
         numResources: 1,
         devRequired: ["Frontend Developer"],
+        recommendedStack: ["React.js"],
       },
     ],
-  },
-];
-export const RealEstateResources = [
-  {
-    role: "Backend Developer",
-    description: "Responsible for server-side development and integration.",
-  },
-  {
-    role: "UI/UX Designer",
-    description:
-        "Responsible for designing user interfaces and user experience.",
-  },
-  {
-    role: "Integration Specialist",
-    description: "Specializes in integrating third-party services and APIs.",
-  },
-  {
-    role: "Financial Specialist",
-    description: "Manages financial aspects and payment integration.",
-  },
-  {
-    role: "Marketing Specialist",
-    description: "Handles lead generation and marketing integration.",
-  },
-  {
-    role: "Data Analyst",
-    description: "Analyzes data for reporting and analytics features.",
-  },
-  {
-    role: "Scheduling Specialist",
-    description: "Manages booking and scheduling functionality.",
-  },
-  {
-    role: "Notification Specialist",
-    description: "Handles messaging and notification features.",
-  },
-  {
-    role: "Map Integration Specialist",
-    description: "Specializes in integrating map-related functionality.",
-  },
-  {
-    role: "Mobile App Developer",
-    description: "Develops mobile applications for property listings.",
-  },
-  {
-    role: "Frontend Developer",
-    description: "Responsible for frontend development of web applications.",
-  },
-];
-
-export const RealEstateTechStack = [
-  {
-    technology: "Node.js",
-    description: "Backend server development.",
-  },
-  {
-    technology: "React.js",
-    description: "Frontend web application development.",
-  },
-  {
-    technology: "React Native",
-    description: "Development of mobile applications.",
-  },
-  {
-    technology: "Google Maps API",
-    description: "Integration of map-related features.",
-  },
-  {
-    technology: "Payment Gateway API",
-    description: "Integration of payment processing.",
-  },
-  {
-    technology: "CRM API",
-    description: "Integration with CRM providers.",
   },
 ];

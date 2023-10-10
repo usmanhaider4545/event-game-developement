@@ -8,6 +8,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js","Real-time Database"],
       },
       {
         name: "Pricing and rate management",
@@ -15,6 +16,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Confirmation and booking notifications",
@@ -22,6 +24,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -34,6 +37,7 @@ export const hospitality = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Room assignments and availability",
@@ -41,6 +45,7 @@ export const hospitality = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Billing and guest profiles",
@@ -48,6 +53,7 @@ export const hospitality = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Integration with other systems",
@@ -55,6 +61,7 @@ export const hospitality = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -67,6 +74,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Payment processing",
@@ -74,6 +82,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Inventory management",
@@ -81,6 +90,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -93,6 +103,7 @@ export const hospitality = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Restocking automation",
@@ -100,6 +111,7 @@ export const hospitality = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Wastage reduction",
@@ -107,6 +119,7 @@ export const hospitality = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -119,6 +132,7 @@ export const hospitality = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Service request functionality",
@@ -126,6 +140,7 @@ export const hospitality = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -138,6 +153,7 @@ export const hospitality = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Personalization of services",
@@ -145,6 +161,7 @@ export const hospitality = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -157,6 +174,7 @@ export const hospitality = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Room cleaning schedules",
@@ -164,6 +182,7 @@ export const hospitality = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Maintenance request handling",
@@ -171,6 +190,7 @@ export const hospitality = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
@@ -183,40 +203,8 @@ export const hospitality = [
         totalManDays: 16,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js"],
       },
     ],
   },
-];
-
-export const HospitalityResources = [
-  {
-    role: "Frontend Developer",
-    skills: ["Angular", "React.js", "Vue.js", "HTML5", "CSS3", "JavaScript"],
-  },
-  {
-    role: "Backend Developer",
-    skills: ["Node.js", "Express.js", "MongoDB", "Python"],
-  },
-  {
-    role: "DevOps Engineer",
-    skills: ["Docker", "AWS", "Jenkins"],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Prototyping"],
-  },
-];
-
-export const HospitalityTechStack = [
-  "Angular",
-  "React.js",
-  "Vue.js",
-  "Node.js",
-  "Python",
-  "MongoDB",
-  "Docker",
-  "AWS",
-  "Jenkins",
-  "Python",
-  "UI/UX Design",
 ];

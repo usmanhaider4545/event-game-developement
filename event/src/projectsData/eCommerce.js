@@ -8,6 +8,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
       {
         name: "Inventory management",
@@ -15,6 +16,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
       {
         name: "Product search and filtering",
@@ -22,6 +24,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Elasticsearch"],
       },
       {
         name: "Product reviews and ratings",
@@ -29,6 +32,7 @@ export const ECommerce = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
       {
         name: "Product recommendations",
@@ -36,6 +40,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Machine Learning"],
       },
     ],
   },
@@ -48,6 +53,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
       {
         name: "Checkout process",
@@ -55,6 +61,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Stripe"],
       },
       {
         name: "Payment processing",
@@ -62,6 +69,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Stripe"],
       },
       {
         name: "Order confirmation and tracking",
@@ -69,6 +77,7 @@ export const ECommerce = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
     ],
   },
@@ -81,6 +90,7 @@ export const ECommerce = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Firebase"],
       },
       {
         name: "User profiles and preferences",
@@ -88,6 +98,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
       {
         name: "Password reset and security",
@@ -95,6 +106,7 @@ export const ECommerce = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Firebase"],
       },
     ],
   },
@@ -107,6 +119,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Elasticsearch"],
       },
       {
         name: "Navigation and filters",
@@ -114,6 +127,7 @@ export const ECommerce = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Elasticsearch"],
       },
     ],
   },
@@ -126,6 +140,7 @@ export const ECommerce = [
         totalManDays: 18,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
     ],
   },
@@ -138,6 +153,7 @@ export const ECommerce = [
         totalManDays: 18,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
     ],
   },
@@ -150,6 +166,7 @@ export const ECommerce = [
         totalManDays: 18,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "Stripe"],
       },
     ],
   },
@@ -162,37 +179,8 @@ export const ECommerce = [
         totalManDays: 18,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
+        recommendedStack: ["React.js", "Node.js", "MongoDB"],
       },
     ],
   },
-];
-
-export const ECommerceResources = [
-  {
-    role: "Frontend Developer",
-    skills: ["React.js", "HTML5", "CSS3", "JavaScript"],
-  },
-  {
-    role: "Backend Developer",
-    skills: ["Node.js", "Express.js", "MongoDB"],
-  },
-  {
-    role: "DevOps Engineer",
-    skills: ["Docker", "AWS", "Jenkins"],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Prototyping"],
-  },
-];
-
-export const ECommerceTechStack = [
-  "React.js",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Docker",
-  "AWS",
-  "Jenkins",
-  "UI/UX Design",
 ];

@@ -8,6 +8,7 @@ export const ArtificialIntelligence = [
         totalManDays: 24,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Task automation and scheduling",
@@ -15,6 +16,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Information retrieval and recommendations",
@@ -22,6 +24,7 @@ export const ArtificialIntelligence = [
         totalManDays: 24,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Multimodal interaction (voice, text, and visuals)",
@@ -29,6 +32,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -41,6 +45,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Predefined responses and knowledge base integration",
@@ -48,6 +53,7 @@ export const ArtificialIntelligence = [
         totalManDays: 32,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Escalation to human agents when necessary",
@@ -55,6 +61,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Sentiment analysis for gauging customer satisfaction",
@@ -62,6 +69,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -74,6 +82,7 @@ export const ArtificialIntelligence = [
         totalManDays: 24,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Content recommendation algorithms",
@@ -81,6 +90,7 @@ export const ArtificialIntelligence = [
         totalManDays: 24,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Real-time content updates",
@@ -88,6 +98,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "A/B testing and performance analytics",
@@ -95,6 +106,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -107,6 +119,7 @@ export const ArtificialIntelligence = [
         totalManDays: 40,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Pattern recognition for identifying fraudulent activities",
@@ -114,6 +127,7 @@ export const ArtificialIntelligence = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Real-time alerts and risk scoring",
@@ -121,6 +135,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Historical data analysis for fraud prevention",
@@ -128,6 +143,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -140,6 +156,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Facial recognition and emotion analysis",
@@ -147,6 +164,7 @@ export const ArtificialIntelligence = [
         totalManDays: 28,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Content moderation and filtering",
@@ -154,6 +172,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Action recognition and event detection",
@@ -161,6 +180,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 1,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -173,6 +193,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Predictive analytics for equipment health",
@@ -180,6 +201,7 @@ export const ArtificialIntelligence = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Automated maintenance scheduling",
@@ -187,6 +209,7 @@ export const ArtificialIntelligence = [
         totalManDays: 24,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Cost optimization and resource allocation",
@@ -194,6 +217,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -206,6 +230,7 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Disease detection and diagnosis",
@@ -213,6 +238,7 @@ export const ArtificialIntelligence = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Treatment recommendations",
@@ -220,6 +246,7 @@ export const ArtificialIntelligence = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Patient outcome prediction",
@@ -227,47 +254,8 @@ export const ArtificialIntelligence = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
-];
-export const ArtificialIntelligenceResources = [
-  {
-    role: "Frontend Developer",
-    skills: ["React", "HTML5", "CSS3", "JavaScript"],
-  },
-  {
-    role: "Backend Developer",
-    skills: ["Node.js", "Express.js", "MongoDB"],
-  },
-  {
-    role: "DevOps Engineer",
-    skills: ["Docker", "AWS", "Jenkins", "Ansible"],
-  },
-  {
-    role: "Machine Learning Engineer",
-    skills: [
-      "Python",
-      "TensorFlow",
-      "scikit-learn",
-      "Natural Language Processing (NLP) Libraries",
-      "Machine Learning Frameworks",
-      "Deep Learning Frameworks",
-      "Data Analytics Tools",
-    ],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Prototyping"],
-  },
-];
-
-export const ArtificialIntelligenceTechStack = [
-  "Python",
-  "TensorFlow",
-  "scikit-learn",
-  "Natural Language Processing (NLP) Libraries",
-  "Machine Learning Frameworks",
-  "Deep Learning Frameworks",
-  "Data Analytics Tools",
 ];

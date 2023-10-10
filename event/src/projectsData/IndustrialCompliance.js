@@ -8,6 +8,10 @@ export const IndustrialCompliance = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Risk Analyst", "Security Engineer"],
+        recommendedStack: [
+          "Threat Modeling Tools",
+          "Security Vulnerability Scanners",
+        ],
       },
       {
         name: "Evaluate compliance with relevant standards",
@@ -15,6 +19,10 @@ export const IndustrialCompliance = [
         totalManDays: 24,
         numResources: 2,
         devRequired: ["Compliance Analyst", "Security Engineer"],
+        recommendedStack: [
+          "Compliance Evaluation Software",
+          "Regulatory Standards Database",
+        ],
       },
       {
         name: "Mitigate risks related to compliance",
@@ -22,6 +30,10 @@ export const IndustrialCompliance = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Compliance Analyst", "Security Engineer"],
+        recommendedStack: [
+          "Risk Mitigation Tools",
+          "Security Measures Implementation",
+        ],
       },
     ],
   },
@@ -34,6 +46,10 @@ export const IndustrialCompliance = [
         totalManDays: 16,
         numResources: 2,
         devRequired: ["Policy Manager", "Software Developer"],
+        recommendedStack: [
+          "Policy Management Software",
+          "Version Control Systems",
+        ],
       },
       {
         name: "Implement version control for policies",
@@ -41,6 +57,10 @@ export const IndustrialCompliance = [
         totalManDays: 16,
         numResources: 2,
         devRequired: ["Policy Manager", "Software Developer"],
+        recommendedStack: [
+          "Version Control Systems",
+          "Policy Management Software",
+        ],
       },
       {
         name: "Track and enforce policy adherence",
@@ -48,6 +68,10 @@ export const IndustrialCompliance = [
         totalManDays: 16,
         numResources: 2,
         devRequired: ["Policy Manager", "Software Developer"],
+        recommendedStack: [
+          "Policy Tracking Tools",
+          "Compliance Monitoring Software",
+        ],
       },
     ],
   },
@@ -60,6 +84,10 @@ export const IndustrialCompliance = [
         totalManDays: 12,
         numResources: 2,
         devRequired: ["Document Manager", "Database Administrator"],
+        recommendedStack: [
+          "Document Management System",
+          "Database Security Measures",
+        ],
       },
       {
         name: "Retrieve and organize regulatory documents",
@@ -67,6 +95,10 @@ export const IndustrialCompliance = [
         totalManDays: 12,
         numResources: 2,
         devRequired: ["Document Manager", "Database Administrator"],
+        recommendedStack: [
+          "Document Retrieval Tools",
+          "Regulatory Document Database",
+        ],
       },
       {
         name: "Manage audit reports and training materials",
@@ -74,6 +106,10 @@ export const IndustrialCompliance = [
         totalManDays: 10,
         numResources: 2,
         devRequired: ["Document Manager", "Software Developer"],
+        recommendedStack: [
+          "Audit Report Management Software",
+          "Training Material Database",
+        ],
       },
     ],
   },
@@ -86,6 +122,7 @@ export const IndustrialCompliance = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Audit Manager", "Software Developer"],
+        recommendedStack: ["Audit Planning Software", "Audit Execution Tools"],
       },
       {
         name: "Create checklists for audit processes",
@@ -93,6 +130,10 @@ export const IndustrialCompliance = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Audit Manager", "Software Developer"],
+        recommendedStack: [
+          "Audit Checklist Generation Tools",
+          "Audit Tracking Software",
+        ],
       },
       {
         name: "Schedule and track compliance inspections",
@@ -100,6 +141,10 @@ export const IndustrialCompliance = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Audit Manager", "Software Developer"],
+        recommendedStack: [
+          "Audit Scheduling Tools",
+          "Compliance Inspection Tracking Software",
+        ],
       },
     ],
   },
@@ -112,6 +157,10 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Training Manager", "Software Developer"],
+        recommendedStack: [
+          "Training Management System",
+          "Employee Training Database",
+        ],
       },
       {
         name: "Manage certifications related to compliance",
@@ -119,6 +168,10 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Training Manager", "Software Developer"],
+        recommendedStack: [
+          "Certification Management Tools",
+          "Certification Tracking Software",
+        ],
       },
       {
         name: "Ensure employees are adequately trained",
@@ -126,6 +179,10 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Training Manager", "Software Developer"],
+        recommendedStack: [
+          "Training Compliance Software",
+          "Skills Assessment Tools",
+        ],
       },
     ],
   },
@@ -138,6 +195,7 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Reporting Analyst", "Software Developer"],
+        recommendedStack: ["Reporting Tools", "Data Visualization Software"],
       },
       {
         name: "Visualize compliance data and progress",
@@ -145,6 +203,7 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Reporting Analyst", "UI/UX Designer"],
+        recommendedStack: ["Data Visualization Tools", "UI/UX Design Software"],
       },
       {
         name: "Identify areas of improvement",
@@ -152,62 +211,11 @@ export const IndustrialCompliance = [
         totalManDays: 14,
         numResources: 2,
         devRequired: ["Reporting Analyst", "Software Developer"],
+        recommendedStack: [
+          "Improvement Identification Tools",
+          "Data Analysis Software",
+        ],
       },
     ],
   },
-];
-export const IndustrialComplianceResources = [
-  {
-    role: "Compliance Analyst",
-    skills: ["Risk Assessment", "Compliance Evaluation"],
-  },
-  {
-    role: "Security Engineer",
-    skills: ["Security Analysis", "Risk Mitigation"],
-  },
-  {
-    role: "Policy Manager",
-    skills: ["Policy Creation", "Version Control"],
-  },
-  {
-    role: "Software Developer",
-    skills: ["Software Development", "Database Management"],
-  },
-  {
-    role: "Document Manager",
-    skills: ["Document Security", "Regulatory Organization"],
-  },
-  {
-    role: "Database Administrator",
-    skills: ["Database Management", "Data Retrieval"],
-  },
-  {
-    role: "Audit Manager",
-    skills: ["Audit Planning", "Compliance Inspection"],
-  },
-  {
-    role: "Training Manager",
-    skills: ["Employee Training", "Certification Management"],
-  },
-  {
-    role: "Reporting Analyst",
-    skills: ["Report Generation", "Data Visualization"],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Prototyping"],
-  },
-];
-
-export const IndustrialComplianceTechStack = [
-  "Angular",
-  "React.js",
-  "Vue.js",
-  "Node.js",
-  "Python",
-  "MongoDB",
-  "Docker",
-  "AWS",
-  "Jenkins",
-  "UI/UX Design",
 ];

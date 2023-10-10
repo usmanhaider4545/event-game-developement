@@ -8,6 +8,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["AWS IoT", "TensorFlow"],
       },
       {
         name: "Machine learning models for failure prediction",
@@ -15,6 +16,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["PyTorch", "Apache Spark"],
       },
       {
         name: "Maintenance scheduling optimization",
@@ -22,6 +24,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["Scikit-Optimize", "Tableau"],
       },
       {
         name: "Real-time monitoring and alerts",
@@ -29,6 +32,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["Apache Kafka", "Slack"],
       },
     ],
   },
@@ -41,6 +45,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["Python Pandas", "Tableau"],
       },
       {
         name: "Churn prediction models",
@@ -48,6 +53,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["scikit-learn", "Databricks"],
       },
       {
         name: "Customer engagement recommendations",
@@ -55,6 +61,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["TensorFlow", "Apache Mahout"],
       },
       {
         name: "Segmentation for targeted marketing",
@@ -62,6 +69,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Scikit-Seg", "HubSpot"],
       },
     ],
   },
@@ -74,6 +82,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["Python Pandas", "Mixpanel"],
       },
       {
         name: "Collaborative filtering or content-based recommendation algorithms",
@@ -81,6 +90,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["PyTorch", "Firebase"],
       },
       {
         name: "Real-time content updates",
@@ -88,6 +98,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Apache Kafka", "Optimizely"],
       },
       {
         name: "A/B testing and performance analytics",
@@ -95,6 +106,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Google Optimize", "Google Analytics"],
       },
     ],
   },
@@ -107,6 +119,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "NLP Engineer"],
+        recommendedStack: ["NNLTK", "TfidfVectorizer"],
       },
       {
         name: "Supervised learning models (e.g., Naive Bayes, SVM, or deep learning)",
@@ -114,6 +127,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["TensorFlow", "Keras"],
       },
       {
         name: "Sentiment analysis or topic classification",
@@ -121,6 +135,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "NLP Engineer"],
+        recommendedStack: ["spaCy", "Apache Nifi"],
       },
       {
         name: "Real-time text processing and prediction",
@@ -128,6 +143,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "NLP Engineer"],
+        recommendedStack: ["Apache Kafka", "Real-time Prediction Engines"],
       },
     ],
   },
@@ -140,6 +156,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: ["Python Requests", "Hadoop"],
       },
       {
         name: "Credit scoring models",
@@ -147,6 +164,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["scikit-learn", "Predictive Analytics Tools"],
       },
       {
         name: "Risk assessment and credit limit recommendations",
@@ -154,6 +172,7 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["PyTorch", "RiskWatch"],
       },
       {
         name: "Regulatory compliance checks",
@@ -161,6 +180,10 @@ export const MachineLearning = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
+        recommendedStack: [
+          "Compliance Checking Tools",
+          "Regulatory Reporting Software",
+        ],
       },
     ],
   },
@@ -173,6 +196,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Pandas", "scikit-learn"],
       },
       {
         name: "Unsupervised anomaly detection models (e.g., Isolation Forest, Autoencoders)",
@@ -180,6 +204,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["TensorFlow", "PyOD"],
       },
       {
         name: "Real-time anomaly alerts and reporting",
@@ -187,6 +212,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Apache Kafka", "Grafana"],
       },
       {
         name: "Model retraining and adaptation",
@@ -194,6 +220,7 @@ export const MachineLearning = [
         totalManDays: 30,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Scientist"],
+        recommendedStack: ["Kubeflow", "Continuous Monitoring Systems"],
       },
     ],
   },
@@ -206,6 +233,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["TensorFlow", "OpenCV"],
       },
       {
         name: "Object recognition and tagging",
@@ -213,6 +241,7 @@ export const MachineLearning = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: ["Object Detection Models", "Image Tagging Tools"],
       },
       {
         name: "Image metadata generation",
@@ -220,6 +249,10 @@ export const MachineLearning = [
         totalManDays: 24,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: [
+          "Image Metadata Tools",
+          "Content Management Systems",
+        ],
       },
       {
         name: "Integration with content management systems",
@@ -227,65 +260,11 @@ export const MachineLearning = [
         totalManDays: 22,
         numResources: 2,
         devRequired: ["Backend Developer", "Machine Learning Engineer"],
+        recommendedStack: [
+          "CMS Integration Plugins",
+          "APIs for CMS Integration",
+        ],
       },
     ],
   },
-];
-
-export const MachineLearningResources = [
-  {
-    role: "Machine Learning Engineer",
-    skills: [
-      "Python",
-      "TensorFlow",
-      "scikit-learn",
-      "Natural Language Processing (NLP)",
-      "Deep Learning",
-      "Data Analysis",
-    ],
-  },
-  {
-    role: "Data Scientist",
-    skills: [
-      "Data Mining",
-      "Statistical Analysis",
-      "Machine Learning Algorithms",
-      "Python",
-      "R",
-    ],
-  },
-  {
-    role: "Data Engineer",
-    skills: ["Big Data Technologies", "Data Warehousing", "ETL Processes"],
-  },
-  {
-    role: "Software Developer",
-    skills: ["Python", "Java", "C++", "Version Control"],
-  },
-  {
-    role: "DevOps Engineer",
-    skills: [
-      "Docker",
-      "Kubernetes",
-      "CI/CD",
-      "Cloud Services (e.g., AWS, Azure)",
-    ],
-  },
-  {
-    role: "UI/UX Designer",
-    skills: ["UI/UX Design", "Wireframing", "Prototyping"],
-  },
-];
-
-export const MachineLearningTechStack = [
-  "Python",
-  "TensorFlow",
-  "scikit-learn",
-  "Natural Language Processing (NLP)",
-  "Deep Learning Frameworks",
-  "Data Analysis Tools",
-  "Big Data Technologies",
-  "Docker",
-  "Kubernetes",
-  "CI/CD",
 ];

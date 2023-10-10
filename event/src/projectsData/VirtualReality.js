@@ -8,6 +8,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Unity3D", "Unreal Engine", "Oculus SDK"],
       },
       {
         name: "Realistic 3D models and simulations",
@@ -15,6 +16,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Blender", "Maya", "3ds Max"],
       },
       {
         name: "Interactive training modules",
@@ -22,6 +24,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["C# Programming", "VR Interaction Frameworks"],
       },
       {
         name: "Scenario-based learning",
@@ -29,6 +32,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Scenario Authoring Tools", "Decision Trees"],
       },
     ],
   },
@@ -41,6 +45,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Unity3D", "Unreal Engine", "CryEngine"],
       },
       {
         name: "Immersive game worlds",
@@ -48,6 +53,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["VR Physics Engines", "Game Design Principles"],
       },
       {
         name: "Motion tracking and hand controllers",
@@ -55,6 +61,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["VR Input SDKs", "Gesture Recognition"],
       },
       {
         name: "Multiplayer and social interaction",
@@ -62,6 +69,7 @@ export const VirtualReality = [
         totalManDays: 160,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Network Multiplayer Frameworks", "Social VR SDKs"],
       },
     ],
   },
@@ -74,6 +82,7 @@ export const VirtualReality = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["3D Artist", "Unity Developer"],
+        recommendedStack: ["3D Modeling Software", "Architectural CAD Tools"],
       },
       {
         name: "Virtual walkthroughs",
@@ -81,6 +90,11 @@ export const VirtualReality = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["3D Artist", "Unity Developer"],
+        recommendedStack: [
+          "Unity3D",
+          "Unreal Engine",
+          "VR Visualization Tools",
+        ],
       },
       {
         name: "Customization and design options",
@@ -88,6 +102,7 @@ export const VirtualReality = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["3D Artist", "Unity Developer"],
+        recommendedStack: ["UI/UX Design Tools", "User Customization Features"],
       },
       {
         name: "Integration with architectural software",
@@ -95,6 +110,10 @@ export const VirtualReality = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["3D Artist", "Unity Developer"],
+        recommendedStack: [
+          "BIM Software Integration",
+          "Data Exchange Standards",
+        ],
       },
     ],
   },
@@ -107,6 +126,7 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["Medical Expert", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Medical VR Libraries", "Healthcare Protocols"],
       },
       {
         name: "Pain management and rehabilitation modules",
@@ -114,6 +134,10 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["Medical Expert", "Unity Developer", "VR Designer"],
+        recommendedStack: [
+          "Physical Therapy Algorithms",
+          "Patient Progress Tracking",
+        ],
       },
       {
         name: "Customized patient treatments",
@@ -121,6 +145,10 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["Medical Expert", "Unity Developer", "VR Designer"],
+        recommendedStack: [
+          "Treatment Planning Tools",
+          "Patient Data Management",
+        ],
       },
       {
         name: "Progress tracking and reporting",
@@ -128,6 +156,10 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["Medical Expert", "Unity Developer", "VR Designer"],
+        recommendedStack: [
+          "Health Data Analytics",
+          "Medical Reporting Systems",
+        ],
       },
     ],
   },
@@ -140,6 +172,7 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["3D Art Assets", "VR Exhibition Software"],
       },
       {
         name: "High-resolution 3D art and artifact models",
@@ -147,6 +180,7 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["3D Scanning Technology", "Art Gallery Software"],
       },
       {
         name: "Audio guides and commentary",
@@ -154,6 +188,7 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Audio Tour Integration", "Narration Scripting"],
       },
       {
         name: "Educational content and tours",
@@ -161,6 +196,10 @@ export const VirtualReality = [
         totalManDays: 150,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: [
+          "Educational VR Modules",
+          "Interactive Learning Tools",
+        ],
       },
     ],
   },
@@ -173,6 +212,7 @@ export const VirtualReality = [
         totalManDays: 170,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["CAD Integration", "Product Simulation Tools"],
       },
       {
         name: "Collaboration tools for design teams",
@@ -180,6 +220,10 @@ export const VirtualReality = [
         totalManDays: 170,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: [
+          "Team Collaboration Platforms",
+          "Design Review Tools",
+        ],
       },
       {
         name: "Real-time design modifications",
@@ -187,6 +231,7 @@ export const VirtualReality = [
         totalManDays: 170,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["Live Design Editing", "Design Feedback Systems"],
       },
       {
         name: "Integration with CAD software",
@@ -194,34 +239,8 @@ export const VirtualReality = [
         totalManDays: 170,
         numResources: 3,
         devRequired: ["3D Artist", "Unity Developer", "VR Designer"],
+        recommendedStack: ["CAD File Compatibility", "CAD-to-VR Plugins"],
       },
     ],
   },
-];
-export const VirtualRealityResources = [
-  {
-    role: "3D Artist",
-    skills: ["3D Modeling", "Texturing", "Animation", "VR Design"],
-  },
-  {
-    role: "Unity Developer",
-    skills: ["Unity3D", "C# Programming", "VR Development"],
-  },
-  {
-    role: "VR Designer",
-    skills: ["User Interaction Design", "VR User Experience", "VR Prototyping"],
-  },
-  {
-    role: "Medical Expert",
-    skills: ["Medical Knowledge", "Therapeutic VR Expertise"],
-  },
-];
-
-export const VirtualRealityTechStack = [
-  "Unity3D",
-  "C# Programming",
-  "3D Modeling Tools",
-  "Texturing Software",
-  "VR Development Frameworks",
-  "VR Design Tools",
 ];
