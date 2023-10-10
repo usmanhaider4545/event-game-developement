@@ -7,18 +7,6 @@ import { pushDataToFirestore } from '../utils/firebaseUtils';
 import { Chart } from "react-google-charts";
 
 function GaintCharts() {
-    useEffect(() => {
-        const data = {
-          appSoftware: localStorage.getItem("appSoftware"),
-          appDesignedFor: localStorage.getItem("appDesignedFor"),
-          industry: localStorage.getItem("industry"),
-          appCategory: localStorage.getItem("appCategory"),
-          userProfile: localStorage.getItem("userProfile"),
-          totalManDays: localStorage.getItem("totalManDays"),
-        };
-        pushDataToFirestore(data);
-
-      }, []);
       const columns = [
         { type: 'string', label: 'Task ID' },
         { type: 'string', label: 'Task Name' },
@@ -102,6 +90,15 @@ function GaintCharts() {
     const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"", technology:"" });
 
     useEffect(() => {
+       const data = {
+        appSoftware: localStorage.getItem("appSoftware"),
+        appDesignedFor: localStorage.getItem("appDesignedFor"),
+        industry: localStorage.getItem("industry"),
+        appCategory: localStorage.getItem("appCategory"),
+        userProfile: localStorage.getItem("userProfile"),
+        totalManDays: localStorage.getItem("totalManDays"),
+        };
+        pushDataToFirestore(data);  
       const parsedManDays = JSON.parse(localStorage.getItem("totalManDays"));
       const manDays = parsedManDays.reduce((acc, item) => acc + item.value, 0);
       const months = Math.floor(manDays / 30);
