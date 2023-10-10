@@ -20,6 +20,10 @@ const TechStack = ({ data }) => {
       alignContent: "flex-start",
       gap: "0.5rem",
       flexWrap: "wrap",
+      overflowY : "auto",
+      maxHeight : "180px",
+      padding: "0 15px 0 0px"
+
     }
   };
 
