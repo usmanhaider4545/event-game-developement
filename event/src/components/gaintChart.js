@@ -50,7 +50,7 @@ function GaintCharts() {
       const chart_data = [columns, ...rows];
     
       const options = {
-        height: 400,
+        height: 800,
         gantt: {
           trackHeight: 30,
         },
@@ -81,6 +81,8 @@ function GaintCharts() {
             background: "rgba(255, 255, 255, 0.09)",
             boxShadow: "0px 0px 53.9px 0px rgba(0, 163, 255, 0.05)",
             backdropFilter: "blur(26.94999885559082px)",
+            maxHeight : "340px",
+            overflowY : "auto"
          },
         twentyMarginRight: {
             marginRight: '20px'
