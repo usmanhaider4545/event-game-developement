@@ -50,7 +50,7 @@ function GaintCharts() {
       const chart_data = [columns, ...rows];
     
       const options = {
-        height: 600,
+        height: 400,
         gantt: {
           trackHeight: 30,
         },
@@ -81,8 +81,7 @@ function GaintCharts() {
             background: "rgba(255, 255, 255, 0.09)",
             boxShadow: "0px 0px 53.9px 0px rgba(0, 163, 255, 0.05)",
             backdropFilter: "blur(26.94999885559082px)",
-            minHeight: { xl: "539.166px", lg: "389.166px" },
-        },
+         },
         twentyMarginRight: {
             marginRight: '20px'
         },
@@ -164,7 +163,7 @@ const TechStack = Array.from(technology);
                         <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}>{data.manDays}</Typography>
                     </Box>
                 </Stack>
-                <Box sx={[styles.chartContainer, styles.themeBackgroundwithBorder, styles.twentyPadding]}>
+                    <Box className="gantChart" sx={[styles.chartContainer, styles.themeBackgroundwithBorder, styles.twentyPadding]}>
                 <Chart
                         chartType="Gantt"
                         width="100%"
@@ -175,7 +174,7 @@ const TechStack = Array.from(technology);
                 </Box>
             </Box>
         </Grid>
-            <Grid   item xs={4}>
+            <Grid item xs={4}>
                 <UniqueDevs data={data}/>
                 <TechStack  data={data}/>
             </Grid>
