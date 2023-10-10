@@ -147,13 +147,13 @@ function GaintCharts() {
                             <Typography variant='h6' sx={{ fontSize: "30px", fontWeight: "600", color: "#fff" }}>{data.manDays}</Typography>
                         </Box>
                     </Stack>
-                    <Box sx={[styles.chartContainer, styles.themeBackgroundwithBorder, styles.twentyPadding]}>
+                    <Box className='gantChart' sx={[styles.chartContainer, styles.themeBackgroundwithBorder, styles.twentyPadding]}>
                     <Chart
                             chartType="Gantt"
                             width="100%"
                             height="100%"
                             data={chart_data}
-                            options={options}
+                            options={options}                          
                         />
                     </Box>
                 </Box>
