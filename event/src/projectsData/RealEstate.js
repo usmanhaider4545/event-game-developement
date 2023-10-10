@@ -16,7 +16,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
-        recommendedStack: ["ReactJS", "NodeJS"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Property Submission",
@@ -24,7 +24,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
-        recommendedStack: ["ReactJS", "NodeJS"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "CRM provider integration",
@@ -32,7 +32,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Integration Specialist"],
-        recommendedStack: ["NodeJS", "CRM API"],
+        recommendedStack: ["Node.js", "CRM API"],
       },
       {
         name: "Data Providers Integration",
@@ -40,7 +40,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 2,
         devRequired: ["Backend Developer", "Integration Specialist"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Payment Integration",
@@ -48,7 +48,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "Financial Specialist"],
-        recommendedStack: ["NodeJS", "Payment Gateway API"],
+        recommendedStack: ["Node.js", "Payment Gateway API"],
       },
       {
         name: "Lead Generation Integration",
@@ -56,7 +56,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Marketing Specialist"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "API Integration",
@@ -64,7 +64,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Backend Developer"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Responsiveness for all Devices",
@@ -80,7 +80,7 @@ export const RealEstate = [
         totalManDays: 45,
         numResources: 2,
         devRequired: ["Backend Developer", "Map Integration Specialist"],
-        recommendedStack: ["NodeJS", "Google Maps API"],
+        recommendedStack: ["Node.js", "Google Maps API"],
       },
       {
         name: "Messaging and Notifications",
@@ -88,7 +88,7 @@ export const RealEstate = [
         totalManDays: 35,
         numResources: 2,
         devRequired: ["Backend Developer", "Notification Specialist"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Advance Search and Filters",
@@ -96,7 +96,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
-        recommendedStack: ["ReactJS", "NodeJS"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Booking and Scheduling",
@@ -104,7 +104,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Scheduling Specialist"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
       {
         name: "Admin and Agent Panels",
@@ -112,7 +112,7 @@ export const RealEstate = [
         totalManDays: 45,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
-        recommendedStack: ["ReactJS", "NodeJS"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Customize design page for properties",
@@ -120,7 +120,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Backend Developer", "UI/UX Designer"],
-        recommendedStack: ["ReactJS", "NodeJS"],
+        recommendedStack: ["React.js", "Node.js"],
       },
       {
         name: "Analytics and Reporting",
@@ -128,7 +128,7 @@ export const RealEstate = [
         totalManDays: 25,
         numResources: 2,
         devRequired: ["Backend Developer", "Data Analyst"],
-        recommendedStack: ["NodeJS"],
+        recommendedStack: ["Node.js"],
       },
     ],
   },
@@ -141,7 +141,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Showcase",
@@ -149,7 +149,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Floor Plans",
@@ -157,7 +157,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Units, Leasing Module for individual units",
@@ -165,7 +165,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive property Amenities",
@@ -173,7 +173,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "360-Degree Virtual Tours",
@@ -181,7 +181,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Neighborhood Maps Integrations",
@@ -189,7 +189,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS", "Google Maps API"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Property Search and Filters",
@@ -197,7 +197,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Details",
@@ -205,7 +205,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Maps",
@@ -213,7 +213,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS", "Google Maps API"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Save Favorites",
@@ -221,7 +221,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Email Favorite Items",
@@ -229,7 +229,7 @@ export const RealEstate = [
         totalManDays: 8,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Offline Mode",
@@ -237,7 +237,7 @@ export const RealEstate = [
         totalManDays: 20,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
     ],
   },
@@ -351,7 +351,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Property Showcase",
@@ -359,7 +359,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Floor Plans",
@@ -367,7 +367,7 @@ export const RealEstate = [
         totalManDays: 12,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Units, Leasing Module for individual units",
@@ -375,7 +375,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive property Amenities",
@@ -383,7 +383,7 @@ export const RealEstate = [
         totalManDays: 5,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "360-Degree Virtual Tours",
@@ -391,7 +391,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Neighborhood Maps Integrations",
@@ -399,7 +399,7 @@ export const RealEstate = [
         totalManDays: 7,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS", "Google Maps API"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Floorplates View",
@@ -407,7 +407,7 @@ export const RealEstate = [
         totalManDays: 15,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Sitemap View",
@@ -415,7 +415,7 @@ export const RealEstate = [
         totalManDays: 10,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Interactive Maps",
@@ -423,7 +423,7 @@ export const RealEstate = [
         totalManDays: 13,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS", "Google Maps API"],
+        recommendedStack: ["React.js", "Google Maps API"],
       },
       {
         name: "Share Favorites",
@@ -431,7 +431,7 @@ export const RealEstate = [
         totalManDays: 8,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Save Favorites",
@@ -439,7 +439,7 @@ export const RealEstate = [
         totalManDays: 14,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
       {
         name: "Email Favorite Items",
@@ -447,9 +447,8 @@ export const RealEstate = [
         totalManDays: 9,
         numResources: 1,
         devRequired: ["Frontend Developer"],
-        recommendedStack: ["ReactJS"],
+        recommendedStack: ["React.js"],
       },
     ],
   },
 ];
-

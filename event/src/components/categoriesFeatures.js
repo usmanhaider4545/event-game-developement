@@ -46,7 +46,7 @@ function CategoriesFeatures(props) {
                 value: parsedValue,
                 resources: value.resources,
                 developers: value.dev,
-                technologies: value?.technologies,
+                technologies: value.technologies,
             });
         } else {
             updatedManDays = updatedManDays.filter(day => day.name !== name);
@@ -92,6 +92,7 @@ function CategoriesFeatures(props) {
                         "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                         "resources": feature.numResources ? feature.numResources : "-",
                         "dev": feature.devRequired ? feature.devRequired : "-",
+                        "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                     }
                 })
             }
@@ -107,7 +108,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -123,7 +125,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -139,7 +142,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -155,7 +159,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -171,7 +176,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -204,7 +210,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -220,7 +227,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -236,7 +244,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -252,7 +261,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -268,7 +278,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -284,7 +295,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -300,7 +312,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }
@@ -316,7 +329,8 @@ function CategoriesFeatures(props) {
                             "manDays": feature.manDays ? feature.manDays : "-",
                             "totalManDays": feature.totalManDays ? feature.totalManDays : "-",
                             "resources": feature.numResources ? feature.numResources : "-",
-                            "dev": feature.devRequired ? feature.devRequired : "-"
+                            "dev": feature.devRequired ? feature.devRequired : "-",
+                            "technologies": feature.recommendedStack ? feature.recommendedStack : "-",
                         }
                     })
                 }

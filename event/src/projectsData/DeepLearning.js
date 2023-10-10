@@ -8,6 +8,7 @@ export const DeepLearning = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "Keras"],
       },
       {
         name: "Multiple object recognition and classification",
@@ -15,6 +16,7 @@ export const DeepLearning = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "Keras"],
       },
       {
         name: "Real-time image processing",
@@ -22,6 +24,7 @@ export const DeepLearning = [
         totalManDays: 120,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "OpenCV"],
       },
       {
         name: "Integration with cameras or image sources",
@@ -29,6 +32,7 @@ export const DeepLearning = [
         totalManDays: 90,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Software Developer"],
+        recommendedStack: ["Python", "OpenCV"],
       },
     ],
   },
@@ -41,6 +45,7 @@ export const DeepLearning = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "NLP Engineer"],
+        recommendedStack: ["PyTorch", "Hugging Face Transformers"],
       },
       {
         name: "Sentiment analysis, intent recognition, and dialogue generation",
@@ -48,6 +53,7 @@ export const DeepLearning = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "NLP Engineer"],
+        recommendedStack: ["PyTorch", "Hugging Face Transformers"],
       },
       {
         name: "Multi-language support",
@@ -55,6 +61,7 @@ export const DeepLearning = [
         totalManDays: 60,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "NLP Engineer"],
+        recommendedStack: ["PyTorch", "Hugging Face Transformers"],
       },
       {
         name: "Integration with chat platforms",
@@ -62,6 +69,7 @@ export const DeepLearning = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Software Developer"],
+        recommendedStack: ["Python", "Dialogflow"],
       },
     ],
   },
@@ -77,6 +85,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Speech Recognition Engineer",
         ],
+        recommendedStack: ["TensorFlow", "Kaldi"],
       },
       {
         name: "Voice command recognition",
@@ -87,6 +96,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Speech Recognition Engineer",
         ],
+        recommendedStack: ["TensorFlow", "Kaldi"],
       },
       {
         name: "Multilingual support",
@@ -97,6 +107,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Speech Recognition Engineer",
         ],
+        recommendedStack: ["TensorFlow", "Kaldi"],
       },
       {
         name: "Integration with virtual assistants (e.g., Alexa or Google Assistant)",
@@ -104,6 +115,7 @@ export const DeepLearning = [
         totalManDays: 120,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Software Developer"],
+        recommendedStack: ["Python", "Google Cloud Speech-to-Text"],
       },
     ],
   },
@@ -116,6 +128,7 @@ export const DeepLearning = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Image synthesis and artistic style transfer",
@@ -123,6 +136,7 @@ export const DeepLearning = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Customizable parameters for image generation",
@@ -130,6 +144,7 @@ export const DeepLearning = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Computer Vision Engineer"],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Integration with image editing software or applications",
@@ -137,6 +152,7 @@ export const DeepLearning = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Machine Learning Engineer", "Software Developer"],
+        recommendedStack: ["Python", "Adobe Creative Cloud SDK"],
       },
     ],
   },
@@ -152,6 +168,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Medical Imaging Specialist",
         ],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Disease detection, localization, and classification",
@@ -162,6 +179,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Medical Imaging Specialist",
         ],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Integration with medical imaging equipment",
@@ -172,6 +190,7 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Medical Imaging Specialist",
         ],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
       {
         name: "Regulatory compliance for healthcare applications",
@@ -182,40 +201,8 @@ export const DeepLearning = [
           "Machine Learning Engineer",
           "Medical Imaging Specialist",
         ],
+        recommendedStack: ["TensorFlow", "PyTorch"],
       },
     ],
   },
-];
-export const DeepLearningResources = [
-  {
-    role: "Machine Learning Engineer",
-    skills: [
-      "Python",
-      "TensorFlow",
-      "Keras",
-      "Deep Learning",
-      "Computer Vision",
-    ],
-  },
-  {
-    role: "Data Scientist",
-    skills: ["Python", "Machine Learning Algorithms", "Data Analysis"],
-  },
-  {
-    role: "Computer Vision Engineer",
-    skills: ["OpenCV", "Image Processing", "Computer Vision Algorithms"],
-  },
-  {
-    role: "AI Researcher",
-    skills: ["Research and Experimentation", "Publication in AI Journals"],
-  },
-];
-
-export const DeepLearningTechStack = [
-  "Python",
-  "TensorFlow",
-  "Keras",
-  "OpenCV",
-  "Machine Learning Algorithms",
-  "Deep Learning",
 ];

@@ -8,6 +8,7 @@ export const augmentedReality = [
         totalManDays: 65,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Realistic 3D models and animations",
@@ -15,6 +16,7 @@ export const augmentedReality = [
         totalManDays: 75,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Interactive product exploration",
@@ -22,6 +24,7 @@ export const augmentedReality = [
         totalManDays: 75,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Integration with e-commerce platforms for virtual try-ons",
@@ -29,6 +32,7 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -41,6 +45,7 @@ export const augmentedReality = [
         totalManDays: 180,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Task-specific training modules",
@@ -48,6 +53,7 @@ export const augmentedReality = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Realistic 3D models and environments",
@@ -55,6 +61,7 @@ export const augmentedReality = [
         totalManDays: 90,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Performance tracking and feedback",
@@ -62,6 +69,7 @@ export const augmentedReality = [
         totalManDays: 85,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -74,6 +82,7 @@ export const augmentedReality = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Real-time location tracking",
@@ -81,6 +90,7 @@ export const augmentedReality = [
         totalManDays: 75,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Interactive points of interest (POIs)",
@@ -88,6 +98,7 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Integration with mapping services",
@@ -95,6 +106,7 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -107,6 +119,7 @@ export const augmentedReality = [
         totalManDays: 50,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Gamified marketing campaigns",
@@ -114,6 +127,7 @@ export const augmentedReality = [
         totalManDays: 50,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Scannable AR markers or QR codes",
@@ -121,6 +135,7 @@ export const augmentedReality = [
         totalManDays: 50,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Integration with social media sharing",
@@ -128,6 +143,7 @@ export const augmentedReality = [
         totalManDays: 40,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -140,6 +156,7 @@ export const augmentedReality = [
         totalManDays: 80,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Interactive 3D models and simulations",
@@ -147,6 +164,7 @@ export const augmentedReality = [
         totalManDays: 90,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Real-time quizzes and assessments",
@@ -154,6 +172,7 @@ export const augmentedReality = [
         totalManDays: 90,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Progress tracking and analytics",
@@ -161,6 +180,7 @@ export const augmentedReality = [
         totalManDays: 90,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
@@ -173,6 +193,7 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Virtual furniture placement and customization",
@@ -180,6 +201,7 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "AR-based design recommendations",
@@ -187,6 +209,7 @@ export const augmentedReality = [
         totalManDays: 75,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
       {
         name: "Integration with shopping and home improvement apps",
@@ -194,36 +217,9 @@ export const augmentedReality = [
         totalManDays: 70,
         numResources: 2,
         devRequired: ["Machine Learning Engineer"],
+        recommendedStack: ["TensorFLow", "Pytorch"],
       },
     ],
   },
 ];
 
-export const VirtualRealityResources = [
-  {
-    role: "VR Frontend Developer",
-    skills: ["Unity3D", "C#", "Unreal Engine", "3D Modeling"],
-  },
-  {
-    role: "VR Backend Developer",
-    skills: ["Networking for VR", "VR Game Logic", "AI for VR"],
-  },
-  {
-    role: "DevOps Engineer",
-    skills: ["VR Deployment", "Cloud Hosting for VR"],
-  },
-  {
-    role: "VR UX Designer",
-    skills: ["VR UX Design", "3D UI/UX"],
-  },
-];
-
-export const VirtualRealityTechStack = [
-  "Unity3D",
-  "Unreal Engine",
-  "C#",
-  "3D Modeling Tools",
-  "Networking for VR",
-  "AI for VR",
-  "VR Deployment",
-];
