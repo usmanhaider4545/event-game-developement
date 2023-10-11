@@ -111,7 +111,7 @@ function StepperComponent() {
                                                 <AppDesignedFor activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                             :
                                                 activeStep === 4 ?
-                                                    <Categories removeDisabledButton={removeDisabledButton} />
+                                                    <Categories activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
                                                 :
                                                 activeStep === 5 ?
                                                         <CategoriesFeatures activeDisabledBtn={activeDisabledBtn} removeDisabledButton={removeDisabledButton} />
