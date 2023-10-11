@@ -22,7 +22,6 @@ import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
 
 function Categories(props) {
-    console.log("abc", ECommerce)
 
     const [value, setValue] = useState('');
 
@@ -31,7 +30,6 @@ function Categories(props) {
     const [localStorageIndustry, setLocalStorageIndustry] = useState(localStorage.getItem("industry"));
 
     const [categories, setCategories] = useState([]);
-
     const ref = useRef();
 
     const { events } = useDraggable(ref);
@@ -47,11 +45,16 @@ function Categories(props) {
 
     useEffect(() => {
         window.onbeforeunload = closeIt;
-        getDataCategories();
-        if (localStorageCategory){
-            props.removeDisabledButton();
+        const categoriesLocal =  getDataCategories();
+        const localStorageData= localStorage.getItem("appCategory")
+        const exist = categoriesLocal.find((cat) => cat === localStorageData)
+        if (!exist){
+            props.activeDisabledBtn();
+        }else{
+            props.removeDisabledButton()
         }
     }, []);
+
 
 
     function closeIt() {
@@ -60,96 +63,84 @@ function Categories(props) {
 
     const getDataCategories = () => {
         let checkSelectedProjects = localStorage.getItem("industry");
-
+        let combineCategories = []
         if (checkSelectedProjects === "Digital Signage") {
-            let combineCategories = DigitalSignage.map((item, index) => {
+            combineCategories = DigitalSignage.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         } else if (checkSelectedProjects === "Fintech") {
-            let combineCategories = Fintech.map((item, index) => {
+            combineCategories = Fintech.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Wayfinding") {
-            let combineCategories = WayFinding.map((item, index) => {
+            combineCategories = WayFinding.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "IOT/Embedded") {
-            let combineCategories = EmbeddedSystemsIoT.map((item, index) => {
+             combineCategories = EmbeddedSystemsIoT.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Storage - Backup and Recovery") {
-            let combineCategories = BackupRecovery.map((item, index) => {
+             combineCategories = BackupRecovery.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Ecommerce and Retail") {
-            let combineCategories = ECommerce.map((item, index) => {
+             combineCategories = ECommerce.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Real Estate") {
-            let combineCategories = RealEstate.map((item, index) => {
+             combineCategories = RealEstate.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Industrial Compliance") {
-            let combineCategories = IndustrialCompliance.map((item, index) => {
+            combineCategories = IndustrialCompliance.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Logistics Freight") {
-            let combineCategories = TransportManagementSystem.map((item, index) => {
+            combineCategories = TransportManagementSystem.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Healthcare") {
-            let combineCategories = HealthTech.map((item, index) => {
+            combineCategories = HealthTech.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Computer Vision") {
-            let combineCategories = ComputerVision.map((item, index) => {
+            combineCategories = ComputerVision.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Virtual Reality") {
-            let combineCategories = VirtualReality.map((item, index) => {
+            combineCategories = VirtualReality.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Artificial Inteligence") {
-            let combineCategories = ArtificialIntelligence.map((item, index) => {
+            combineCategories = ArtificialIntelligence.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Machine Learning") {
-            let combineCategories = MachineLearning.map((item, index) => {
+            combineCategories = MachineLearning.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
         else if (checkSelectedProjects === "Deep Learning") {
-            let combineCategories = DeepLearning.map((item, index) => {
+            combineCategories = DeepLearning.map((item, index) => {
                 return item.category ? item.category : "-"
             })
-            setCategories(combineCategories);
         }
+
+        setCategories(combineCategories);
+        return combineCategories
     }
 
 
