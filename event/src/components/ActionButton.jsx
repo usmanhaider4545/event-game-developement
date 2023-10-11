@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 const ButtonWrapper = styled(Box)`
   position: fixed;
-  bottom: 17px;
+  bottom: 27px;
   right: 0;
   left: 0;
   z-index: 999;
