@@ -106,8 +106,7 @@ function GaintCharts() {
       const months = Math.floor(manDays / 30);
       const days = manDays % 30;
       const resources = parsedManDays.reduce((sum, feature) => sum + feature.resources, 0);
-     console.log(parsedManDays)
-     const uniqueDevelopersSet = new Set();
+      const uniqueDevelopersSet = new Set();
 
     parsedManDays.forEach((item) => {
     if (typeof item.developers === 'string') {

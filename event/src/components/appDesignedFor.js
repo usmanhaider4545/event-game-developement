@@ -26,7 +26,6 @@ function AppDesignedFor(props) {
     useEffect(() => {
         let stringfyData = JSON.stringify(DNC);
         localStorage.setItem("appDesignedFor", stringfyData);
-
         const someTruthy = Object.values(DNC).some(val => val === true);
 
         if (someTruthy === true) {
