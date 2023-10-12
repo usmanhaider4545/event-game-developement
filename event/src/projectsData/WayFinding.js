@@ -7,7 +7,7 @@ export const WayFinding = [
         manDays: "7 + 3 Man Days",
         totalManDays: 10,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django"],
       },
       {
@@ -15,7 +15,7 @@ export const WayFinding = [
         manDays: "2 + 2 Man Days",
         totalManDays: 4,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django"],
       },
       {
@@ -23,7 +23,7 @@ export const WayFinding = [
         manDays: "2 + 2 Man Days",
         totalManDays: 4,
         numResources: 1,
-        devRequired: "Backend Developer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Google Maps API", "Navigation SDKs"],
       },
       {
@@ -31,7 +31,7 @@ export const WayFinding = [
         manDays: "3 + 5 Man Days",
         totalManDays: 8,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django", "UI/UX Design Tools"],
       },
       {
@@ -39,7 +39,7 @@ export const WayFinding = [
         manDays: "7 + 5 Man Days",
         totalManDays: 12,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django", "UI/UX Design Tools"],
       },
       {
@@ -47,7 +47,7 @@ export const WayFinding = [
         manDays: "6 + 4 Man Days",
         totalManDays: 10,
         numResources: 2,
-        devRequired: "Backend Developer, Data Analyst",
+        devRequired: ["Backend Developer, Data Analyst"],
         recommendedStack: ["Python Django", "Analytics Platforms"],
       },
     ],
@@ -60,7 +60,7 @@ export const WayFinding = [
         manDays: "7 + 3 Man Days",
         totalManDays: 10,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
       {
@@ -68,7 +68,7 @@ export const WayFinding = [
         manDays: "2 + 2 Man Days",
         totalManDays: 4,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
       {
@@ -76,7 +76,7 @@ export const WayFinding = [
         manDays: "2 + 2 Man Days",
         totalManDays: 4,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
       {
@@ -84,7 +84,7 @@ export const WayFinding = [
         manDays: "7 + 5 Man Days",
         totalManDays: 12,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
       {
@@ -92,7 +92,7 @@ export const WayFinding = [
         manDays: "6 + 4 Man Days",
         totalManDays: 10,
         numResources: 2,
-        devRequired: "Backend Developer, Data Analyst",
+        devRequired: ["Backend Developer, Data Analyst"],
         recommendedStack: ["Python Django", "Analytics Platforms"],
       },
       {
@@ -100,7 +100,7 @@ export const WayFinding = [
         manDays: "3 + 5 Man Days",
         totalManDays: 8,
         numResources: 2,
-        devRequired: "Backend Developer, UI/UX Designer",
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django", "UI/UX Design Tools"],
       },
       {
@@ -108,7 +108,7 @@ export const WayFinding = [
         manDays: "7 + 3 Man Days",
         totalManDays: 10,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
       {
@@ -116,7 +116,7 @@ export const WayFinding = [
         manDays: "6 + 4 Man Days",
         totalManDays: 10,
         numResources: 2,
-        devRequired: "Backend Developer, Mobile App Developer",
+        devRequired: ["Backend Developer, Mobile App Developer"],
         recommendedStack: ["Python Django", "React native"],
       },
     ],

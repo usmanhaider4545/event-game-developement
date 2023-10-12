@@ -202,8 +202,8 @@ export const IndustrialCompliance = [
         manDays: "8-16 days",
         totalManDays: 14,
         numResources: 2,
-        devRequired: ["Reporting Analyst", "UI/UX Designer"],
-        recommendedStack: ["Data Visualization Tools", "UI/UX Design Software"],
+        devRequired: ["Reporting Analyst"],
+        recommendedStack: ["Data Visualization Tools"],
       },
       {
         name: "Identify areas of improvement",

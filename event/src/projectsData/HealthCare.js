@@ -355,7 +355,7 @@ export const HealthTech = [
         manDays: 60,
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python"],
       },
       {
