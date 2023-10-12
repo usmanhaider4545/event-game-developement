@@ -25,9 +25,9 @@ const UniqueDevs = ({ data }) => {
             <Box sx={[styles.themeBackgroundwithBorder, styles.twentyPadding, styles.twentyMarginBottom]}>
                 <Typography variant='h6' sx={{ fontFamily: 'IBM Plex Mono !important', fontSize: "18px", fontWeight: "700", textTransform: 'uppercase', color: "#fff", textAlign: "left", width: "100%", marginBottom: "14px" }}>Recommended team</Typography>
                 <Box sx={{ overflowY: "auto", maxHeight : "260px"}}>
-                {data?.uniqueDevelopers?.map((elem) => (
-                    <DevList heading={elem} key={elem} />
-                ))}
+                    {data.uniqueDeveloper?.map((developer, index) => (
+                        <DevList heading={developer} count={data.developerCountsArray[index]} key={index} />
+                    ))}
             </Box>
             </Box>
         </>

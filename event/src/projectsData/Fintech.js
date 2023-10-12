@@ -7,7 +7,7 @@ export const Fintech = [
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: ["UI/UX Designer", "Mobile App Developer"],
+        devRequired: [ "Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -36,7 +36,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -52,7 +52,7 @@ export const Fintech = [
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: [
           "Node.js",
           "React Native",
@@ -81,7 +81,7 @@ export const Fintech = [
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: [
           "Node.js",
           "React Native",
@@ -128,7 +128,7 @@ export const Fintech = [
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: [
           "Node.js",
           "React Native",
@@ -141,7 +141,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Node.js", "React", "React Native"],
       },
       {
@@ -149,7 +149,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Node.js", "React", "React Native"],
       },
       {
@@ -181,7 +181,7 @@ export const Fintech = [
         manDays: "Ongoing and integrated throughout development",
         totalManDays: 20,
         numResources: 1,
-        devRequired: ["UI/UX Designer"],
+        devRequired: ["FrontEnd Developer"],
         recommendedStack: ["Ongoing Accessibility Integration"],
       },
       {
@@ -190,7 +190,7 @@ export const Fintech = [
         totalManDays: 40,
         numResources: 3,
         devRequired: [
-          "UI/UX Designer",
+
           "Mobile App Developer",
           "Backend Developer",
         ],
@@ -334,7 +334,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -483,7 +483,7 @@ export const Fintech = [
         manDays: "40-80 man-days",
         totalManDays: 80,
         numResources: 2,
-        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -640,7 +640,7 @@ export const Fintech = [
         manDays: "40-80 man-days",
         totalManDays: 80,
         numResources: 2,
-        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -648,7 +648,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Node.js", "Express"],
       },
       {
@@ -709,7 +709,7 @@ export const Fintech = [
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {
@@ -725,7 +725,7 @@ export const Fintech = [
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {
@@ -813,7 +813,7 @@ export const Fintech = [
         manDays: "40-80 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Mobile App Developer", "UI/UX Designer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -874,7 +874,7 @@ export const Fintech = [
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {
@@ -890,7 +890,7 @@ export const Fintech = [
         manDays: "20-40 man-days",
         totalManDays: 40,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {
@@ -970,7 +970,7 @@ export const Fintech = [
         manDays: "30-60 man-days",
         totalManDays: 60,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {
@@ -1047,7 +1047,7 @@ export const Fintech = [
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 1,
-        devRequired: ["UI/UX Designer"],
+        devRequired: ["FrontEnd Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {

@@ -7,7 +7,7 @@ export const RealEstate = [
         manDays: "5 + 10 Man Days",
         totalManDays: 15,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Python Django", "UI/UX"],
       },
       {
@@ -15,7 +15,7 @@ export const RealEstate = [
         manDays: "10 + 10 Man Days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React.js", "Node.js"],
       },
       {
@@ -23,7 +23,7 @@ export const RealEstate = [
         manDays: "5 + 10 Man Days",
         totalManDays: 15,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React.js", "Node.js"],
       },
       {
@@ -71,7 +71,7 @@ export const RealEstate = [
         manDays: "15 + 0 Man Days",
         totalManDays: 15,
         numResources: 1,
-        devRequired: ["UI/UX Designer"],
+        devRequired: ["Frontend Developer"],
         recommendedStack: ["UI/UX"],
       },
       {
@@ -95,7 +95,7 @@ export const RealEstate = [
         manDays: "5 + 15 Man Days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React.js", "Node.js"],
       },
       {
@@ -111,7 +111,7 @@ export const RealEstate = [
         manDays: "15 + 30 Man Days",
         totalManDays: 45,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React.js", "Node.js"],
       },
       {
@@ -119,7 +119,7 @@ export const RealEstate = [
         manDays: "10 + 10 Man Days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: ["Backend Developer", "UI/UX Designer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["React.js", "Node.js"],
       },
       {
