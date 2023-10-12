@@ -26,10 +26,12 @@ function AppType(props) {
 
     useEffect(() => {
         let stringfyData = JSON.stringify(DNC);
+        console.log(stringfyData)
+        const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
+
+        console.log(trueKeysArray);
         localStorage.setItem("appSoftware", stringfyData);
-
         const someTruthy = Object.values(DNC).some(val => val === true);
-
         if (someTruthy === true) {
             props.removeDisabledButton();
         } else {
@@ -50,8 +52,11 @@ function AppType(props) {
     return (
 
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
-                What type of app are you looking for in {localStorageIndustry}?
+            <Typography variant='h6' sx={{ color: "#fff", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
+                What type of app are you looking for?
+            </Typography>
+            <Typography variant='h6' sx={{ color: "#fff", padding: "11px 0px 30px", fontWeight: "700", fontSize: { xs: "1.5rem", md: "1.25rem" } }}>
+                {localStorageIndustry}
             </Typography>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" maxWidth ="450px" margin="auto">
                 <FormControlLabel
