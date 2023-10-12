@@ -89,7 +89,7 @@ function GaintCharts() {
         }
 
     }
-    const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"", technology:"" });
+    const [data, setData] = useState({ months: "", days: "", manDays: "", resources: "", developers:"", count:"", technology:"" });
 
     useEffect(() => {
        const data = {
@@ -105,23 +105,27 @@ function GaintCharts() {
       const manDays = parsedManDays.reduce((acc, item) => acc + item.value, 0);
       const months = Math.floor(manDays / 30);
       const days = manDays % 30;
-      const resources = parsedManDays.reduce((sum, feature) => sum + feature.resources, 0);
-     console.log(parsedManDays)
-     const uniqueDevelopersSet = new Set();
+      const resources = parsedManDays.reduce((sum, feature) => sum + feature.resources, 3);
+        const developerCounts = {};
 
-    parsedManDays.forEach((item) => {
-    if (typeof item.developers === 'string') {
-        const developersArray = item.developers.split(', ');
-        developersArray.forEach((developer) => {
-        uniqueDevelopersSet.add(developer);
+        parsedManDays.forEach((item) => {
+            if (typeof item.developers === 'string') {
+                const developersArray = item.developers.split(', ');
+                developersArray.forEach((developer) => {
+                    developerCounts[developer] = (developerCounts[developer] || 0) + 1; // Increment the count
+                });
+            } else if (Array.isArray(item.developers)) {
+                item.developers.forEach((developer) => {
+                    developerCounts[developer] = (developerCounts[developer] || 0) + 1; // Increment the count
+                });
+            }
         });
-    } else if (Array.isArray(item.developers)) {
-        item.developers.forEach((developer) => {
-        uniqueDevelopersSet.add(developer);
-        });
-    }
-    });
-    const uniqueDevelopers = Array.from(uniqueDevelopersSet);
+    developerCounts["Project Manager"] = developerCounts["Project Manager"] || 1;
+    developerCounts["QA Engineer"] = developerCounts["QA Engineer"] || 1;
+    developerCounts["UI/UX Developer"] = developerCounts["UI/UX Developer"] || 1;
+    const uniqueDeveloper = Object.keys(developerCounts);
+    const developerCountsArray = uniqueDeveloper.map((developer) => developerCounts[developer]);
+
     const technology = new Set();
 
 parsedManDays.forEach((item) => {
@@ -139,7 +143,7 @@ parsedManDays.forEach((item) => {
 
 const TechStack = Array.from(technology);
 
-    setData({ months, days, manDays, resources, uniqueDevelopers, TechStack });
+    setData({ months, days, manDays, resources, uniqueDeveloper,developerCountsArray, TechStack });
     }, []);
     localStorage.setItem("Estimations", JSON.stringify(data));
     const displayText =
