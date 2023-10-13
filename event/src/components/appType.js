@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {  Stack, Typography, Container, Box } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import SelectionTypeCatagory from './selectionTypeCatagory';
 const getDefaultDNC = () => ({
     MobileApp: false,
     WebApplication: false,
@@ -14,7 +15,6 @@ const getInitialDNC = () => {
     return storedValue ? JSON.parse(storedValue) : getDefaultDNC();
 };
 function AppType(props) {
-
     const [DNC, setDNC] = useState(getInitialDNC);
 
     const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } = DNC;
@@ -26,10 +26,12 @@ function AppType(props) {
 
     useEffect(() => {
         let stringfyData = JSON.stringify(DNC);
+        console.log(stringfyData)
+        const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
+
+        console.log(trueKeysArray);
         localStorage.setItem("appSoftware", stringfyData);
-
         const someTruthy = Object.values(DNC).some(val => val === true);
-
         if (someTruthy === true) {
             props.removeDisabledButton();
         } else {
@@ -50,9 +52,7 @@ function AppType(props) {
     return (
 
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "40px 0", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
-                What type of app are you looking for?
-            </Typography>
+           <SelectionTypeCatagory heading= {"What type of app are you looking for?"}/>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" maxWidth ="450px" margin="auto">
                 <FormControlLabel
                     control={
