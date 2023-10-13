@@ -229,4 +229,15 @@ td {
     .reset {
         font-size: 18px;
     }
+
+}
+.css-3bmhjh-MuiPaper-root-MuiPopover-paper{
+    background-color: transparent !important;
+}
+ .Circle{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.09);
+    margin-left :8px
 }

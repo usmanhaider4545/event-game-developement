@@ -31,6 +31,13 @@ const SelectionTypeCategory = ({ heading, selection }) => {
     setAnchorEl(null);
     setCountVisible(selection && selection.length > 1);
   };
+    const renderAbc = () => {
+        if (countVisible) {
+            return <>{firstOption}{(selection.length > 1 ? <span className="Circle">+{selection.length - 1}</span> : '')}</>
+        } else {
+            return <>{firstOption}</>
+        }
+    }
 
   const firstOption = selection ? selection[0] : '';
   const remainingSelection = selection ? selection.slice(1) : [];
@@ -41,14 +48,14 @@ const SelectionTypeCategory = ({ heading, selection }) => {
         {heading}
       </Typography>
       <Typography variant='h6' sx={{
-        display: "flex", flexDirection: "row", justifyContent: "center", padding: "8px 18px", alignItems: "center", gap: "16px", color: "#fff", padding: "11px 0px 30px", fontWeight: "700", fontSize: { xs: "1.5rem", md: "1.25rem" }
+        display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "16px", color: "#fff", padding: "11px 0px 30px", fontWeight: "700", fontSize: { xs: "1.5rem", md: "1.25rem" }
       }}>
         <Box display="flex" justifyContent="center" alignItems="center" sx={[styles.CategorySelected]}>
           {localStorageIndustry}
         </Box>
         {selection && (
           <Box display="flex" justifyContent="center" alignItems="center" sx={[styles.CategorySelected]} onClick={handlePopoverOpen}>
-            {countVisible ? firstOption + (selection.length > 1 ? `+${selection.length - 1}` : '') : firstOption}
+            {renderAbc()}
           </Box>
         )}
         <Popover
