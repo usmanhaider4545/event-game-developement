@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {  Stack, Typography, Container, Box } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import SelectionTypeCatagory from './selectionTypeCatagory';
 const getDefaultDNC = () => ({
     MobileApp: false,
     WebApplication: false,
@@ -14,7 +15,6 @@ const getInitialDNC = () => {
     return storedValue ? JSON.parse(storedValue) : getDefaultDNC();
 };
 function AppType(props) {
-    const localStorageIndustry = localStorage.getItem("industry");
     const [DNC, setDNC] = useState(getInitialDNC);
 
     const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } = DNC;
@@ -52,12 +52,7 @@ function AppType(props) {
     return (
 
         <Box>
-            <Typography variant='h6' sx={{ color: "#fff", fontWeight: "700", fontSize: { xs: "35px", md: "27px" } }}>
-                What type of app are you looking for?
-            </Typography>
-            <Typography variant='h6' sx={{ color: "#fff", padding: "11px 0px 30px", fontWeight: "700", fontSize: { xs: "1.5rem", md: "1.25rem" } }}>
-                {localStorageIndustry}
-            </Typography>
+           <SelectionTypeCatagory heading= {"What type of app are you looking for?"}/>
             <Stack className='optionsBlocks' flexDirection="column" justifyContent="center" width="100%" maxWidth ="450px" margin="auto">
                 <FormControlLabel
                     control={
