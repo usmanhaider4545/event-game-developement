@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+
+import { motion } from "framer-motion";
 import { Stack, Typography, Container, Box } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { motion } from "framer-motion";
+import SelectionTypeCatagory from "./selectionTypeCatagory";
+
 const getDefaultDNC = () => ({
   MobileApp: false,
   WebApplication: false,
@@ -17,9 +20,6 @@ const getInitialDNC = () => {
 function AppType(props) {
   const [DNC, setDNC] = useState(getInitialDNC);
 
-  const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } =
-    DNC;
-
   const handleChange = (event) => {
     setDNC({ ...DNC, [event.target.name]: event.target.checked });
     props.removeDisabledButton();
@@ -29,22 +29,33 @@ function AppType(props) {
     let stringfyData = JSON.stringify(DNC);
     localStorage.setItem("appSoftware", stringfyData);
 
-    const someTruthy = Object.values(DNC).some((val) => val === true);
+    useEffect(() => {
+      let stringfyData = JSON.stringify(DNC);
+      console.log(stringfyData);
+      const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
 
-    if (someTruthy === true) {
-      props.removeDisabledButton();
-    } else {
-      props.activeDisabledBtn();
+      console.log(trueKeysArray);
+      localStorage.setItem("appSoftware", stringfyData);
+      const someTruthy = Object.values(DNC).some((val) => val === true);
+      if (someTruthy === true) {
+        props.removeDisabledButton();
+      } else {
+        props.activeDisabledBtn();
+      }
+    }, [handleChange]);
+
+    useEffect(() => {
+      window.onbeforeunload = closeIt;
+    }, []);
+
+    function closeIt() {
+      localStorage.clear("appSoftware");
     }
   }, [handleChange]);
 
   useEffect(() => {
     window.onbeforeunload = closeIt;
   }, []);
-
-  function closeIt() {
-    localStorage.clear("appSoftware");
-  }
 
   return (
     <Box>

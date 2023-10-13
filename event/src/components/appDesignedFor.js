@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import { motion } from "framer-motion";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import SelectionTypeCatagory from "./selectionTypeCatagory";
 
 const getDefaultDNC = () => ({
   Consumer: false,
@@ -18,6 +20,9 @@ function AppDesignedFor(props) {
   const [DNC, setDNC] = useState(getInitialDNC);
 
   const { Consumer, Business, NotYet } = DNC;
+  const appSoftware = localStorage.getItem("appSoftware");
+  const test = JSON.parse(appSoftware);
+  const trueKeysArray = Object.keys(test).filter((key) => test[key] === true);
 
   const handleChange = (event) => {
     setDNC({ ...DNC, [event.target.name]: event.target.checked });
@@ -35,14 +40,6 @@ function AppDesignedFor(props) {
       props.activeDisabledBtn();
     }
   }, [handleChange]);
-
-  useEffect(() => {
-    window.onbeforeunload = closeIt;
-  }, []);
-
-  function closeIt() {
-    localStorage.clear("appDesignedFor");
-  }
 
   return (
     <Box>
