@@ -20,6 +20,9 @@ const getInitialDNC = () => {
 function AppType(props) {
   const [DNC, setDNC] = useState(getInitialDNC);
 
+  const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } =
+    DNC;
+
   const handleChange = (event) => {
     setDNC({ ...DNC, [event.target.name]: event.target.checked });
     props.removeDisabledButton();
@@ -27,35 +30,26 @@ function AppType(props) {
 
   useEffect(() => {
     let stringfyData = JSON.stringify(DNC);
+    console.log(stringfyData);
+    const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
+
+    console.log(trueKeysArray);
     localStorage.setItem("appSoftware", stringfyData);
-
-    useEffect(() => {
-      let stringfyData = JSON.stringify(DNC);
-      console.log(stringfyData);
-      const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
-
-      console.log(trueKeysArray);
-      localStorage.setItem("appSoftware", stringfyData);
-      const someTruthy = Object.values(DNC).some((val) => val === true);
-      if (someTruthy === true) {
-        props.removeDisabledButton();
-      } else {
-        props.activeDisabledBtn();
-      }
-    }, [handleChange]);
-
-    useEffect(() => {
-      window.onbeforeunload = closeIt;
-    }, []);
-
-    function closeIt() {
-      localStorage.clear("appSoftware");
+    const someTruthy = Object.values(DNC).some((val) => val === true);
+    if (someTruthy === true) {
+      props.removeDisabledButton();
+    } else {
+      props.activeDisabledBtn();
     }
   }, [handleChange]);
 
   useEffect(() => {
     window.onbeforeunload = closeIt;
   }, []);
+
+  function closeIt() {
+    localStorage.clear("appSoftware");
+  }
 
   return (
     <Box>
