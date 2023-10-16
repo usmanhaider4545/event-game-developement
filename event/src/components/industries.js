@@ -22,7 +22,7 @@ function Industries(props) {
   const [value, setValue] = useState("");
 
   const [localStorageValue, setLocalStorageValue] = useState(
-    localStorage.getItem("industry"),
+    localStorage.getItem("industry")
   );
 
   const handleChange = (event) => {
@@ -53,7 +53,7 @@ function Industries(props) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <Typography
-          variant='h6'
+          variant="h6"
           sx={{
             color: "#fff",
             padding: "20px 0",
@@ -66,16 +66,16 @@ function Industries(props) {
       </motion.div>
 
       <Stack
-        className='optionsBlocks'
-        flexDirection='inherit'
-        justifyContent='center'
-        gap='100px'
+        className="optionsBlocks"
+        flexDirection="inherit"
+        justifyContent="center"
+        gap="100px"
       >
         <FormControl>
           <RadioGroup
-            aria-labelledby='demo-radio-buttons-group-label'
-            defaultValue=''
-            name='radio-buttons-group'
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue=""
+            name="radio-buttons-group"
             value={value ? value : localStorageValue}
             onChange={handleChange}
           >
@@ -83,10 +83,10 @@ function Industries(props) {
               {...events}
               ref={ref}
               sx={{ overflowX: "auto", width: "100%" }}
-              className='optionsBlocks'
-              display='-webkit-inline-box'
-              flexDirection='initial'
-              justifyContent='center'
+              className="optionsBlocks"
+              display="-webkit-inline-box"
+              flexDirection="initial"
+              justifyContent="center"
             >
               <Box
                 sx={{
@@ -104,9 +104,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Fintech'
+                    value="Fintech"
                     control={<Radio />}
-                    label='Fintech'
+                    label="Fintech"
                   />
                 </motion.div>
                 <motion.div
@@ -118,9 +118,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Digital Signage'
+                    value="Digital Signage"
                     control={<Radio />}
-                    label='Digital Signage'
+                    label="Digital Signage"
                   />
                 </motion.div>
                 <motion.div
@@ -132,9 +132,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Wayfinding'
+                    value="Wayfinding"
                     control={<Radio />}
-                    label='Wayfinding'
+                    label="Wayfinding"
                   />
                 </motion.div>
                 <motion.div
@@ -146,9 +146,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='IOT/Embedded'
+                    value="IOT/Embedded"
                     control={<Radio />}
-                    label='IOT/Embedded'
+                    label="IOT/Embedded"
                   />
                 </motion.div>
 
@@ -161,9 +161,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Storage - Backup and Recovery'
+                    value="Storage - Backup and Recovery"
                     control={<Radio />}
-                    label='Storage - Backup and Recovery'
+                    label="Storage - Backup and Recovery"
                   />
                 </motion.div>
 
@@ -176,9 +176,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Ecommerce and Retail'
+                    value="Ecommerce and Retail"
                     control={<Radio />}
-                    label='Ecommerce and Retail'
+                    label="Ecommerce and Retail"
                   />
                 </motion.div>
               </Box>
@@ -198,9 +198,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Real Estate'
+                    value="Real Estate"
                     control={<Radio />}
-                    label='Real Estate'
+                    label="Real Estate"
                   />
                 </motion.div>
 
@@ -213,9 +213,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Industrial Compliance'
+                    value="Industrial Compliance"
                     control={<Radio />}
-                    label='Industrial Compliance'
+                    label="Industrial Compliance"
                   />
                 </motion.div>
 
@@ -228,9 +228,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Logistics Freight'
+                    value="Logistics Freight"
                     control={<Radio />}
-                    label='Logistics Freight'
+                    label="Logistics Freight"
                   />
                 </motion.div>
 
@@ -243,9 +243,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Healthcare'
+                    value="Healthcare"
                     control={<Radio />}
-                    label='Healthcare'
+                    label="Healthcare"
                   />
                 </motion.div>
 
@@ -258,9 +258,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Computer Vision'
+                    value="Computer Vision"
                     control={<Radio />}
-                    label='Computer Vision'
+                    label="Computer Vision"
                   />
                 </motion.div>
 
@@ -273,9 +273,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Virtual Reality'
+                    value="Virtual Reality"
                     control={<Radio />}
-                    label='Virtual Reality'
+                    label="Virtual Reality"
                   />
                 </motion.div>
               </Box>
@@ -295,9 +295,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Artificial Inteligence'
+                    value="Artificial Inteligence"
                     control={<Radio />}
-                    label='Artificial Inteligence'
+                    label="Artificial Inteligence"
                   />
                 </motion.div>
 
@@ -310,9 +310,9 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Machine Learning'
+                    value="Machine Learning"
                     control={<Radio />}
-                    label='Machine Learning'
+                    label="Machine Learning"
                   />
                 </motion.div>
 
@@ -325,9 +325,37 @@ function Industries(props) {
                   }}
                 >
                   <FormControlLabel
-                    value='Deep Learning'
+                    value="Deep Learning"
                     control={<Radio />}
-                    label='Deep Learning'
+                    label="Deep Learning"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    delay: 4.75,
+                    duration: 1,
+                  }}
+                >
+                  <FormControlLabel
+                    value="Augmented Reality"
+                    control={<Radio />}
+                    label="Augmented Reality"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    delay: 4.75,
+                    duration: 1,
+                  }}
+                >
+                  <FormControlLabel
+                    value="Hospitality"
+                    control={<Radio />}
+                    label="Hospitality"
                   />
                 </motion.div>
               </Box>

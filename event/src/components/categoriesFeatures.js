@@ -23,6 +23,8 @@ import { MachineLearning } from "../projectsData/MachineLearning";
 import { DeepLearning } from "../projectsData/DeepLearning";
 import { useDraggable } from "react-use-draggable-scroll";
 import { motion } from "framer-motion";
+import { augmentedReality } from "../projectsData/AugmentedReality";
+import { hospitality } from "../projectsData/Hospitality";
 
 function CategoriesFeatures(props) {
   const localStorageCategory = localStorage.getItem("appCategory");
@@ -369,6 +371,44 @@ function CategoriesFeatures(props) {
         }
         setFeatures(combineCategories);
       });
+    } else if (localStorageIndustry === "Augmented Reality") {
+      let combineCategories = [];
+      augmentedReality.map((item, index) => {
+        if (item.category === localStorageCategory) {
+          combineCategories = item?.features.map((feature, index) => {
+            return {
+              name: feature.name ? feature.name : "-",
+              manDays: feature.manDays ? feature.manDays : "-",
+              totalManDays: feature.totalManDays ? feature.totalManDays : "-",
+              resources: feature.numResources ? feature.numResources : "-",
+              dev: feature.devRequired ? feature.devRequired : "-",
+              technologies: feature.recommendedStack
+                ? feature.recommendedStack
+                : "-",
+            };
+          });
+        }
+        setFeatures(combineCategories);
+      });
+    } else if (localStorageIndustry === "Hospitality") {
+      let combineCategories = [];
+      hospitality.map((item, index) => {
+        if (item.category === localStorageCategory) {
+          combineCategories = item?.features.map((feature, index) => {
+            return {
+              name: feature.name ? feature.name : "-",
+              manDays: feature.manDays ? feature.manDays : "-",
+              totalManDays: feature.totalManDays ? feature.totalManDays : "-",
+              resources: feature.numResources ? feature.numResources : "-",
+              dev: feature.devRequired ? feature.devRequired : "-",
+              technologies: feature.recommendedStack
+                ? feature.recommendedStack
+                : "-",
+            };
+          });
+        }
+        setFeatures(combineCategories);
+      });
     }
   };
 
@@ -380,7 +420,7 @@ function CategoriesFeatures(props) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <Typography
-          variant='h6'
+          variant="h6"
           sx={{
             color: "#fff",
             padding: "18px 0",
@@ -396,10 +436,10 @@ function CategoriesFeatures(props) {
         {...events}
         ref={ref}
         sx={{ overflowX: "auto", width: "100%" }}
-        className='optionsBlocks'
-        display='-webkit-inline-box'
-        flexDirection='initial'
-        justifyContent='center'
+        className="optionsBlocks"
+        display="-webkit-inline-box"
+        flexDirection="initial"
+        justifyContent="center"
       >
         <Box
           sx={{
@@ -427,7 +467,7 @@ function CategoriesFeatures(props) {
                         value={JSON.stringify(f)}
                         style={{ color: "#fff" }}
                         defaultChecked={totalManDays.some(
-                          (day) => day.name === f.name,
+                          (day) => day.name === f.name
                         )}
                       />
                     }
@@ -458,7 +498,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name,
+                            (day) => day.name === f.name
                           )}
                         />
                       }
@@ -492,7 +532,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name,
+                            (day) => day.name === f.name
                           )}
                         />
                       }
@@ -526,7 +566,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name,
+                            (day) => day.name === f.name
                           )}
                         />
                       }
