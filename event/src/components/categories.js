@@ -15,6 +15,8 @@ import { IndustrialCompliance } from "../projectsData/IndustrialCompliance";
 import { TransportManagementSystem } from "../projectsData/TransportManagement";
 import { HealthTech } from "../projectsData/HealthCare";
 import { ComputerVision } from "../projectsData/ComputerVision";
+import { augmentedReality } from "../projectsData/AugmentedReality";
+import { hospitality } from "../projectsData/Hospitality";
 import { VirtualReality } from "../projectsData/VirtualReality";
 import { ArtificialIntelligence } from "../projectsData/ArtificialInteligence";
 import { MachineLearning } from "../projectsData/MachineLearning";
@@ -26,11 +28,11 @@ function Categories(props) {
   const [value, setValue] = useState("");
 
   const [localStorageCategory, setLocalStorageCategory] = useState(
-    localStorage.getItem("appCategory"),
+    localStorage.getItem("appCategory")
   );
 
   const [localStorageIndustry, setLocalStorageIndustry] = useState(
-    localStorage.getItem("industry"),
+    localStorage.getItem("industry")
   );
 
   const [categories, setCategories] = useState([]);
@@ -106,6 +108,14 @@ function Categories(props) {
       combineCategories = HealthTech.map((item, index) => {
         return item.category ? item.category : "-";
       });
+    } else if (checkSelectedProjects === "Hospitality") {
+      combineCategories = hospitality.map((item, index) => {
+        return item.category ? item.category : "-";
+      });
+    } else if (checkSelectedProjects === "Augmented Reality") {
+      combineCategories = augmentedReality.map((item, index) => {
+        return item.category ? item.category : "-";
+      });
     } else if (checkSelectedProjects === "Computer Vision") {
       combineCategories = ComputerVision.map((item, index) => {
         return item.category ? item.category : "-";
@@ -126,6 +136,14 @@ function Categories(props) {
       combineCategories = DeepLearning.map((item, index) => {
         return item.category ? item.category : "-";
       });
+    } else if (checkSelectedProjects === "Augmented Reality") {
+      combineCategories = augmentedReality.map((item, index) => {
+        return item.category ? item.category : "-";
+      });
+    } else if (checkSelectedProjects === "Hospitality") {
+      combineCategories = hospitality.map((item, index) => {
+        return item.category ? item.category : "-";
+      });
     }
 
     setCategories(combineCategories);
@@ -140,7 +158,7 @@ function Categories(props) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <Typography
-          variant='h6'
+          variant="h6"
           sx={{
             color: "#fff",
             padding: "40px 0",
@@ -152,17 +170,17 @@ function Categories(props) {
         </Typography>
       </motion.div>
       <Stack
-        className='optionsBlocks'
-        flexDirection='column'
-        justifyContent='center'
-        width='100%'
-        margin='auto'
+        className="optionsBlocks"
+        flexDirection="column"
+        justifyContent="center"
+        width="100%"
+        margin="auto"
       >
         <FormControl>
           <RadioGroup
-            aria-labelledby='demo-radio-buttons-group-label'
-            defaultValue=''
-            name='radio-buttons-group'
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue=""
+            name="radio-buttons-group"
             value={value ? value : localStorageCategory}
             onChange={handleChange}
           >
@@ -170,10 +188,10 @@ function Categories(props) {
               {...events}
               ref={ref}
               sx={{ overflowX: "auto", width: "100%" }}
-              className='optionsBlocks'
-              display='-webkit-inline-box'
-              flexDirection='initial'
-              justifyContent='center'
+              className="optionsBlocks"
+              display="-webkit-inline-box"
+              flexDirection="initial"
+              justifyContent="center"
             >
               <Box
                 sx={{

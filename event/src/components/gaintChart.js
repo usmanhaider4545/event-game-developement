@@ -111,10 +111,14 @@ function GaintCharts() {
     };
     pushDataToFirestore(data);
     const parsedManDays = JSON.parse(localStorage.getItem("totalManDays"));
-    const manDays = parsedManDays.reduce((acc, item) => acc + item.value, 0);
+    let manDays = parsedManDays.reduce((acc, item) => acc + item.value, 0);
+    if (manDays > 90) {
+      const additionalDays = (manDays - 90) % 30;
+      manDays = 90 + additionalDays; 
+    }
     const months = Math.floor(manDays / 30);
     const days = manDays % 30;
-    const resources = parsedManDays.reduce(
+    let resources = parsedManDays.reduce(
       (sum, feature) => sum + feature.resources,
       3,
     );
@@ -133,16 +137,17 @@ function GaintCharts() {
       }
     });
     developerCounts["Project Manager"] =
-      developerCounts["Project Manager"] || 1;
+    developerCounts["Project Manager"] || 1;
     developerCounts["QA Engineer"] = developerCounts["QA Engineer"] || 1;
     developerCounts["UI/UX Developer"] =
-      developerCounts["UI/UX Developer"] || 1;
+    developerCounts["UI/UX Developer"] || 1;
     const uniqueDeveloper = Object.keys(developerCounts);
-    const developerCountsArray = uniqueDeveloper.map(
-      (developer) => developerCounts[developer],
-    );
-
-    const technology = new Set();
+    const developerCountsArray = uniqueDeveloper.map((developer) =>
+    Math.min(developerCounts[developer], 3)
+  );
+  const totalDeveloperCounts = developerCountsArray.reduce((acc, count) => acc + count, 0); 
+  resources=totalDeveloperCounts
+  const technology = new Set();
 
     parsedManDays.forEach((item) => {
       if (typeof item.technologies === "string") {
