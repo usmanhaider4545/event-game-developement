@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Typography, Container, Box } from "@mui/material";
 import stepsData from "../steps.json";
 import Logo from "../images/logo.png";
@@ -15,9 +15,53 @@ import GaintCharts from "./gaintChart";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import ActionButton from "./ActionButton";
 import AccessRequiredResources from "./accessRequiredResources";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+import icon1 from "../images/29_cognative-services 1.png";
+import icon2 from "../images/icon 1.png";
+import icon3 from "../images/Microsoft_Azure 1.png";
+import icon4 from "../images/image 10.png";
+import icon5 from "../images/Microsoft_Defender_2020_Fluent_Design_icon 1.png";
+import icon6 from "../images/vecteezy_chatgpt-openai-logo-icon_21495993_427 1.png";
+import icon7 from "../images/pngwing 3.png";
+import icon8 from "../images/pngaaa 1.png";
+import icon9 from "../images/Postgresql_elephant 1.png";
+import icon10 from "../images/Group 198.png";
+import icon11 from "../images/image 78.png";
+import icon12 from "../images/image 14.png";
+import icon13 from "../images/image 65.png";
+import icon14 from "../images/image 79.png";
+import icon15 from "../images/image 83.png";
+import icon16 from "../images/java-script 1.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// import icon17 from "../images/";
+// import icon18 from "../images/";
+// import icon19 from "../images/";
+// import icon20 from "../images/";
 
 function StepperComponent() {
+  const icons = [
+    icon1,
+    icon2,
+    icon3,
+    icon4,
+    icon5,
+    icon6,
+    icon7,
+    icon8,
+    icon9,
+    icon10,
+    icon11,
+    icon12,
+    icon13,
+    icon14,
+    icon15,
+    icon16,
+  ];
+
   const [activeStep, setActiveStep] = useState(0);
 
   const [disabledButton, setDisabledButton] = useState(true);
@@ -43,6 +87,16 @@ function StepperComponent() {
   const resetAction = () => {
     setActiveStep(0);
     localStorage.clear();
+  };
+
+  const settings = {
+    infinite: true,
+    slidesToShow: 10,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
   };
 
   return (
@@ -124,7 +178,10 @@ function StepperComponent() {
       )}
 
       {activeStep == 0 ? (
-        <Container sx={{ height: "100%", zIndex: "123" }}>
+        <Container
+          sx={{ height: "100%", zIndex: "123" }}
+          style={{ overflowY: "auto", overflowX: "hidden" }}
+        >
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -139,21 +196,141 @@ function StepperComponent() {
                 width: "100%",
               }}
             >
-              <Typography variant='h2'>
-                <img src={Logo} />
-              </Typography>{" "}
+              <img src={Logo} alt='Logo' style={{ position: "relative" }} />
+
               <Box sx={{ pt: 5 }}>
-                <Typography sx={{ fontSize: "32px", color: "#fff" }}>
+                <Typography
+                  sx={{ fontSize: "32px", color: "#fff" }}
+                  style={{ marginBottom: "20px" }}
+                >
                   Hey there 👋{" "}
                 </Typography>
+
+                <Slider {...settings}>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon1}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon2}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon3}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon4}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon5}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon6}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon7}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon8}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon9}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon10}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon11}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon12}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon13}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon14}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon15}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon16}
+                    />
+                  </div>
+                </Slider>
 
                 <Typography sx={{ pt: 5, fontSize: "60px", color: "#fff" }}>
                   <strong>Have a product idea? </strong>
                 </Typography>
 
-                <Typography sx={{ fontSize: "60px", color: "#fff" }}>
+                <Typography
+                  style={{
+                    display: "flex",
+                    gap: "2.5rem",
+                    justifyContent: "center ",
+                  }}
+                  sx={{ fontSize: "60px", color: "#fff" }}
+                >
                   {" "}
-                  Get time and workforce estimations now!{" "}
+                  Get time and{" "}
+                  <motion.div
+                    initial={{ scale: 1, opacity: 0.6 }}
+                    animate={{ scale: 1.1, opacity: 1 }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity, // Infinite animation
+                      repeatType: "reverse",
+                    }} // Reverse animation on repeat
+                  >
+                    workforce estimations
+                  </motion.div>{" "}
+                  now!{" "}
                 </Typography>
               </Box>
             </Box>
