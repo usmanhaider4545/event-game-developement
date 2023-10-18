@@ -181,7 +181,7 @@ export const Fintech = [
         manDays: "Ongoing and integrated throughout development",
         totalManDays: 20,
         numResources: 1,
-        devRequired: ["FrontEnd Developer"],
+        devRequired: ["Frontend Developer"],
         recommendedStack: ["Ongoing Accessibility Integration"],
       },
       {
@@ -1047,7 +1047,7 @@ export const Fintech = [
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 1,
-        devRequired: ["FrontEnd Developer"],
+        devRequired: ["Frontend Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {

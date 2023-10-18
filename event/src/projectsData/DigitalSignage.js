@@ -43,7 +43,7 @@ export const DigitalSignage = [
         manDays: "5+10 Man Days",
         totalManDays: 15,
         numResources: 2,
-        devRequired: ["Backend Developer", "DevOps Engineer"],
+        devRequired: ["Backend Developer"],
         recommendedStack: ["Node.js", "Docker"],
       },
       {

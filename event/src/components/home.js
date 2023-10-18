@@ -97,6 +97,7 @@ function StepperComponent() {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+
   };
 
   return (
@@ -205,108 +206,8 @@ function StepperComponent() {
                 >
                   Hey there 👋{" "}
                 </Typography>
-
-                <Slider {...settings}>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon1}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon2}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon3}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon4}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon5}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon6}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon7}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon8}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon9}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon10}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon11}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon12}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon13}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon14}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon15}
-                    />
-                  </div>
-                  <div>
-                    <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon16}
-                    />
-                  </div>
-                </Slider>
-
                 <Typography sx={{ pt: 5, fontSize: "60px", color: "#fff" }}>
-                  <strong>Have a product idea? </strong>
+                  <strong>Have a Product Idea? </strong>
                 </Typography>
 
                 <Typography
@@ -318,7 +219,7 @@ function StepperComponent() {
                   sx={{ fontSize: "60px", color: "#fff" }}
                 >
                   {" "}
-                  Get time and{" "}
+                  Get Time and{" "}
                   <motion.div
                     initial={{ scale: 1, opacity: 0.6 }}
                     animate={{ scale: 1.1, opacity: 1 }}
@@ -328,11 +229,110 @@ function StepperComponent() {
                       repeatType: "reverse",
                     }} // Reverse animation on repeat
                   >
-                    workforce estimations
+                    <span style={{color: "#3b82f6"}}>Workforce Estimations</span>
                   </motion.div>{" "}
-                  now!{" "}
+                  Now!{" "}
                 </Typography>
               </Box>
+              <Slider style={{marginTop: "6rem"}} {...settings}>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon1}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon2}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon3}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon4}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon5}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon6}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon7}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon8}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon9}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon10}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon11}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon12}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon13}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon14}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon15}
+                  />
+                </div>
+                <div>
+                  <img
+                      style={{ height: "50px", width: "50px" }}
+                      src={icon16}
+                  />
+                </div>
+              </Slider>
+
             </Box>
           </motion.div>
         </Container>
