@@ -11,8 +11,8 @@ function TotalManDays({ removeDisabledButton, activeDisabledBtn }) {
   useEffect(() => {
     let parsManDays = JSON.parse(localStorageManDays);
     let getNumberFromArray = [];
-    parsManDays.map((item, index) => {
-      getNumberFromArray.push(item[2]);
+    parsManDays?.map((item, index) => {
+      getNumberFromArray?.push(item[2]);
     });
     const daysSum = getNumberFromArray.reduce(
       (partialSum, a) => partialSum + a,

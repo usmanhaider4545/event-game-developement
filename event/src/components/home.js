@@ -36,6 +36,8 @@ import icon16 from "../images/java-script 1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PlayerSubCategoriesFeatures from "./playerSubCategories";
+import Step5ActionButton from "./Step5ActionButton";
 
 // import icon17 from "../images/";
 // import icon18 from "../images/";
@@ -65,6 +67,7 @@ function StepperComponent() {
   const [activeStep, setActiveStep] = useState(0);
 
   const [disabledButton, setDisabledButton] = useState(true);
+  const [playerSubCategories, setPlayerSubCategories] = useState(false);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -97,8 +100,18 @@ function StepperComponent() {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-
   };
+
+  const currentAppCategory = localStorage.getItem("appCategory");
+
+  if (currentAppCategory === "Player") {
+    const appSoftwareObject = {
+      MobileApp: true,
+      WebApplication: true,
+    };
+
+    localStorage.setItem("appSoftware", JSON.stringify(appSoftwareObject));
+  }
 
   return (
     <>
@@ -229,110 +242,63 @@ function StepperComponent() {
                       repeatType: "reverse",
                     }} // Reverse animation on repeat
                   >
-                    <span style={{color: "#3b82f6"}}>Workforce Estimations</span>
+                    <span style={{ color: "#3b82f6" }}>
+                      Workforce Estimations
+                    </span>
                   </motion.div>{" "}
                   Now!{" "}
                 </Typography>
               </Box>
-              <Slider style={{marginTop: "6rem"}} {...settings}>
+              <Slider style={{ marginTop: "6rem" }} {...settings}>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon1}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon1} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon2}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon2} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon3}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon3} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon4}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon4} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon5}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon5} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon6}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon6} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon7}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon7} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon8}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon8} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon9}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon9} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon10}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon10} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon11}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon11} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon12}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon12} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon13}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon13} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon14}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon14} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon15}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon15} />
                 </div>
                 <div>
-                  <img
-                      style={{ height: "50px", width: "50px" }}
-                      src={icon16}
-                  />
+                  <img style={{ height: "50px", width: "50px" }} src={icon16} />
                 </div>
               </Slider>
-
             </Box>
           </motion.div>
         </Container>
@@ -359,17 +325,24 @@ function StepperComponent() {
                   {activeStep === 1 ? (
                     <Industries removeDisabledButton={removeDisabledButton} />
                   ) : activeStep === 2 ? (
+                    <Categories
+                      activeDisabledBtn={activeDisabledBtn}
+                      removeDisabledButton={removeDisabledButton}
+                    />
+                  ) : activeStep === 3 &&
+                    localStorage?.getItem("appCategory") &&
+                    localStorage?.getItem("appCategory") === "Player" ? (
+                    (() => {
+                      setActiveStep(activeStep + 1);
+                      return null;
+                    })()
+                  ) : activeStep === 3 ? (
                     <AppType
                       activeDisabledBtn={activeDisabledBtn}
                       removeDisabledButton={removeDisabledButton}
                     />
-                  ) : activeStep === 3 ? (
-                    <AppDesignedFor
-                      activeDisabledBtn={activeDisabledBtn}
-                      removeDisabledButton={removeDisabledButton}
-                    />
                   ) : activeStep === 4 ? (
-                    <Categories
+                    <AppDesignedFor
                       activeDisabledBtn={activeDisabledBtn}
                       removeDisabledButton={removeDisabledButton}
                     />
@@ -379,14 +352,21 @@ function StepperComponent() {
                       removeDisabledButton={removeDisabledButton}
                     />
                   ) : activeStep === 6 ? (
+                    localStorage.getItem("industry") === "Digital Signage" &&
+                    localStorage.getItem("appCategory") === "Player" ? (
+                      <PlayerSubCategoriesFeatures resetAction={resetAction} />
+                    ) : (
+                      setActiveStep(activeStep + 1)
+                    )
+                  ) : activeStep === 7 ? (
                     <CustomerInfo
                       resetAction={resetAction}
                       removeDisabledButton={removeDisabledButton}
                       activeDisabledBtn={activeDisabledBtn}
                     />
-                  ) : activeStep === 7 ? (
-                    <AccessRequiredResources setActiveStep={setActiveStep} />
                   ) : activeStep === 8 ? (
+                    <AccessRequiredResources setActiveStep={setActiveStep} />
+                  ) : activeStep === 9 ? (
                     <GaintCharts resetAction={resetAction} />
                   ) : (
                     ""
@@ -401,7 +381,7 @@ function StepperComponent() {
       <ActionButton
         activeStep={activeStep}
         handleNext={handleNext}
-        disabledButton={disabledButton}
+        disabledButton={activeStep !== 6 ? disabledButton : ""}
       />
     </>
   );

@@ -9,8 +9,6 @@ import SelectionTypeCatagory from "./selectionTypeCatagory";
 const getDefaultDNC = () => ({
   MobileApp: false,
   WebApplication: false,
-  EnterpriseSoftware: false,
-  CloudBasedSolution: false,
 });
 
 const getInitialDNC = () => {
@@ -20,22 +18,22 @@ const getInitialDNC = () => {
 function AppType(props) {
   const [DNC, setDNC] = useState(getInitialDNC);
 
-  const { MobileApp, WebApplication, EnterpriseSoftware, CloudBasedSolution } =
-    DNC;
+  const { MobileApp, WebApplication } = DNC;
 
   const handleChange = (event) => {
     setDNC({ ...DNC, [event.target.name]: event.target.checked });
     props.removeDisabledButton();
   };
+  console.log(DNC);
 
   useEffect(() => {
     let stringfyData = JSON.stringify(DNC);
     console.log(stringfyData);
     const trueKeysArray = Object.keys(DNC).filter((key) => DNC[key] === true);
 
-    console.log(trueKeysArray);
     localStorage.setItem("appSoftware", stringfyData);
     const someTruthy = Object.values(DNC).some((val) => val === true);
+    console.log(someTruthy);
     if (someTruthy === true) {
       props.removeDisabledButton();
     } else {
@@ -78,75 +76,43 @@ function AppType(props) {
         maxWidth='450px'
         margin='auto'
       >
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.75, duration: 1 }}
-        >
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ color: "#fff" }}
-                checked={MobileApp}
-                onChange={handleChange}
-                name='MobileApp'
-              />
-            }
-            label='Mobile App'
-          />
-        </motion.div>
+        <>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.75, duration: 1 }}
+          >
+            <FormControlLabel
+              control={
+                <Checkbox
+                  style={{ color: "#fff" }}
+                  checked={MobileApp}
+                  onChange={handleChange}
+                  name='MobileApp'
+                />
+              }
+              label='Mobile App'
+            />
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ color: "#fff" }}
-                checked={WebApplication}
-                onChange={handleChange}
-                name='WebApplication'
-              />
-            }
-            label='Web Application'
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.25, duration: 1 }}
-        >
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ color: "#fff" }}
-                checked={EnterpriseSoftware}
-                onChange={handleChange}
-                name='EnterpriseSoftware'
-              />
-            }
-            label='Enterprise Software'
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ color: "#fff" }}
-                checked={CloudBasedSolution}
-                onChange={handleChange}
-                name='CloudBasedSolution'
-              />
-            }
-            label='Cloud-based Solution'
-          />
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            <FormControlLabel
+              control={
+                <Checkbox
+                  style={{ color: "#fff" }}
+                  checked={WebApplication}
+                  onChange={handleChange}
+                  name='WebApplication'
+                />
+              }
+              label='Web Application'
+            />
+          </motion.div>
+        </>
       </Stack>
     </Box>
   );

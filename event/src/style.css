@@ -40,6 +40,20 @@ button {
   line-height: normal;
 }
 
+.subOptions {
+  border-radius: 10px;
+  border: 2px solid #7b8089;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+  -webkit-backdrop-filter: blur(26.94999885559082px);
+  backdrop-filter: blur(26.94999885559082px);
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  display: flex;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
 .optionsBlocks label {
   border-radius: 10px;
   border: 2px solid #7b8089;
@@ -53,6 +67,32 @@ button {
   text-align: left;
   margin-left: 0;
   margin-right: 0;
+}
+.digitalSignageBlock label {
+  border-radius: 10px;
+  border: 2px solid #3b82f6;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+  -webkit-backdrop-filter: blur(26.94999885559082px);
+  backdrop-filter: blur(26.94999885559082px);
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  display: flex;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+
+  /* Add glowing effect using box-shadow and animation */
+  animation: glowBorder 2s infinite alternate, rotateBorder 4s linear infinite;
+}
+
+@keyframes glowBorder {
+  0% {
+    box-shadow: 0px 0px 20px 0px rgba(59, 130, 246, 0.9);
+  }
+  100% {
+    box-shadow: 0px 0px 40px 0px rgba(59, 130, 246, 1);
+  }
 }
 
 .disabled {

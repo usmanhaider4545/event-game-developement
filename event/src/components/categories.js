@@ -28,14 +28,15 @@ function Categories(props) {
   const [value, setValue] = useState("");
 
   const [localStorageCategory, setLocalStorageCategory] = useState(
-    localStorage.getItem("appCategory")
+    localStorage.getItem("appCategory"),
   );
 
   const [localStorageIndustry, setLocalStorageIndustry] = useState(
-    localStorage.getItem("industry")
+    localStorage.getItem("industry"),
   );
 
   const [categories, setCategories] = useState([]);
+  console.log(categories);
   const ref = useRef();
 
   const { events } = useDraggable(ref);
@@ -48,7 +49,7 @@ function Categories(props) {
     }
     props.removeDisabledButton();
   };
-
+  console.log(value);
   useEffect(() => {
     window.onbeforeunload = closeIt;
     const categoriesLocal = getDataCategories();
@@ -158,7 +159,7 @@ function Categories(props) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <Typography
-          variant="h6"
+          variant='h6'
           sx={{
             color: "#fff",
             padding: "40px 0",
@@ -170,17 +171,17 @@ function Categories(props) {
         </Typography>
       </motion.div>
       <Stack
-        className="optionsBlocks"
-        flexDirection="column"
-        justifyContent="center"
-        width="100%"
-        margin="auto"
+        className='optionsBlocks'
+        flexDirection='column'
+        justifyContent='center'
+        width='100%'
+        margin='auto'
       >
         <FormControl>
           <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue=""
-            name="radio-buttons-group"
+            aria-labelledby='demo-radio-buttons-group-label'
+            defaultValue=''
+            name='radio-buttons-group'
             value={value ? value : localStorageCategory}
             onChange={handleChange}
           >
@@ -188,10 +189,10 @@ function Categories(props) {
               {...events}
               ref={ref}
               sx={{ overflowX: "auto", width: "100%" }}
-              className="optionsBlocks"
-              display="-webkit-inline-box"
-              flexDirection="initial"
-              justifyContent="center"
+              className='optionsBlocks'
+              display='-webkit-inline-box'
+              flexDirection='initial'
+              justifyContent='center'
             >
               <Box
                 sx={{

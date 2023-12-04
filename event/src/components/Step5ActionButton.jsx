@@ -26,23 +26,26 @@ const ButtonStyled = styled(Button)`
   }
 `;
 
-const ActionButton = ({ activeStep, handleNext, disabledButton }) => {
-  if (activeStep === 9) return null;
-
-  let buttonText = "Next";
-  if (activeStep === 0) buttonText = "Get Started";
-
+const Step5ActionButton = ({
+  activeStep,
+  handleNext,
+  setPlayerSubCategories,
+  disabledButton,
+}) => {
+  let buttonText = "Know what you'll get";
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 2 }}
     >
-      {activeStep !== 8 && (
+      {activeStep !== 7 && (
         <ButtonWrapper>
           <ButtonStyled
-            disabled={disabledButton && activeStep !== 0}
-            onClick={handleNext}
+            // disabled={disabledButton && activeStep !== 0}
+            onClick={() => {
+              setPlayerSubCategories(true);
+            }}
           >
             {buttonText}
           </ButtonStyled>
@@ -52,4 +55,4 @@ const ActionButton = ({ activeStep, handleNext, disabledButton }) => {
   );
 };
 
-export default ActionButton;
+export default Step5ActionButton;

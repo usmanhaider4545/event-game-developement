@@ -25,8 +25,16 @@ import { useDraggable } from "react-use-draggable-scroll";
 import { motion } from "framer-motion";
 import { augmentedReality } from "../projectsData/AugmentedReality";
 import { hospitality } from "../projectsData/Hospitality";
+import Step5ActionButton from "./Step5ActionButton";
+import ActionButton from "./ActionButton";
+import PlayerSubCategoriesFeatures from "./playerSubCategories";
 
-function CategoriesFeatures(props) {
+function CategoriesFeatures({
+  activeDisabledBtn,
+  removeDisabledButton,
+  playerSubCategories,
+  setPlayerSubCategories,
+}) {
   const localStorageCategory = localStorage.getItem("appCategory");
   const localStorageIndustry = localStorage.getItem("industry");
 
@@ -41,6 +49,8 @@ function CategoriesFeatures(props) {
     return storedManDays ? JSON.parse(storedManDays) : [];
   });
 
+  console.log(totalManDays);
+
   const handleChange = (event) => {
     let { checked, value, name, ariaLabel } = event.target;
     let updatedManDays = [...totalManDays];
@@ -54,6 +64,7 @@ function CategoriesFeatures(props) {
         resources: value.resources,
         developers: value.dev,
         technologies: value.technologies,
+        subFeatures: value.subFeatures,
       });
     } else {
       updatedManDays = updatedManDays.filter((day) => day.name !== name);
@@ -62,9 +73,9 @@ function CategoriesFeatures(props) {
     setTotalManDays(updatedManDays);
 
     if (updatedManDays.length === 0) {
-      props.activeDisabledBtn();
+      activeDisabledBtn();
     } else {
-      props.removeDisabledButton();
+      removeDisabledButton();
     }
 
     const totalManDaysStringify = JSON.stringify(updatedManDays);
@@ -75,9 +86,9 @@ function CategoriesFeatures(props) {
     window.onbeforeunload = closeIt;
     getDataCategories();
     if (totalManDays.length === 0) {
-      props.activeDisabledBtn();
+      activeDisabledBtn();
     } else {
-      props.removeDisabledButton();
+      removeDisabledButton();
     }
   }, []);
 
@@ -100,6 +111,7 @@ function CategoriesFeatures(props) {
               technologies: feature.recommendedStack
                 ? feature.recommendedStack
                 : "-",
+              subFeatures: feature?.subFeatures ? feature?.subFeatures : "-",
             };
           });
         }
@@ -411,7 +423,7 @@ function CategoriesFeatures(props) {
       });
     }
   };
-
+  console.log(features);
   return (
     <Box>
       <motion.div
@@ -420,7 +432,7 @@ function CategoriesFeatures(props) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <Typography
-          variant="h6"
+          variant='h6'
           sx={{
             color: "#fff",
             padding: "18px 0",
@@ -436,10 +448,10 @@ function CategoriesFeatures(props) {
         {...events}
         ref={ref}
         sx={{ overflowX: "auto", width: "100%" }}
-        className="optionsBlocks"
-        display="-webkit-inline-box"
-        flexDirection="initial"
-        justifyContent="center"
+        className='optionsBlocks'
+        display='-webkit-inline-box'
+        flexDirection='initial'
+        justifyContent='center'
       >
         <Box
           sx={{
@@ -448,6 +460,7 @@ function CategoriesFeatures(props) {
             paddingRight: `${features.length > 6 ? "80px" : ""}`,
           }}
         >
+          {console.log(features)}
           {features.length > 0
             ? features.slice(0, 6).map((f, i) => (
                 <motion.div
@@ -467,7 +480,7 @@ function CategoriesFeatures(props) {
                         value={JSON.stringify(f)}
                         style={{ color: "#fff" }}
                         defaultChecked={totalManDays.some(
-                          (day) => day.name === f.name
+                          (day) => day.name === f.name,
                         )}
                       />
                     }
@@ -498,7 +511,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name
+                            (day) => day.name === f.name,
                           )}
                         />
                       }
@@ -532,7 +545,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name
+                            (day) => day.name === f.name,
                           )}
                         />
                       }
@@ -566,7 +579,7 @@ function CategoriesFeatures(props) {
                           value={JSON.stringify(f)}
                           style={{ color: "#fff" }}
                           defaultChecked={totalManDays.some(
-                            (day) => day.name === f.name
+                            (day) => day.name === f.name,
                           )}
                         />
                       }

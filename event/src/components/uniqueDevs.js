@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import DevList from "./DevList";
 import { motion } from "framer-motion";
-const UniqueDevs = ({ data }) => {
+const UniqueDevs = ({ data, digitalSignageResources, playerResources }) => {
   const styles = {
     themeBackgroundwithBorder: {
       borderRadius: "10px",
@@ -20,6 +20,7 @@ const UniqueDevs = ({ data }) => {
       marginBottom: "20px",
     },
   };
+
   return (
     <>
       <motion.div
@@ -53,15 +54,111 @@ const UniqueDevs = ({ data }) => {
         >
           Recommended team
         </Typography>
-        <Box sx={{ overflowY: "auto", maxHeight: "260px" }}>
-          {data.uniqueDeveloper?.map((developer, index) => (
+        {localStorage?.getItem("industry") === "Digital Signage" &&
+        localStorage?.getItem("appCategory") === "CMS" ? (
+          <Box sx={{ overflowY: "auto", maxHeight: "260px" }}>
+            {data?.manDays <= 110 ? (
+              <>
+                <DevList heading={"Frontend Developer"} count={1} />
+                <DevList heading={"Backend Developer"} count={1} />
+              </>
+            ) : data?.manDays > 110 && data?.manDays <= 170 ? (
+              <>
+                <DevList heading={"Frontend Developer"} count={2} />
+                <DevList heading={"Backend Developer"} count={1} />
+              </>
+            ) : (
+              <>
+                <DevList heading={"Frontend Developer"} count={2} />
+                <DevList heading={"Backend Developer"} count={2} />
+              </>
+            )}
+
+            <DevList heading={"Project Manager"} count={1} />
+            <DevList heading={"QA Engineer"} count={1} />
+
+            <Typography
+              variant='h6'
+              sx={{
+                fontFamily: "IBM Plex Mono !important",
+                fontSize: "14px",
+                fontWeight: "500",
+                textTransform: "uppercase",
+                color: "#fff",
+                textAlign: "left",
+                width: "80%",
+                marginBottom: "14px",
+                marginTop: "14px",
+              }}
+            >
+              <i>
+                Project Manager and QA Engineer is not reflected in Total No. of
+                Resources
+              </i>
+            </Typography>
+          </Box>
+        ) : localStorage?.getItem("industry") === "Digital Signage" &&
+          localStorage?.getItem("appCategory") === "Player" ? (
+          <Box sx={{ overflowY: "auto", maxHeight: "260px" }}>
             <DevList
-              heading={developer}
-              count={data.developerCountsArray[index]}
-              key={index}
+              heading={"Frontend Developer"}
+              count={playerResources.length}
             />
-          ))}
-        </Box>
+            <DevList heading={"Project Manager"} count={1} />
+            <DevList heading={"QA Engineer"} count={1} />
+            <Typography
+              variant='h6'
+              sx={{
+                fontFamily: "IBM Plex Mono !important",
+                fontSize: "14px",
+                fontWeight: "500",
+                textTransform: "uppercase",
+                color: "#fff",
+                textAlign: "left",
+                width: "80%",
+                marginBottom: "14px",
+                marginTop: "14px",
+              }}
+            >
+              <i>
+                Project Manager and QA Engineer is not reflected in Total No. of
+                Resources
+              </i>
+            </Typography>
+          </Box>
+        ) : (
+          <Box sx={{ overflowY: "auto", maxHeight: "260px" }}>
+            {data.uniqueDeveloper?.map((developer, index) => (
+              <DevList
+                heading={developer}
+                count={data.developerCountsArray[index]}
+                key={index}
+              />
+            ))}
+            <DevList heading={"Project Manager"} count={1} />
+            <DevList heading={"QA Engineer"} count={1} />
+
+            <Typography
+              variant='h6'
+              sx={{
+                fontFamily: "IBM Plex Mono !important",
+                fontSize: "14px",
+                fontWeight: "500",
+                textTransform: "uppercase",
+                color: "#fff",
+                textAlign: "left",
+                width: "80%",
+                marginBottom: "14px",
+                marginTop: "14px",
+              }}
+            >
+              <i>
+                Project Manager and QA Engineer is not reflected in Total No. of
+                Resources
+              </i>
+            </Typography>
+          </Box>
+        )}
       </motion.div>
     </>
   );

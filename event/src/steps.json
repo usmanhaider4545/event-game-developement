@@ -1,29 +1,32 @@
 [
-    {
-        "title": "Step 1"
-    },
-    {
-        "title": "Step 2"
-    },
-    {
-        "title": "Step 3"
-    },
-    {
-        "title": "Step 4"
-    },
-    {
-        "title": "Step 5"
-    },
-    {
-        "title": "Step 6"
-    },
-    {
-        "title": "Step 7"
-    },
-    {
-        "title": "Step 8"
-    },
-        {
-            "title": "Step 9"
-        }
+  {
+    "title": "Step 1"
+  },
+  {
+    "title": "Step 2"
+  },
+  {
+    "title": "Step 3"
+  },
+  {
+    "title": "Step 4"
+  },
+  {
+    "title": "Step 5"
+  },
+  {
+    "title": "Step 6"
+  },
+  {
+    "title": "Step 7"
+  },
+  {
+    "title": "Step 8"
+  },
+  {
+    "title": "Step 9"
+  },
+  {
+    "title": "Step 10"
+  }
 ]

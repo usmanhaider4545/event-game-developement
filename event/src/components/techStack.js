@@ -22,7 +22,8 @@ const TechStack = ({ data }) => {
       gap: "0.5rem",
       flexWrap: "wrap",
       overflowY: "auto",
-      maxHeight: "180px",
+      minHeight: "264px",
+      maxHeight: "264px",
       padding: "0 15px 0 0px",
     },
   };
