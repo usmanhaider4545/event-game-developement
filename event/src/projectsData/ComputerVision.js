@@ -7,28 +7,28 @@ export const ComputerVision = [
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Computer Vision Engineer", "Machine Learning Engineer"],
-        recommendedStack: ["OpenCV", "TensorFlow"],
+        recommendedStack: ["OpenCV", "Dlib", "TensorFlow"],
       },
       {
         name: "Facial feature extraction",
         totalManDays: 120,
         numResources: 2,
         devRequired: ["Computer Vision Engineer", "Machine Learning Engineer"],
-        recommendedStack: ["OpenCV", "TensorFlow"],
+        recommendedStack: ["OpenCV", "Dlib", "TensorFlow"],
       },
       {
         name: "Identity verification and recognition",
         totalManDays: 150,
         numResources: 2,
         devRequired: ["Computer Vision Engineer", "Machine Learning Engineer"],
-        recommendedStack: ["OpenCV", "TensorFlow"],
+        recommendedStack: ["OpenCV", "Dlib", "TensorFlow"],
       },
       {
         name: "Liveness detection for security applications",
         totalManDays: 100,
         numResources: 2,
         devRequired: ["Computer Vision Engineer", "Machine Learning Engineer"],
-        recommendedStack: ["OpenCV", "TensorFlow"],
+        recommendedStack: ["OpenCV", "Dlib", "TensorFlow"],
       },
     ],
   },
@@ -198,4 +198,3 @@ export const ComputerVision = [
     ],
   },
 ];
-

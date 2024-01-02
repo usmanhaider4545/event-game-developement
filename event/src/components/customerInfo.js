@@ -3,7 +3,12 @@ import { Box, Typography } from "@mui/material";
 import UserInformation from "./UserInformation";
 import { motion } from "framer-motion";
 
-function TotalManDays({ removeDisabledButton, activeDisabledBtn }) {
+function TotalManDays({
+  removeDisabledButton,
+  activeDisabledBtn,
+  checked,
+  setChecked,
+}) {
   const localStorageManDays = localStorage.getItem("totalManDays");
 
   const [selectedTotalManDays, setSelectedTotalManDays] = useState();
@@ -33,6 +38,8 @@ function TotalManDays({ removeDisabledButton, activeDisabledBtn }) {
       <UserInformation
         enableActionButton={enableActionButton}
         disableActionButton={disableActionButton}
+        checked={checked}
+        setChecked={setChecked}
       />
 
       <Box>
@@ -41,6 +48,7 @@ function TotalManDays({ removeDisabledButton, activeDisabledBtn }) {
             fontSize: { xs: "32px", md: "27px" },
             color: "#fff",
             fontWeight: "700",
+            // display: "flex",
           }}
         >
           <motion.p

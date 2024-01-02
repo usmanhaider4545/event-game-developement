@@ -557,6 +557,3 @@ export const HealthTech = [
     ],
   },
 ];
-
-
-

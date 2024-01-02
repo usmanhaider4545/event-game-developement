@@ -37,7 +37,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PlayerSubCategoriesFeatures from "./playerSubCategories";
-import Step5ActionButton from "./Step5ActionButton";
 
 // import icon17 from "../images/";
 // import icon18 from "../images/";
@@ -65,7 +64,7 @@ function StepperComponent() {
   ];
 
   const [activeStep, setActiveStep] = useState(0);
-
+  const [checked, setChecked] = useState(false);
   const [disabledButton, setDisabledButton] = useState(true);
   const [playerSubCategories, setPlayerSubCategories] = useState(false);
 
@@ -75,8 +74,15 @@ function StepperComponent() {
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    setDisabledButton(true);
+    if (activeStep === 9) {
+      setActiveStep((prevActiveStep) => prevActiveStep - 8);
+      setDisabledButton(true);
+    } else if (activeStep === 7) {
+      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    } else {
+      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+      setDisabledButton(true);
+    }
   };
 
   const removeDisabledButton = () => {
@@ -84,11 +90,16 @@ function StepperComponent() {
   };
 
   const activeDisabledBtn = () => {
-    setDisabledButton(true);
+    if (activeStep === 7 && !checked) {
+      setDisabledButton(false);
+    } else {
+      setDisabledButton(true);
+    }
   };
 
   const resetAction = () => {
     setActiveStep(0);
+    setChecked(false);
     localStorage.clear();
   };
 
@@ -363,6 +374,8 @@ function StepperComponent() {
                       resetAction={resetAction}
                       removeDisabledButton={removeDisabledButton}
                       activeDisabledBtn={activeDisabledBtn}
+                      checked={checked}
+                      setChecked={setChecked}
                     />
                   ) : activeStep === 8 ? (
                     <AccessRequiredResources setActiveStep={setActiveStep} />
@@ -382,6 +395,8 @@ function StepperComponent() {
         activeStep={activeStep}
         handleNext={handleNext}
         disabledButton={activeStep !== 6 ? disabledButton : ""}
+        checked={checked}
+        setChecked={setChecked}
       />
     </>
   );

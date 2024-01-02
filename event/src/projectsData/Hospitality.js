@@ -8,7 +8,7 @@ export const hospitality = [
         totalManDays: 20,
         numResources: 2,
         devRequired: ["Frontend Developer", "Backend Developer"],
-        recommendedStack: ["React.js", "Node.js","Real-time Database"],
+        recommendedStack: ["React.js", "Node.js", "Real-time Database"],
       },
       {
         name: "Pricing and rate management",

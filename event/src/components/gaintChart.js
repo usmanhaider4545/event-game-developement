@@ -115,7 +115,6 @@ function GaintCharts() {
     const parsedManDays = JSON.parse(localStorage?.getItem("totalManDays"));
     let manDays = parsedManDays?.reduce((acc, item) => acc + item.value, 0);
 
-    console.log("=======================>", parsedManDays);
     // if (manDays > 60) {
     //   const additionalDays = (manDays - 60) % 30;
     //   manDays = 60 + additionalDays;
@@ -124,8 +123,6 @@ function GaintCharts() {
     const days = manDays % 30;
 
     let resources = parsedManDays?.map((abc) => abc?.resources);
-
-    console.log(resources);
 
     const developerCounts = {};
 
@@ -190,11 +187,9 @@ function GaintCharts() {
   );
 
   const digitalSignageResources = digitalSignageEstimations?.resources;
-  console.log(data?.manDays);
 
   const playerResources = JSON.parse(localStorage.getItem("totalManDays"));
-
-  console.log("======================>", data?.manDays);
+  console.log(playerResources);
 
   return (
     <Grid container spacing={2}>
@@ -261,11 +256,12 @@ function GaintCharts() {
                     localStorage?.getItem("industry") === "Digital Signage" &&
                     localStorage?.getItem("appCategory") === "Player"
                       ? playerResources.length
-                      : data?.manDays <= 110
-                      ? 2
-                      : data?.manDays > 110 && data?.manDays <= 170
-                      ? 3
-                      : 4
+                      : data.resources
+                    // : data?.manDays <= 110
+                    // ? 2
+                    // : data?.manDays > 110 && data?.manDays <= 170
+                    // ? 3
+                    // : 4
                   }
                   duration={4}
                 />

@@ -25,7 +25,7 @@ import { useDraggable } from "react-use-draggable-scroll";
 import { motion } from "framer-motion";
 import { augmentedReality } from "../projectsData/AugmentedReality";
 import { hospitality } from "../projectsData/Hospitality";
-import Step5ActionButton from "./Step5ActionButton";
+
 import ActionButton from "./ActionButton";
 import PlayerSubCategoriesFeatures from "./playerSubCategories";
 

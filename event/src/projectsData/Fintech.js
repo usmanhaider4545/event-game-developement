@@ -7,7 +7,7 @@ export const Fintech = [
         manDays: "10-20 man-days",
         totalManDays: 20,
         numResources: 2,
-        devRequired: [ "Mobile App Developer"],
+        devRequired: ["Mobile App Developer"],
         recommendedStack: ["React Native", "Swift (iOS)", "Kotlin (Android)"],
       },
       {
@@ -181,7 +181,7 @@ export const Fintech = [
         manDays: "Ongoing and integrated throughout development",
         totalManDays: 20,
         numResources: 1,
-        devRequired: ["Frontend Developer"],
+        devRequired: ["FrontEnd Developer"],
         recommendedStack: ["Ongoing Accessibility Integration"],
       },
       {
@@ -189,11 +189,7 @@ export const Fintech = [
         manDays: "30-60 man-days per platform (iOS, Android, web)",
         totalManDays: 40,
         numResources: 3,
-        devRequired: [
-
-          "Mobile App Developer",
-          "Backend Developer",
-        ],
+        devRequired: ["Mobile App Developer", "Backend Developer"],
         recommendedStack: ["React", "React Native", "Node.js"],
       },
     ],
@@ -1047,7 +1043,7 @@ export const Fintech = [
         manDays: "15-30 man-days",
         totalManDays: 30,
         numResources: 1,
-        devRequired: ["Frontend Developer"],
+        devRequired: ["FrontEnd Developer"],
         recommendedStack: ["React", "Node.js", "Express"],
       },
       {

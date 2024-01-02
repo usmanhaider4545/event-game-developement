@@ -101,7 +101,7 @@ button {
 }
 
 .resultBox {
-  width: 100%;
+  /* width: 100%; */
   max-width: 535px;
   display: flex;
   flex-direction: column;
